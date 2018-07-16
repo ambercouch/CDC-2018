@@ -45,9 +45,6 @@
                 </div>
                 <span class="branding__description"><?php bloginfo('description'); ?></span>
               <?php endif; ?>
-              <div class="header--master__lang-switch">
-                <?php echo  langSwitch(); ?>
-              </div>
               <div class="header--master__tel">
                 <a href="tel:02920382671">
                   <svg preserveAspectRatio="none" class="icon header--master__tel__call ">

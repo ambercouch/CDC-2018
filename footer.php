@@ -30,14 +30,8 @@
 </footer><!-- #colophon -->
 </div><!-- #page -->
 
-<link type="text/css" media="all" href="<?php echo get_stylesheet_uri(); ?>?v=1.4" rel="stylesheet" >
+<link type="text/css" media="all" href="<?php echo get_stylesheet_uri(); ?>?v=1.3" rel="stylesheet" >
 <?php wp_footer(); ?>
 
-<?php if(is_page() && get_field('scripts') != '') : ?>
-    <!-- Page Scripts --!>
-    <?php the_field('scripts'); ?>
-    <?php else : ?>
-    <!-- No Page Script -->
-<?php endif; ?>
 </body>
 </html>

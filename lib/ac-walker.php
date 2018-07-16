@@ -29,7 +29,7 @@ function ad_filter_menu($sorted_menu_objects, $args) {
     }
   }
 
-  if (in_array($args->menu->term_id, array(10,19,25,47,55,75,76,77,78,79,80))) {
+  if (in_array($args->menu->term_id, array(10,25,47,55,75,76,77,79))) {
 //  if ($args->menu->term_id == 10 || $args->menu->term_id == 25) {
 
     foreach ($sorted_menu_objects as $menu_object) {
