@@ -1,26 +1,25 @@
-Console output: pluginsConsole output: no palmConsole output: [object Object]Console output: pageConsole output: 1200Console output: Welcome To Cathedral Dental Clinicarticle, aside, header, nav{ display: block; }
+Console output: pluginsConsole output: no palmConsole output: [object Object]Console output: pageConsole output: 1200Console output: Welcome To Cathedral Dental Clinic aside, header, nav{ display: block; }
 html{ font-family: sans-serif; }
 body{ margin: 0px; }
 h1{ font-size: 2em; margin: 0.67em 0px; }
- strong{ font-weight: bold; }
 img{ border: 0px; }
 svg:not(:root){ overflow: hidden; }
  input, select{ font-family: inherit; font-size: 100%; margin: 0px; }
  input{ line-height: normal; }
  select{ text-transform: none; }
 *{ box-sizing: border-box; }
-h1, h2, h3, p, ul{ margin: 0px; padding: 0px; }
+h1, h2, ul{ margin: 0px; padding: 0px; }
 img{ font-style: italic; }
  input, select, option{ cursor: pointer; }
- .menu--site::after, .menu--site__menu-list::after, .menu--services__menu-list::after, .page__content::after{ content: ''; display: table; clear: both; }
-h1, h2, h3, ul, p{ margin-bottom: 1.4705882353rem; }
+ .menu--site::after, .menu--site__menu-list::after, .menu--services__menu-list::after{ content: ''; display: table; clear: both; }
+h1, h2, ul{ margin-bottom: 1.4705882353rem; }
 ul{ margin-left: 2.9411764706rem; }
 html{ font-style: normal; font-variant: normal; font-weight: normal; font-size: 1.0625em; line-height: 1.4705882353; font-family: proxima-nova, sans-serif; overflow-y: scroll; min-height: 100%; }
 h1{ font-size: 2.1176470588rem; line-height: 1.3888888889; }
 h2{ font-size: 1.7647058824rem; line-height: 1.6666666667; }
-h3, .header--master__strap{ font-size: 1.4117647059rem; line-height: 1.0416666667; }
+ .header--master__strap{ font-size: 1.4117647059rem; line-height: 1.0416666667; }
  .header--master__tel, .home .header--master__tel{ font-size: 1.1764705882rem; line-height: 1.25; }
- .branding .branding__description, .title--widget{ font-size: 0.9411764706rem; line-height: 1.5625; }
+ .branding .branding__description{ font-size: 0.9411764706rem; line-height: 1.5625; }
  .form-contact--mobile label{ font-size: 0.8235294118rem; line-height: 1.7857142857; }
  .branding .branding__site-title{ font-size: 2.8235294118rem; line-height: 1.0416666667; }
 img{ max-width: 100%; }
@@ -41,13 +40,12 @@ li > ul{ margin-bottom: 0px; }
  .menu--services__menu-list{ border-left-width: 1px; }
  .menu--services__menu-list > li{ float: left; border-right-width: 1px; }
  .menu--services__menu-list > li{ width: 50%; }
- .navigation--main__menu, .content__single-page, .content__widget-area--main, .content__widget-area--below .widget-area__widget{ width: 100%; }
+ .navigation--main__menu, .content__widget-area--below .widget-area__widget{ width: 100%; }
 @media only screen and (max-width: 799px) and (min-width: 481px){
- .content__single-page, .content__widget-area--main, .content__widget-area--below .widget-area__widget{ width: 100%; }
+ .content__widget-area--below .widget-area__widget{ width: 100%; }
 }
 @media only screen and (min-width: 800px){
- .content__widget-area--main, .content__widget-area--below .widget-area__widget{ width: 33.333%; }
- .content__single-page{ width: 66.666%; }
+ .content__widget-area--below .widget-area__widget{ width: 33.333%; }
 }
 html{ font-style: normal; font-variant: normal; font-weight: normal; font-size: 0.95625em; line-height: 1.4705882353; font-family: proxima-nova, sans-serif; }
 @media only screen and (min-width: 481px){
@@ -57,11 +55,11 @@ body{ font-size: 90%; background-color: rgb(255, 255, 255); background-position:
 @media only screen and (min-width: 481px){
 body{ font-size: 100%; }
 }
- .header--master, .navigation--main, .navigation--services, .content{ width: auto; margin-left: auto; margin-right: auto; }
+ .header--master, .navigation--main, .navigation--services{ width: auto; margin-left: auto; margin-right: auto; }
 @media only screen and (min-width: 800px){
- .header--master, .navigation--main, .navigation--services, .content{ max-width: 1024px; width: 100%; }
+ .header--master, .navigation--main, .navigation--services{ max-width: 1024px; width: 100%; }
 }
-h1, h2, h3{ margin-bottom: 0.75em; }
+h1, h2{ margin-bottom: 0.75em; }
 a, a:link{ text-decoration: none; }
 h1{ font-size: 1.4117647059rem; line-height: 1.3888888889; }
 @media only screen and (max-width: 799px) and (min-width: 481px){
@@ -77,20 +75,20 @@ h2{ font-size: 1.4705882353rem; line-height: 1.6666666667; }
 @media only screen and (min-width: 800px){
 h2{ font-size: 1.7647058824rem; line-height: 1.6666666667; }
 }
-h3, .header--master__strap{ font-size: 1.0859728507rem; line-height: 1.0416666667; }
+ .header--master__strap{ font-size: 1.0859728507rem; line-height: 1.0416666667; }
 @media only screen and (max-width: 799px) and (min-width: 481px){
-h3, .header--master__strap{ font-size: 1.2834224599rem; line-height: 1.0416666667; }
+ .header--master__strap{ font-size: 1.2834224599rem; line-height: 1.0416666667; }
 }
 @media only screen and (min-width: 800px){
-h3, .header--master__strap{ font-size: 1.4117647059rem; line-height: 1.0416666667; }
+ .header--master__strap{ font-size: 1.4117647059rem; line-height: 1.0416666667; }
 }
  .header--master__tel, .home .header--master__tel{ font-size: 0.9803921569rem; line-height: 1.25; }
 @media only screen and (min-width: 481px){
  .header--master__tel, .home .header--master__tel{ font-size: 1.1764705882rem; line-height: 1.25; }
 }
- .branding .branding__description, .title--widget{ font-size: 0.8556149733rem; line-height: 1.5625; }
+ .branding .branding__description{ font-size: 0.8556149733rem; line-height: 1.5625; }
 @media only screen and (min-width: 481px){
- .branding .branding__description, .title--widget{ font-size: 0.9411764706rem; line-height: 1.5625; }
+ .branding .branding__description{ font-size: 0.9411764706rem; line-height: 1.5625; }
 }
  .form-contact--mobile label{ font-size: 0.8235294118rem; line-height: 1.7857142857; }
 .grid{ font-size: 0px; }
@@ -102,7 +100,6 @@ h3, .header--master__strap{ font-size: 1.4117647059rem; line-height: 1.041666666
 .site{ background-color: rgb(255, 255, 255); color: rgb(77, 75, 74); background-position: initial initial; background-repeat: initial initial; }
 .site__header--master{ padding: 0px; margin-bottom: 1.5rem; background-color: rgb(234, 236, 233); background-position: initial initial; background-repeat: initial initial; }
 .site__navigation--main{ background-color: rgb(101, 3, 96); border-bottom-style: solid; border-bottom-width: 3px; border-bottom-color: rgb(139, 66, 135); background-position: initial initial; background-repeat: initial initial; }
-.site__content{ padding: 25px 0px 0px; }
 .site__tel{ display: block; text-decoration: none; background-color: rgb(234, 236, 233); color: rgb(101, 3, 96); text-align: center; padding-top: 0.75rem; padding-bottom: 0.75rem; background-position: initial initial; background-repeat: initial initial; }
 @media only screen and (min-width: 800px){
 .site__tel{ display: none; }
@@ -188,26 +185,18 @@ h3, .header--master__strap{ font-size: 1.4117647059rem; line-height: 1.041666666
 @media only screen and (min-width: 800px){
 .menu--services__title{ transition: background 0.3s ease; -webkit-transition: background 0.3s ease; }
 }
-.content{ max-width: 924px; }
-.content__widget-area--main a{ transition: background 0.3s ease, border-bottom 0.3s ease, box-shadow 0.3s ease, text-shadow 0.3s ease; -webkit-transition: background 0.3s ease, border-bottom 0.3s ease, box-shadow 0.3s ease, text-shadow 0.3s ease; color: rgb(101, 3, 96); text-decoration: none; border: 1px solid rgb(255, 255, 255); background-color: rgba(178, 129, 175, 0.247059); }
 @media only screen and (min-width: 800px){
 .content__widget-area--below .widget{ height: 150px; }
 }
  .menu--services img, .page img{ display: block; max-width: 100%; height: auto; overflow: hidden; }
 body.home .page__header{ display: none; }
-.page__content{ text-align: justify; padding-left: 1em; padding-right: 1em; }
-@media only screen and (min-width: 800px){
-.page__content{ padding-right: 0px; }
-}
- .title--article, .title--widget{ text-decoration: none; margin-bottom: 0px; }
+ .title--article{ text-decoration: none; margin-bottom: 0px; }
 .title--article{ display: block; padding-left: 1rem; font-weight: 500; color: rgb(101, 3, 96); }
-.title--widget{ font-weight: 300; text-transform: uppercase; color: rgb(77, 75, 74); background-color: rgb(255, 255, 255); padding: 12.5px 25px; letter-spacing: 0.1em; background-position: initial initial; background-repeat: initial initial; }
 .widget-area{ display: block; }
 .widget{ border-bottom-style: solid; border-bottom-width: 3px; border-bottom-color: rgb(255, 255, 255); margin-bottom: 3px; }
 @media only screen and (min-width: 800px){
 .widget{ margin-bottom: 25px; }
 }
-.widget__header{ position: relative; margin-bottom: 1em; }
 .textwidget{ padding: 0px 25px 25px; }
  .navigation--main__menu .menu--site__menu-list ul{ background-color: rgb(178, 129, 175); z-index: 999; background-position: initial initial; background-repeat: initial initial; }
  .navigation--main__menu .menu--site__menu-list ul li a{ display: block; padding: 12.5px; }
@@ -223,9 +212,9 @@ body.home .page__header{ display: none; }
 @media only screen and (min-width: 800px){
 .site-title__icon--desk{ display: block !important; }
 }
- .form-contact--mobile, .form-contact--primary{ display: block; }
- .form-contact--mobile .widget, .form-contact--primary .widget{ background-color: rgb(178, 129, 175); padding-bottom: 1em; border-color: rgb(178, 129, 175); }
- .form-contact--mobile .title--widget, .form-contact--primary .title--widget{ background-color: rgb(101, 3, 96); color: rgb(255, 255, 255); }
+ .form-contact--mobile{ display: block; }
+ .form-contact--mobile .widget{ background-color: rgb(178, 129, 175); padding-bottom: 1em; border-color: rgb(178, 129, 175); }
+ .form-contact--mobile .title--widget{ background-color: rgb(101, 3, 96); color: rgb(255, 255, 255); }
  .form-contact--mobile label{ color: rgb(255, 255, 255); margin-bottom: 0.25em; }
  .form-contact--mobile .form-contact__list{ margin: 0px 0px 1em; }
  .form-contact--mobile .form-contact__list li{ list-style: none; margin-bottom: 0.5em; }
@@ -235,17 +224,7 @@ body.home .page__header{ display: none; }
 @media only screen and (min-width: 800px){
 .form-contact--mobile{ display: none !important; }
 }
-.form-contact--primary{ display: none; }
-@media only screen and (min-width: 800px){
-.form-contact--primary{ display: block; }
-}
-.form-contact--primary .widget{ padding-bottom: 5px; }
-.btn, .form-contact--mobile .form-contact__submit input{ display: block; width: 100%; height: 40px; line-height: 1; border: none; margin: 0px auto 0em; top: 0px; font-style: normal; font-family: proxima-nova, sans-serif; font-size: 18px; text-align: center; text-decoration: none; color: white; background-color: rgb(101, 3, 96); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; box-shadow: rgb(75, 2, 72) 0px 5px 0px, rgba(0, 0, 0, 0.4) 0px 5px 5px 1px, rgba(255, 255, 255, 0.2) 0px 0px 20px inset; text-shadow: rgba(0, 0, 0, 0.2) 0px 1px 0px; transition: all 0.15s ease-in-out; -webkit-transition: all 0.15s ease-in-out; padding: 0px; }
-.textwidget--book-online{ background-color: rgb(178, 129, 175); color: rgb(255, 255, 255); margin-bottom: 25px; }
-@media only screen and (min-width: 800px){
-.textwidget--book-online{ margin-bottom: 0px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; }
-}
-.textwidget--book-online .widget{ padding-top: 1em; border-bottom-style: none; }
+ .form-contact--mobile .form-contact__submit input{ display: block; width: 100%; height: 40px; line-height: 1; border: none; margin: 0px auto 0em; top: 0px; font-style: normal; font-family: proxima-nova, sans-serif; font-size: 18px; text-align: center; text-decoration: none; color: white; background-color: rgb(101, 3, 96); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; box-shadow: rgb(75, 2, 72) 0px 5px 0px, rgba(0, 0, 0, 0.4) 0px 5px 5px 1px, rgba(255, 255, 255, 0.2) 0px 0px 20px inset; text-shadow: rgba(0, 0, 0, 0.2) 0px 1px 0px; transition: all 0.15s ease-in-out; -webkit-transition: all 0.15s ease-in-out; padding: 0px; }
 .icon{ fill: #ffffff; }
 .menu--site nav{ clear: both; transition: all 0.5s; -webkit-transition: all 0.5s; overflow: hidden; max-height: 0px; }
 @media only screen and (min-width: 800px){
