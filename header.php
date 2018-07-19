@@ -10,10 +10,13 @@
 <html <?php language_attributes(); ?>>
   <head>
 
-    <?php if(file_exists("assets/css/critical.css"))  : ?>
+    <?php $path = dirname(__FILE__) . '/assets/css/critical.css'; ?>
+    <?php if(realpath($path))  : ?>
       <style>
-        <?php include_once("assets/css/critical.css"); ?>
+        <?php include_once($path); ?>
       </style>
+    <?php else: ?>
+    <!-- No Critical CSS <?php echo $path ?> -->
     <?php endif; ?>
 
     <meta charset="<?php bloginfo('charset'); ?>" />
