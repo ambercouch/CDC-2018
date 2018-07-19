@@ -13,6 +13,18 @@
     <?php $path = dirname(__FILE__) . '/assets/css/critical.css'; ?>
     <?php if(realpath($path))  : ?>
       <style>
+        
+        .menu--services__menu-list {
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          font-size: .8em;
+          margin: 0 auto;
+          border: none;
+          max-width: 100%;
+        }
+
         <?php include_once($path); ?>
       </style>
     <?php else: ?>
