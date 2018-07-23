@@ -13,7 +13,7 @@
     <?php $path = dirname(__FILE__) . '/assets/css/critical.css'; ?>
     <?php if(realpath($path))  : ?>
       <style>
-        
+
         .menu--services__menu-list {
           display: -ms-flexbox;
           display: flex;
