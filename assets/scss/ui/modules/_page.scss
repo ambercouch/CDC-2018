@@ -10,9 +10,15 @@
     //max-width: 36em;
     //margin: 0 auto 1em;
     a{
-      @extend %link-style-1--col-2;
+       //display: none !important;
+       @extend %link-style-1--col-2;
+     }
+    a.u-cfa{
+      //display: none !important;
+      @extend %link-style-1--cfa;
     }
   }
+
   ul, ol{
     margin-left: 1.5em;
     text-align: left;
@@ -148,5 +154,12 @@
 
   }
 
+}
+
+[data-post-slug] .page__content p a {
+  @extend %link-style-1--cfa;
+}
+[data-post-slug] .page__content li a {
+  @extend %link-style-1--cfa;
 }
 

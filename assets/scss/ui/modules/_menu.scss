@@ -66,7 +66,7 @@
     text-align: center;
     padding:6px;
     //position: relative;
-    border-width: 3px;;
+    //border-width: 3px;;
     border-color: #fff;
     .rtl &{
       float: right;
@@ -84,12 +84,12 @@
     }
     @include media-query(lap){
       width: 33.333%;
-      border-width: 6px;
+      //border-width: 6px;
 
     }
     @include media-query(desk){
       width: 16.666%;
-      border-width: 12px;
+      //border-width: 12px;
       img{
        //transition: border 0.2s ease;
        border: solid 0px $brand-col-2;

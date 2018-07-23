@@ -10,10 +10,25 @@
 <html <?php language_attributes(); ?>>
   <head>
 
-    <?php if(file_exists("assets/css/critical.css"))  : ?>
+    <?php $path = dirname(__FILE__) . '/assets/css/critical.css'; ?>
+    <?php if(realpath($path))  : ?>
       <style>
-        <?php include_once("assets/css/critical.css"); ?>
+
+        .menu--services__menu-list {
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          font-size: .8em;
+          margin: 0 auto;
+          border: none;
+          max-width: 100%;
+        }
+
+        <?php include_once($path); ?>
       </style>
+    <?php else: ?>
+    <!-- No Critical CSS <?php echo $path ?> -->
     <?php endif; ?>
 
     <meta charset="<?php bloginfo('charset'); ?>" />

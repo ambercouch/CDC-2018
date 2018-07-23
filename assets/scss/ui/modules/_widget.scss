@@ -21,6 +21,9 @@
   @include media-query(desk){
     margin-bottom: $base-spacing-unit;
   }
+  .has-no-border &{
+    border-bottom: 0px !important;
+  }
 }
 
 .widget__header{
