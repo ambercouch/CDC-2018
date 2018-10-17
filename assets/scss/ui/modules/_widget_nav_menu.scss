@@ -78,3 +78,12 @@
     background: $brand-cfa-col-2;
   }
 }
+
+[data-post-slug="facial_aesthetics"] .widget_nav_menu {
+  .widget {
+    border-color: $brand-cfa-col-2;
+    @include media-query(portable) {
+      margin-bottom: $base-spacing-unit !important;
+    }
+  }
+}
