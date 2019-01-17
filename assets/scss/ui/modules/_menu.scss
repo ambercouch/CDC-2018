@@ -213,3 +213,16 @@
 }
 
 
+  position: relative;
+  > a{
+    padding-right:$base-spacing-unit  !important;
+  }
+&:after{
+content : url('/content/themes/CDC2014/assets/images/svg/down.svg');
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 0.6em;
+  top:15px;
+}
+}
