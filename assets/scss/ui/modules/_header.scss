@@ -108,7 +108,9 @@
 
 }
 
-
+[class*=header--master__strap--]{
+  @extend .header--master__strap;
+}
 .header--master__strap{
   @extend .gamma;
   line-height: 1.5em;
