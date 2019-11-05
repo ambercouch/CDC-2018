@@ -45,7 +45,12 @@
                 </div>
                 <span class="branding__description"><?php bloginfo('description'); ?></span>
               <?php endif; ?>
+
               <div class="header--master__lang-switch">
+                <a href="https://www.facebook.com/cathedraldentalclinic" target="_blank" class="a--icon"><svg class="icon icon-facebook2 icon--header"><use xlink:href="#icon-facebook2"></use></svg></a>
+                <span class="c-sep"> | </span>
+                <a href="https://www.instagram.com/cathedraldentalclinic166/" target="_blank" class="a--icon"><svg class="icon icon-instagram icon--header"><use xlink:href="#icon-instagram"></use></svg></a>
+                <span class="c-sep"> | </span>
                 <?php echo  langSwitch(); ?>
               </div>
               <div class="header--master__tel">

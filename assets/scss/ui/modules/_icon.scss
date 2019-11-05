@@ -13,22 +13,22 @@
 
  .icon__use--hover-on{
     display: none;
-   
+
   }
 .icon--hover{
   .icon__use--hover-on{
     transition: opacity 0.3s ease;
     opacity: 0;
     display: block;
-   
+
   }
   .icon__use--hover-off{
     transition: opacity 0.3s ease;
     opacity: 1;
-    
+
   }
   &:hover{
-    
+
     .icon__use--hover-on{
     opacity: 1;
     }
@@ -36,5 +36,14 @@
       opacity: 0;
     }
   }
-  
+
+}
+
+.icon--{
+  &header{
+    width: 1.75em;
+    height: 1.75em;
+    vertical-align: middle;
+    padding: 0 0.25em;
+  }
 }
