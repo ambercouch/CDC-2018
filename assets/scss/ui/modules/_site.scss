@@ -29,6 +29,7 @@
   @include media-query(desk){
     display:none;
   }
+  font-weight: 700;
   display: block;
   text-decoration: none;
   background: $brand-col-6;
