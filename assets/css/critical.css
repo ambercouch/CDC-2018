@@ -99,7 +99,7 @@ h3, .header--master__strap{ font-size: 1.4117647059rem; line-height: 1.041666666
 .site{ background-color: rgb(255, 255, 255); color: rgb(77, 75, 74); background-position: initial initial; background-repeat: initial initial; }
 .site__header--master{ padding: 0px; margin-bottom: 1.5rem; background-color: rgb(234, 236, 233); background-position: initial initial; background-repeat: initial initial; }
 .site__navigation--main{ background-color: rgb(101, 3, 96); border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: rgb(140, 66, 136); background-position: initial initial; background-repeat: initial initial; }
-.site__tel{ display: block; text-decoration: none; background-color: rgb(234, 236, 233); color: rgb(101, 3, 96); text-align: center; padding-top: 0.75rem; padding-bottom: 0.75rem; background-position: initial initial; background-repeat: initial initial; }
+.site__tel{ font-weight: 700; display: block; text-decoration: none; background-color: rgb(234, 236, 233); color: rgb(101, 3, 96); text-align: center; padding-top: 0.75rem; padding-bottom: 0.75rem; background-position: initial initial; background-repeat: initial initial; }
 @media only screen and (min-width: 800px){
 .site__tel{ display: none; }
 }
@@ -128,7 +128,7 @@ h3, .header--master__strap{ font-size: 1.4117647059rem; line-height: 1.041666666
 .header--master__lang-a{ color: rgb(255, 255, 255); padding-bottom: 2px; }
 .header--master__lang{ padding: 0px 0.5em; }
 .lang-active{ border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(255, 255, 255); }
-.header--master__tel{ font-weight: 100; display: none; position: absolute; bottom: auto; left: auto; right: 0px; top: 2.5em; color: rgb(255, 255, 255); padding: 0.4em 0.75em; border: none; }
+.header--master__tel{ font-weight: 500; display: none; position: absolute; bottom: auto; left: auto; right: 0px; top: 2.5em; color: rgb(255, 255, 255); padding: 0.4em 0.75em; border: none; }
 @media only screen and (min-width: 800px){
 .header--master__tel{ display: block; }
 }
@@ -157,7 +157,10 @@ h3, .header--master__strap{ font-size: 1.4117647059rem; line-height: 1.041666666
 @media only screen and (min-width: 800px){
 .branding{ height: 67px; }
 }
-.branding .branding__site-title{ margin-top: 0.6em; margin-bottom: 0.5em; font-weight: 700; line-height: 1.333em; color: rgb(101, 3, 96); }
+.branding .branding__site-title{ margin-top: 1em; margin-bottom: 0.5em; font-weight: 700; line-height: 1.333em; color: rgb(101, 3, 96); }
+@media only screen and (min-width: 481px){
+.branding .branding__site-title{ margin-top: 0.6em; }
+}
 .branding .branding__site-title a{ color: rgb(101, 3, 96); text-decoration: none; }
 .branding .branding__description{ display: none; color: rgb(101, 3, 96); margin-bottom: 0px; font-weight: 400; }
  .navigation--main, .navigation--services{ display: block; }
@@ -245,6 +248,7 @@ body.home .page__header{ display: none; }
 }
  .form--register .form-contact__submit input, .form-contact--mobile .form-contact__submit input{ display: block; width: 100%; height: 40px; line-height: 1; border: none; margin: 0px auto; top: 0px; font-style: normal; font-family: proxima-nova, sans-serif; font-size: 18px; text-align: center; text-decoration: none; color: rgb(255, 255, 255); background-color: rgb(101, 3, 96); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; box-shadow: rgb(76, 2, 72) 0px 5px 0px, rgba(0, 0, 0, 0.4) 0px 5px 5px 1px, rgba(255, 255, 255, 0.2) 0px 0px 20px inset; text-shadow: rgba(0, 0, 0, 0.2) 0px 1px 0px; transition: all 0.15s ease-in-out; -webkit-transition: all 0.15s ease-in-out; padding: 0px; }
 .icon{ fill: #ffffff; }
+.icon--header{ width: 1.75em; height: 1.75em; vertical-align: middle; padding: 0px 0.25em; }
 .menu--site nav{ clear: both; transition: all 0.5s; -webkit-transition: all 0.5s; overflow: hidden; max-height: 0px; }
 @media only screen and (min-width: 800px){
 .menu--site nav{ overflow: visible; max-height: none; }

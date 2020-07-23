@@ -82,7 +82,7 @@ if (!function_exists('ac_inuk_comment')) :
                 <?php printf(__('%s', 'ac_inuk'), sprintf('<cite class="fn testimonials__cite">%s</cite>', get_comment_author_link())); ?>
               </div><!-- .comment-author .vcard -->
               <?php if ($comment->comment_approved == '0') : ?>
-                <em><?php _e('Your comment is awaiting moderation.', 'ac_inuk'); ?></em>
+                <em><?php _e('Thank you for taking time to leave your testimonial. Your comment is awaiting moderation.', 'ac_inuk'); ?></em>
                 <br />
               <?php endif; ?>
 

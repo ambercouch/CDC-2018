@@ -103,3 +103,48 @@ function cdc_shortcode_video_block($atts) {
 }
 
 add_shortcode('video-block', 'cdc_shortcode_video_block');
+
+
+
+function cdc_shortcode_youtube_block($atts) {
+
+    extract(shortcode_atts(array(
+        'id' => '',
+        'title' => ''
+    ), $atts));
+
+    $output = '';
+    $output .= '<div class="video-preview sc ">';
+
+    $output .= '<div class="video-preview__video-thumb with atts">';
+    $output .= '<div class="video-thumb">';
+    $output .= '<a class="video-link " href="#modal-'.$id.'">';
+
+    $output .= '<svg preserveAspectRatio="none" class="icon video-link__icon--play ">';
+    $output .= '<use xlink:href = "#icon-play" />';
+    $output .= '</svg>';
+    $output .= '<small class="video-link__play-text">Play</small>';
+
+    $output .='</a>';
+
+    $output .= '</div>';
+    $output .= '</div>';
+    $output .= '<h6 class="video-preview__video-title">' .$title . '</h6>';
+
+    $output .= '</div>';
+
+    $output .= '<div class="remodal" data-remodal-id="modal-'.$id.'">';
+    $output .= '<div id="ajax-box"  class="iframe video ">';
+    $output .= '<h1 class="video__title">';
+
+    $output .= '<span class="title" >'. get_field('video_title') .'</span>';
+    $output .= '</h1>';
+    $output .= '<iframe width="560" height="315" src="https://www.youtube.com/embed/'.$id.'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    $output .= '</div>';
+    $output .= '</div>';
+
+
+
+    return $output;
+}
+add_shortcode('youtube-block', 'cdc_shortcode_youtube_block');
