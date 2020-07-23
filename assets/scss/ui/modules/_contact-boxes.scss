@@ -9,32 +9,39 @@ and open the template in the editor.
     description: styles for page-id-25 (contact us)
 */
 
-body{
-  //display: none !important;
-}
+
   .contact-boxes{
     //@extend .grid--full;
     //margin-bottom: $half-spacing-unit;
-    //display: none !important;
+    display: flex;
+    flex-wrap: wrap;
+    //margin: 0 0 -$act-unit -$act-unit !important;
   }
+  [class*=contact-boxes__box]{
+    @extend .islet;
+    width: 46% !important;
+    height: 200px;
+    background: $brand-col-4;
+    margin: 0 4% 4% 0;
+  }
+
+
   .contact-boxes__content{
-    border:solid 1px $brand-col-4;
-    @include x-rem(margin-left, 0.2);
-    @include x-rem(margin-right, 0.2);
-    margin-bottom: $half-spacing-unit;
   }
   .contact-boxes__label{
-    @extend .islet;
-    background: $brand-col-4;
+    //@extend .islet;
     color: #fff;
-    margin-bottom: 0;
+    margin-bottom: $act-unit-t;
+    display: block;
+    @include act-font-size($h3-size);
+    font-weight: 100;
   }
   .contact-boxes__deets{
-    @extend .islet;
-    background: #fff;
+    //@extend .islet;
+    //background: #fff;
     margin-bottom: 0;
-    text-align: center;
-    color: $brand-col-1;
+    text-align:  left;
+    color: white;
   }
   a.contact-boxes__deets,
   .contact-boxes__deets a{
@@ -42,10 +49,9 @@ body{
       border-bottom 0.3s ease,
       box-shadow 0.3s ease,
       text-shadow 0.3s ease;
-    background-color:rgba($brand-col-4, 0.25);
-    color: $brand-col-2;
+    color: white;
     &:hover{
-      color: $brand-col-2--shade;
+      color: white;
       //background: rgba($brand-col-3--tint, 0.1);
       /* border-bottom: solid 1px $brand-col-3;*/
       text-shadow: 0 1px 0 rgba(#fff, 0.8);
