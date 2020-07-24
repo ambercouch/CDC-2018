@@ -19,14 +19,20 @@ and open the template in the editor.
   }
   [class*=contact-boxes__box]{
     @extend .islet;
-    width: 46% !important;
-    height: 200px;
+
+    height: 220px;
     background: $brand-col-4;
-    margin: 0 4% 4% 0;
+    margin: 0 0 4% 0;
+    width: 100%;
+    @include mq($from : tablet){
+      width: 46% !important;
+      margin: 0 4% 4% 0;
+    }
   }
 
 
   .contact-boxes__content{
+    text-align: left !important;
   }
   .contact-boxes__label{
     //@extend .islet;
@@ -60,14 +66,18 @@ and open the template in the editor.
 
     }
   }
+  .contact-boxes__icon{
+    border: solid 1px white;
+    padding: $act-unit-s;
+    display: inline-block;
+    border-radius: 50%;
+  }
 
   .contact-boxes__tel{
     display: none !important;
     @extend .desk-one-half;
     @include x-rem(font-size, 0.9);
-    .contact-boxes__content{
-      //margin-left: 0;
-    }
+
   }
   .contact-boxes__fax{
     @extend .desk-one-half;
