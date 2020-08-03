@@ -60,6 +60,11 @@
 
 .form-contact {
   @extend .form--cdc;
+  input{
+    box-shadow:  none !important;
+    border-radius: 1px !important;
+  }
+
 }
 
 .form--register {
@@ -113,12 +118,34 @@
 
 .form-contact--primary {
   @extend .form-contact;
+
   display: none;
   @include media-query(desk) {
     display: block;
   }
   .widget {
-    padding-bottom: 5px;;
+    padding-bottom: 5px;
+    background: transparent !important;
+  }
+  label{
+    color: $brand-col-2;
+  }
+  input{
+    border: solid 1px $brand-col-4--light;
+  }
+  textarea{
+    border: solid 1px $brand-col-4--light;
+  }
+  .title--widget{
+    background: transparent;
+    color: $brand-col-2;
+    @include inuk-font-size($h3-size);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .textwidget{
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
