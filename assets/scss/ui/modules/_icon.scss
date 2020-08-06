@@ -46,4 +46,10 @@
     vertical-align: middle;
     padding: 0 0.25em;
   }
+  &contact-box{
+    display: block;
+    width: $act-unit;
+    height:  $act-unit;
+    vertical-align: middle;
+  }
 }

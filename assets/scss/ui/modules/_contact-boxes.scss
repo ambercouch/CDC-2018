@@ -11,30 +11,43 @@ and open the template in the editor.
 
 
   .contact-boxes{
-    @extend .grid--full;
+    //@extend .grid--full;
     //margin-bottom: $half-spacing-unit;
-
+    display: flex;
+    flex-wrap: wrap;
+    //margin: 0 0 -$act-unit -$act-unit !important;
   }
+  [class*=contact-boxes__box]{
+    @extend .islet;
+
+    height: 220px;
+    background: $brand-col-4;
+    margin: 0 0 4% 0;
+    width: 100%;
+    @include mq($from : tablet){
+      width: 46% !important;
+      margin: 0 4% 4% 0;
+    }
+  }
+
+
   .contact-boxes__content{
-    border:solid 1px $brand-col-4;
-    @include x-rem(margin-left, 0.2);
-    @include x-rem(margin-right, 0.2);
-
-    margin-bottom: $half-spacing-unit;
-
+    text-align: left !important;
   }
   .contact-boxes__label{
-    @extend .islet;
-    background: $brand-col-4;
+    //@extend .islet;
     color: #fff;
-    margin-bottom: 0;
+    margin-bottom: $act-unit-t;
+    display: block;
+    @include act-font-size($h3-size);
+    font-weight: 100;
   }
   .contact-boxes__deets{
-    @extend .islet;
-    background: #fff;
+    //@extend .islet;
+    //background: #fff;
     margin-bottom: 0;
-    text-align: center;
-    color: $brand-col-1;
+    text-align:  left;
+    color: white;
   }
   a.contact-boxes__deets,
   .contact-boxes__deets a{
@@ -42,10 +55,9 @@ and open the template in the editor.
       border-bottom 0.3s ease,
       box-shadow 0.3s ease,
       text-shadow 0.3s ease;
-    background-color:rgba($brand-col-4, 0.25);
-    color: $brand-col-2;
+    color: white;
     &:hover{
-      color: $brand-col-2--shade;
+      color: white;
       //background: rgba($brand-col-3--tint, 0.1);
       /* border-bottom: solid 1px $brand-col-3;*/
       text-shadow: 0 1px 0 rgba(#fff, 0.8);
@@ -54,16 +66,21 @@ and open the template in the editor.
 
     }
   }
+  .contact-boxes__icon{
+    border: solid 1px white;
+    padding: $act-unit-s;
+    display: inline-block;
+    border-radius: 50%;
+  }
 
   .contact-boxes__tel{
-    @extend .desk-one-quarter;
+    display: none !important;
+    @extend .desk-one-half;
     @include x-rem(font-size, 0.9);
-    .contact-boxes__content{
-      //margin-left: 0;
-    }
+
   }
   .contact-boxes__fax{
-    @extend .desk-one-quarter;
+    @extend .desk-one-half;
     @include x-rem(font-size, 0.9);
   }
   .contact-boxes__email{
@@ -74,6 +91,7 @@ and open the template in the editor.
     }
   }
   .contact-boxes__address{
+    @extend .desk-one-half;
     margin-bottom: 1em;
   }
   [id=cdc-map]{
