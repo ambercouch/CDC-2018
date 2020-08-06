@@ -17,7 +17,7 @@ function langSwitch(){
     $output = '';
     foreach ($langs as $key => $lang){
         $activeClass = ($current_lang == $key)? 'lang-active' : '';
-        $output .= '<span class="header--master__lang" ><a class=" header--master__lang-a '.$activeClass.' " href="'.$lang['url'].'" >'.$lang[native_name].'</a></span>';
+        $output .= '<span class="header--master__lang" ><a class=" header--master__lang-a '.$activeClass.' " href="'.$lang['url'].'" >'.$lang['native_name'].'</a></span>';
         if ($count > 1)
         {
             $output .= '<span> | </span>';
