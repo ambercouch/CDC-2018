@@ -1,4 +1,13 @@
 
+.textwidget{
+  padding: 0;
+  & .btn {
+    box-shadow: none;
+    border-radius: 0;
+    line-height: 2.5em !important;
+    height: 45px;
+  }
+}
 .textwidget--single-image{
   text-align:center;
   .widget{
@@ -21,11 +30,9 @@
     line-height: 1;
   }
   .textwidget{
-    padding: 0 0 1.5em;
-
-  }
-  img{
-    display: inline;
+    img{
+      display: inline;
+    }
   }
   .icon{
     width: 100%;

@@ -2,18 +2,24 @@
 .form--cdc {
   display: block;
   .widget {
-    background-color: $brand-col-4;
+    background-color: transparent;
     padding-bottom: 1em;
-    border-color: $brand-col-4;
+    border-color: transparent;
   }
 
   .title--widget {
-    background-color: $brand-col-2;
-    color: #fff;
+    background-color: white;
+    color: $brand-col-2;
+    @include inuk-font-size($h3-size);
+    padding-left: 0;
+    padding-right: 0;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
   }
   label {
     @extend .zeta;
-    color: #fff;
+    color: $brand-col-2;
     //text-transform: uppercase;
     margin-bottom: 0.25em;
     text-align: left;
@@ -54,6 +60,8 @@
   .form-contact__submit {
     input {
       @extend .btn;
+      box-shadow: none !important;
+      border-radius: 0 !important;
     }
   }
 }
@@ -69,10 +77,13 @@
 
 .form--register {
   @extend .form--cdc;
-  background: $brand-col-4;
+  background: white;
   max-width: 600px;
   margin: 0 auto;
-
+  label {
+    color: $brand-col-2;
+    font-size: .82353rem;
+  }
   .form__header {
     margin-bottom: $half-spacing-unit;
   }
@@ -149,7 +160,7 @@
   }
 }
 
-.wpcf7-mail-sent-ok {
+cf7-mail-sent-ok {
   background: none repeat scroll 0 0 #fff;
   border: 1px solid green;
   box-shadow: 0 0 0 3px #fff;
@@ -359,12 +370,18 @@
 
   }
   &__legend{
-    color:#fff;
-    padding: 0 1em;
+    color: $brand-col-2; //(#fff)
+    padding: 0 0.6em; //(0 1em)
     position: absolute;
     top: -.7em;
-    background: $brand-col-4;;
+    //background: $brand-col-4;
     //margin-bottom: -1em;
+    text-transform: uppercase;
+    font-weight: 300;
+    @include media-query (desk){
+      font-size: 1.41em;
+      letter-spacing: 0.1em;
+    }
 
   }
   &__item{
@@ -380,11 +397,11 @@
   &__q {
     span {
       font-size: 1rem;
-      color: #fff;
+      color: $brand-col-2;
       display: block;
-      margin-bottom: $half-spacing-unit;
       text-align: left;
       font-weight:300;
+      font-size: .82353rem;
     }
 
   }
@@ -547,4 +564,14 @@
     font-style: normal;
   }
 }
-
+.wpcf7-form-control-wrap{
+  input {
+    border: solid 1px $brand-col-4--light;
+  }
+  select {
+    border: solid 1px $brand-col-4--light;
+  }
+  textarea {
+    border: solid 1px $brand-col-4--light;
+  }
+}

@@ -5,9 +5,9 @@
  */
 
 .widget{
+  padding-top: 0 !important;
   .rtl &{
     direction: rtl;
-
   }
   margin-bottom: $half-spacing-unit;
   > ul{
@@ -36,7 +36,4 @@
     }
   }
 
-}
-.textwidget{
-  padding: 0 $base-spacing-unit $base-spacing-unit;
 }
