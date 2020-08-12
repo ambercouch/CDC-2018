@@ -64,33 +64,6 @@
     }
   }
 }
-
-.header--master__lang-switch{
-  position: absolute;
-  bottom: auto;
-  left: auto;
-  right: 0;
-  top: 0.5em;
-  padding: 0.4em 0.75em;
-  color: #fff;
-  @extend .zeta;
-  font-weight: 100;
-  @include media-query(desk){
-    top: 1em;
-  }
-}
-.header--master__lang-a{
-   color: white;
-  padding-bottom: 2px;
- }
-.header--master__lang{
-
-  padding: 0 0.5em;
-}
-.lang-active{
-  border-bottom: solid 1px white ;
-}
-
 .header--master__tel{
   @extend .delta;
   font-weight: 500;
@@ -98,8 +71,9 @@
   position: absolute;
   bottom: auto;
   left: auto;
+
   right: 0;
-  top: 2.5em;
+  top: 1em;
   color: #fff;
   padding: 0.4em 0.75em;
   border:none;;
@@ -134,7 +108,9 @@
 
 }
 
-
+[class*=header--master__strap--]{
+  @extend .header--master__strap;
+}
 .header--master__strap{
   @extend .gamma;
   line-height: 1.5em;

@@ -1,4 +1,13 @@
 
+.textwidget{
+  padding: 0;
+  & .btn {
+    box-shadow: none;
+    border-radius: 0;
+    line-height: 2.5em !important;
+    height: 45px;
+  }
+}
 .textwidget--single-image{
   text-align:center;
   .widget{
@@ -21,11 +30,9 @@
     line-height: 1;
   }
   .textwidget{
-    padding: 0 0 1.5em;
-
-  }
-  img{
-    display: inline;
+    img{
+      display: inline;
+    }
   }
   .icon{
     width: 100%;
@@ -229,6 +236,29 @@
   }
 }
 
+%textwidget--boxy-cfa{
+  background-color: $brand-cfa-col-4;
+  color: #fff;
+  margin-bottom: $base-spacing-unit;
+  @include media-query(desk){
+    margin-bottom: 0;
+    border-radius: 4px;
+  }
+
+  .widget{
+    padding-top: 1em;
+    border-bottom: none;
+  }
+  .title--widget{
+    background-color:transparent;
+    color: #fff;
+  }
+  svg{
+    max-width: 100%;
+  }
+}
+
+
 .textwidget--book-online{
   @extend %textwidget--boxy;
   a.btn{
@@ -241,6 +271,29 @@
     text-shadow: 0 1px 0 rgba(0,0,0,0.2) !important;
     background-color: $brand-col-2--tint;
     box-shadow: 0 4px 0  lighten($brand-col-2--shade, 5%), 0 5px 5px 1px rgba(0, 0, 0, 0.4) !important;
+
+  }
+
+  a.btn:active {
+    position: relative;
+    top: 4px;
+    box-shadow: none;
+  }
+}
+.textwidget--cfa{
+  @extend %textwidget--boxy-cfa;
+  a.btn{
+    color:#fff !important;
+    background-color: $brand-cfa-col-2;
+    border: none !important;
+    line-height: 2.3em;
+    box-shadow: 0 5px 0 $brand-cfa-col-2--shade, 0 5px 5px 1px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 255, 255, 0.2) inset;
+
+  }
+  a.btn:hover {
+    text-shadow: 0 1px 0 rgba(0,0,0,0.2) !important;
+    background-color: $brand-cfa-col-2--tint;
+    box-shadow: 0 4px 0  lighten($brand-cfa-col-2--shade, 5%), 0 5px 5px 1px rgba(0, 0, 0, 0.4) !important;
 
   }
 
