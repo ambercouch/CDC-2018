@@ -11,7 +11,7 @@
     background-color: white;
     color: $brand-col-2;
     @include inuk-font-size($h3-size);
-    padding-left: 0;
+    padding-left: 25px;
     padding-right: 0;
     font-weight: 300;
     text-transform: uppercase;
@@ -107,7 +107,7 @@
   }
 
   form {
-    padding: 0 $base-spacing-unit $base-spacing-unit;
+    padding: 0 0 $base-spacing-unit;
   }
   .title--form {
     @extend .title--widget;
@@ -359,7 +359,6 @@ cf7-mail-sent-ok {
 
 .form--referral {
   @extend .form--satisfaction;
-
   &__fs{
     border:solid 1px rgba(#fff, 0.2);
     margin-top: $base-spacing-unit;
