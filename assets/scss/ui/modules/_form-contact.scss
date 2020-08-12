@@ -2,24 +2,18 @@
 .form--cdc {
   display: block;
   .widget {
-    background-color: transparent;
+    background-color: $brand-col-4;
     padding-bottom: 1em;
-    border-color: transparent;
+    border-color: $brand-col-4;
   }
 
   .title--widget {
-    background-color: white;
-    color: $brand-col-2;
-    @include inuk-font-size($h3-size);
-    padding-left: 25px;
-    padding-right: 0;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    background-color: $brand-col-2;
+    color: #fff;
   }
   label {
     @extend .zeta;
-    color: $brand-col-2;
+    color: #fff;
     //text-transform: uppercase;
     margin-bottom: 0.25em;
     text-align: left;
@@ -60,8 +54,6 @@
   .form-contact__submit {
     input {
       @extend .btn;
-      box-shadow: none !important;
-      border-radius: 0 !important;
     }
   }
 }
@@ -77,13 +69,10 @@
 
 .form--register {
   @extend .form--cdc;
-  background: white;
+  background: $brand-col-4;
   max-width: 600px;
   margin: 0 auto;
-  label {
-    color: $brand-col-2;
-    font-size: .82353rem;
-  }
+
   .form__header {
     margin-bottom: $half-spacing-unit;
   }
@@ -107,7 +96,7 @@
   }
 
   form {
-    padding: 0 0 $base-spacing-unit;
+    padding: 0 $base-spacing-unit $base-spacing-unit;
   }
   .title--form {
     @extend .title--widget;
@@ -160,7 +149,7 @@
   }
 }
 
-cf7-mail-sent-ok {
+.wpcf7-mail-sent-ok {
   background: none repeat scroll 0 0 #fff;
   border: 1px solid green;
   box-shadow: 0 0 0 3px #fff;
@@ -359,28 +348,25 @@ cf7-mail-sent-ok {
 
 .form--referral {
   @extend .form--satisfaction;
+  form{
+    padding: 0 $half-spacing-unit $half-spacing-unit;
+  }
   &__fs{
     border:solid 1px rgba(#fff, 0.2);
     margin-top: $base-spacing-unit;
-    padding: $base-spacing-unit $half-spacing-unit $half-spacing-unit;
+    padding: $base-spacing-unit 0 $half-spacing-unit;
     display: flex;
     flex-wrap: wrap;
     position: relative;
 
   }
   &__legend{
-    color: $brand-col-2; //(#fff)
-    padding: 0 0.6em; //(0 1em)
+    color:#fff;
+    padding: 0 1em;
     position: absolute;
     top: -.7em;
-    //background: $brand-col-4;
+    background: $brand-col-4;;
     //margin-bottom: -1em;
-    text-transform: uppercase;
-    font-weight: 300;
-    @include media-query (desk){
-      font-size: 1.41em;
-      letter-spacing: 0.1em;
-    }
 
   }
   &__item{
@@ -392,15 +378,22 @@ cf7-mail-sent-ok {
     .is-hidden{
       display: none;
     }
+    @include media-query(palm){
+      width: 100%;
+      margin-bottom: 0;
+    }
   }
   &__q {
     span {
       font-size: 1rem;
-      color: $brand-col-2;
+      color: #fff;
       display: block;
+      margin-bottom: $half-spacing-unit;
       text-align: left;
       font-weight:300;
-      font-size: .82353rem;
+      @include media-query(palm){
+        margin-bottom: $half-spacing-unit / 4;
+      }
     }
 
   }
@@ -410,7 +403,7 @@ cf7-mail-sent-ok {
     flex-direction: column;
     @include media-query(palm) {
 
-      padding: $half-spacing-unit;
+      padding: 0;
       margin-bottom: $half-spacing-unit;
     }
     @include media-query(lap-and-up) {
@@ -483,6 +476,18 @@ cf7-mail-sent-ok {
   &__a--ttt{
     @extend .form--referral__a;
     flex-wrap: wrap;
+    flex-direction: row;
+    @include media-query(palm){
+
+      padding: 0;
+    }
+
+    input{
+      @include media-query(palm){
+
+        padding: 0.5em 0.25em;
+      }
+    }
   }
   &__a--upper-left{
     width: 50%;
@@ -563,14 +568,4 @@ cf7-mail-sent-ok {
     font-style: normal;
   }
 }
-.wpcf7-form-control-wrap{
-  input {
-    border: solid 1px $brand-col-4--light;
-  }
-  select {
-    border: solid 1px $brand-col-4--light;
-  }
-  textarea {
-    border: solid 1px $brand-col-4--light;
-  }
-}
+

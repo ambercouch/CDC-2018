@@ -56,21 +56,6 @@ a, a:link, a:active{
     text-shadow: none;;
   }
 }
-%link-style-1--cfa{
-  transition: background 0.3s ease;
-  color: $brand-cfa-col-2;
-  padding: 0 3px;
-  background: transparent;
-  border: none;
-  border-bottom:solid 1px rgba($brand-cfa-col-2, 0.3);
-  display: inline;
-  &:hover{
-    background: rgba($brand-cfa-col-2--tint, 0.2) !important;
-    text-shadow: 0 1px 0 rgba(#fff, 0.5);
-    border-bottom:solid 1px rgba($brand-cfa-col-2, 1);
-
-  }
-}
 .text-columns--2{
   @include media-query(lap-and-up){
     list-style-position: inside;

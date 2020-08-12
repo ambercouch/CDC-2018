@@ -1,8 +1,7 @@
-Console output: pluginsConsole output: no palmConsole output: [object Object]Console output: pageConsole output: 1200Console output: Welcome To Cathedral Dental Clinicarticle, aside, header, nav{ display: block; }
+Console output: pluginsConsole output: no palmConsole output: [object Object]Console output: pageConsole output: 1200Console output: Welcome To Cathedral Dental Clinic aside, header, nav{ display: block; }
 html{ font-family: sans-serif; }
 body{ margin: 0px; }
 h1{ font-size: 2em; margin: 0.67em 0px; }
- strong{ font-weight: bold; }
 img{ border: 0px; }
 svg:not(:root){ overflow: hidden; }
  input, select{ font-family: inherit; font-size: 100%; margin: 0px; }
@@ -36,14 +35,13 @@ img[height], img[width]{ max-width: none; }
  .menu--site__menu-list > li > a{ padding: 12.5px; }
  .content__widget-area--below .widget-area__widget, .form--register li, .navigation--main__menu{ width: 100%; }
 @media only screen and (max-width: 799px) and (min-width: 481px){
- .content__single-page, .content__widget-area--main, .content__widget-area--below .widget-area__widget{ width: 100%; }
+ .content__widget-area--below .widget-area__widget{ width: 100%; }
 }
 @media only screen and (min-width: 481px){
  .form--register li{ width: 50%; }
 }
 @media only screen and (min-width: 800px){
- .content__widget-area--main, .content__widget-area--below .widget-area__widget{ width: 33.333%; }
- .content__single-page{ width: 66.666%; }
+ .content__widget-area--below .widget-area__widget{ width: 33.333%; }
 }
 html{ font-style: normal; font-variant: normal; font-weight: normal; font-size: 0.95625em; line-height: 1.4705882353; font-family: proxima-nova, sans-serif; }
 @media only screen and (min-width: 481px){
@@ -53,11 +51,11 @@ body{ font-size: 90%; background-color: rgb(255, 255, 255); background-position:
 @media only screen and (min-width: 481px){
 body{ font-size: 100%; }
 }
- .header--master, .navigation--main, .navigation--services, .content{ width: auto; margin-left: auto; margin-right: auto; }
+ .header--master, .navigation--main, .navigation--services{ width: auto; margin-left: auto; margin-right: auto; }
 @media only screen and (min-width: 800px){
  .header--master, .navigation--main, .navigation--services{ max-width: 64pc; width: 100%; }
 }
-h1, h2, h3{ margin-bottom: 0.75em; }
+h1, h2{ margin-bottom: 0.75em; }
 a, a:link{ text-decoration: none; }
  h1{ font-size: 1.4117647059rem; line-height: 1.3888888889; }
 @media only screen and (max-width: 799px) and (min-width: 481px){
@@ -73,12 +71,12 @@ a, a:link{ text-decoration: none; }
 @media only screen and (min-width: 800px){
  h2{ font-size: 1.7647058824rem; line-height: 1.6666666667; }
 }
-h3, .header--master__strap{ font-size: 1.0859728507rem; line-height: 1.0416666667; }
+ .header--master__strap{ font-size: 1.0859728507rem; line-height: 1.0416666667; }
 @media only screen and (max-width: 799px) and (min-width: 481px){
-h3, .header--master__strap{ font-size: 1.2834224599rem; line-height: 1.0416666667; }
+ .header--master__strap{ font-size: 1.2834224599rem; line-height: 1.0416666667; }
 }
 @media only screen and (min-width: 800px){
-h3, .header--master__strap{ font-size: 1.4117647059rem; line-height: 1.0416666667; }
+ .header--master__strap{ font-size: 1.4117647059rem; line-height: 1.0416666667; }
 }
  .header--master__tel, .home .header--master__tel{ font-size: 0.9803921569rem; line-height: 1.25; }
 @media only screen and (min-width: 481px){
@@ -121,7 +119,7 @@ h3, .header--master__strap{ font-size: 1.4117647059rem; line-height: 1.041666666
 .header--master__banner-image{ top: -255px; max-width: 50pc !important; }
 .home .header--master__banner-image{ top: -75px; right: -150px !important; }
 }
-.header--master__tel{ font-weight: 100; display: none; position: absolute; bottom: auto; left: auto; right: 0px; top: 1em; color: rgb(255, 255, 255); padding: 0.4em 0.75em; border: none; }
+.header--master__lang-switch{ position: absolute; bottom: auto; left: auto; right: 0px; top: 0.5em; padding: 0.4em 0.75em; color: rgb(255, 255, 255); font-weight: 100; }
 @media only screen and (min-width: 800px){
 .header--master__lang-switch{ top: 1em; }
 }
@@ -199,19 +197,18 @@ h3, .header--master__strap{ font-size: 1.4117647059rem; line-height: 1.041666666
 .menu-item-has-children > a{ padding-right: 25px !important; }
 .menu-item-has-children::after{ content: url(/content/themes/CDC2014/assets/images/svg/down.svg); width: 10px; height: 10px; position: absolute; right: 0.6em; top: 15px; }
 @media only screen and (min-width: 800px){
-.content__widget-area--below .widget{ height: 150px; }
+.content__widget-area--below .widget{ height: auto; }
 }
  .menu--services img, .page img{ display: block; max-width: 100%; height: auto; overflow: hidden; }
 body.home .page__header{ display: none; }
  .form--register .title--form, .title--article{ text-decoration: none; margin-bottom: 0px; }
 .title--article{ display: block; padding-left: 1rem; font-weight: 500; color: rgb(101, 3, 96); }
-.title--widget, .form--register .title--form{ font-weight: 300; text-transform: uppercase; color: rgb(77, 75, 74); background-color: rgb(255, 255, 255); padding: 12.5px 25px; letter-spacing: 0.1em; background-position: initial initial; background-repeat: initial initial; }
+ .form--register .title--form{ font-weight: 300; text-transform: uppercase; color: rgb(77, 75, 74); background-color: rgb(255, 255, 255); padding: 12.5px 25px; letter-spacing: 0.1em; background-position: initial initial; background-repeat: initial initial; }
 .widget-area{ display: block; }
 .widget{ border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: rgb(255, 255, 255); margin-bottom: 3px; }
 @media only screen and (min-width: 800px){
 .widget{ margin-bottom: 25px; }
 }
-.widget__header{ position: relative; margin-bottom: 1em; }
 .textwidget{ padding: 0px 25px 25px; }
 .navigation--main__menu .menu--site__menu-list ul{ background-color: rgb(178, 129, 175); z-index: 4; background-position: initial initial; background-repeat: initial initial; }
 .navigation--main__menu .menu--site__menu-list ul li a{ display: block; padding: 12.5px; }
@@ -264,7 +261,7 @@ body.home .page__header{ display: none; }
 @media only screen and (min-width: 800px){
 .menu--site nav > ul > .menu-item a{ border-bottom-style: none; }
 }
-.menu--responsive-toggle__toggle{ position: absolute; float: right; display: block; padding: 0.75em 2.75em 0.75em 0.5em; margin: 0px 0px 0.5em; line-height: 1; text-decoration: none; color: rgb(255, 255, 255); background-color: rgb(140, 66, 136); top: 1em; right: 0px; font-size: 1.14em; text-transform: uppercase; background-position: initial initial; background-repeat: initial initial; }
+.menu--responsive-toggle__toggle{ position: absolute; float: right; display: block; padding: 0.75em 2.75em 0.75em 0.5em; margin: 0px 0px 0.5em; line-height: 1; text-decoration: none; color: rgb(255, 255, 255); background-color: rgb(140, 66, 136); top: 2.8em; right: 0px; font-size: 1.14em; text-transform: uppercase; background-position: initial initial; background-repeat: initial initial; }
 @media only screen and (min-width: 800px){
 .menu--responsive-toggle__toggle{ display: none; }
 }

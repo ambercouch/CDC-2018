@@ -4,15 +4,9 @@
     margin-bottom: 0;
   }
   .title--widget{
-    background: transparent;
-    color: $brand-col-2;
-    @include inuk-font-size($h3-size);
-    font-size: 0.9em !important;
-    padding-left: 0;
-    padding-right: 0;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    background: $brand-col-2;
+    color: #fff;
+    position: relative;
   }
   .widget{
     border-color: $brand-col-2;
@@ -79,17 +73,3 @@
   }
 }
 
-.widget_nav_menu .title--widget {
-  [data-post-slug="facial_aesthetics"] &{
-    background: $brand-cfa-col-2;
-  }
-}
-
-[data-post-slug="facial_aesthetics"] .widget_nav_menu {
-  .widget {
-    border-color: $brand-cfa-col-2;
-    @include media-query(portable) {
-      margin-bottom: $base-spacing-unit !important;
-    }
-  }
-}

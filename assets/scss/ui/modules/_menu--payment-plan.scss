@@ -20,7 +20,7 @@
     height:100px;
   }
   .menu-item{
-    width: 50%;
+    width: 100%;
     @include media-query(desk){
       width: 50%;
     }

@@ -5,9 +5,9 @@
  */
 
 .widget{
-  padding-top: 0 !important;
   .rtl &{
     direction: rtl;
+
   }
   margin-bottom: $half-spacing-unit;
   > ul{
@@ -21,9 +21,6 @@
   @include media-query(desk){
     margin-bottom: $base-spacing-unit;
   }
-  .has-no-border &{
-    border-bottom: 0px !important;
-  }
 }
 
 .widget__header{
@@ -36,4 +33,7 @@
     }
   }
 
+}
+.textwidget{
+  padding: 0 $base-spacing-unit $base-spacing-unit;
 }
