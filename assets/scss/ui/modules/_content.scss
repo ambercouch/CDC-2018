@@ -94,7 +94,7 @@
   }
   .widget{
     @include media-query(desk){
-      height: auto;
+      height: 150px;
     }
 
   }
@@ -138,3 +138,51 @@
 
 
 }
+
+//CFA colours
+[data-post-slug=facial_aesthetics] .content__widget-area--main{
+  @extend .content__widget-area;
+  a{
+    transition: background 0.3s ease,
+    border-bottom 0.3s ease,
+    box-shadow 0.3s ease,
+    text-shadow 0.3s ease;
+    color: $brand-cfa-col-2;
+    text-decoration: none;
+    border: solid 1px #fff;
+    background-color:rgba($brand-cfa-col-4, 0.25);
+    &:hover{
+      color: $brand-cfa-col-2--shade;
+      //background: rgba($brand-col-3--tint, 0.1);
+      /* border-bottom: solid 1px $brand-col-3;*/
+      text-shadow: 0 1px 0 rgba(#fff, 0.8);
+      box-shadow: inset 0px 0px 10px rgba($brand-cfa-col-4, 1);
+      background-color:rgba($brand-cfa-col-4, 0.5);
+
+    }
+  }
+  .current-menu-item a{
+    position: relative;
+    //background: $brand-col-4;
+    //color: #fff;
+    padding-left: 2em !important;
+    &:hover{
+      //color: #fff;
+      text-shadow: none;
+      box-shadow: none;
+      background-color:rgba($brand-cfa-col-4, 0.25);
+      color: $brand-cfa-col-2
+    }
+    &:before{
+      content: '';
+      height: 100%;
+      width: 1em;
+      background: $brand-cfa-col-2;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
