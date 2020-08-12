@@ -73,7 +73,7 @@
   left: auto;
 
   right: 0;
-  top: 1em;
+  top: 2.5em;
   color: #fff;
   padding: 0.4em 0.75em;
   border:none;;
@@ -211,4 +211,15 @@
   .rtl &{
     direction: rtl;
   }
+}
+
+.header--master__lang-switch {
+  position: absolute;
+  bottom: auto;
+  left: auto;
+  right: 0;
+  top: .5em;
+  padding: .4em .75em;
+  color: #fff;
+  font-weight: 100;
 }
