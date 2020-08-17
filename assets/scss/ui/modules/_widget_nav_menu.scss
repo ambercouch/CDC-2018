@@ -12,6 +12,9 @@
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    .content__widget-area--below & {
+      font-size: 0.9em;
+    }
   }
   .widget{
     border-color: $brand-col-2;
