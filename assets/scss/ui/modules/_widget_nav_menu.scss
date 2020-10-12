@@ -83,7 +83,8 @@
 
 .widget_nav_menu .title--widget {
   [data-post-slug="facial_aesthetics"] &{
-    background: $brand-cfa-col-2;
+    background: transparent;
+    color: $brand-cfa-col-2;
   }
 }
 
@@ -95,3 +96,4 @@
     }
   }
 }
+
