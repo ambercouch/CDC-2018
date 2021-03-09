@@ -99,7 +99,7 @@
   }
   .widget{
     @include media-query(desk){
-      height: 150px;
+      height: auto;
     }
 
   }

@@ -10,3 +10,70 @@
   }
 
 }
+
+
+.form--satisfaction__a--check span {
+  color:#4d4b4a !important;
+  font-weight:300;
+}
+
+.form--satisfaction__q span {
+  color: #4d4b4a !important;
+  font-weight:400 !important;
+}
+
+.menu--site__container{
+  margin-top:10px
+}
+
+.site__tel {
+  font-weight: bold;
+  font-size:1.4em;
+}
+
+.page__content iframe{
+  max-width:100% !important;
+}
+
+.header--master__lang-switch {
+  font-weight: 500 !important;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .menu-item-has-children:after {
+    content:none  !important;
+  }
+}
+
+@media only screen and (max-width: 480px){
+  .home .header--master__banner-image {
+    right: -185px !important;
+    top: 0;
+  }
+}
+
+.price_list .prefix{
+  white-space: nowrap
+}
+.sgpb-main-html-content-wrapper{
+  padding: 0 12px !important
+}
+.sgpb-main-html-content-wrapper p{
+  padding: 0 !important
+}
+
+.sgpb-main-html-content-wrapper h3{
+  background: 0 0;
+  color: #650360 !important;
+  font-size: 24px;
+  font-size: 1.41176rem;
+  line-height: 1.04167;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.form--satisfaction__a--check span {
+  font-size: 1rem;
+  color: #333;
+}
