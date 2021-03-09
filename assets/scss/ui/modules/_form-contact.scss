@@ -66,7 +66,15 @@
   }
 }
 
+
+
 .form-contact {
+  &__wrapper{
+    padding: 0 $act-unit;
+    @include media-query(lap-and-up){
+      padding: 0;
+    }
+  }
   @extend .form--cdc;
   input{
     box-shadow:  none !important;
@@ -114,7 +122,7 @@
     text-align: left;
     .remodal &{
       padding-left: 25px;
-    } 
+    }
     .rtl &{
       text-align: right;
       direction: rtl;
@@ -124,6 +132,7 @@
 
 .form-contact--mobile {
   @extend .form-contact;
+  padding: $act-unit !important;
   @include media-query(desk) {
     display: none !important;
   }
