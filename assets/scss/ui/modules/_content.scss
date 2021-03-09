@@ -29,6 +29,10 @@
 
 .content__widget-area--main{
   @extend .content__widget-area;
+  padding: 0 $act-unit 0 $act-unit-l !important;
+  @include media-query(desk){
+    padding: 0 0 0 $act-unit !important;
+  }
   a{
     transition: background 0.3s ease,
       border-bottom 0.3s ease,
@@ -71,6 +75,7 @@
       top: 0;
     }
   }
+
 }
 .content__widget-area--below{
   @include media-query(desk){

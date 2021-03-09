@@ -1,0 +1,12 @@
+.hero-banner--winter-girl{
+  .header--master__banner-image{
+    left: -120px;
+    top: -50px;
+    @include media-query(lap-and-up){
+      left: auto;
+      top: -25px;
+      right: 0 !important;
+    }
+  }
+
+}
