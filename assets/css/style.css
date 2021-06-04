@@ -3912,7 +3912,7 @@ and open the template in the editor.
   .widget_nav_menu .menu--responsive-toggle__toggle {
     background: #650360 !important;
     position: absolute;
-    top: 0;
+    top: 30px;
     color: #fff !important;
     border: none; }
     .widget_nav_menu .menu--responsive-toggle__toggle:hover {
@@ -4259,7 +4259,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
+/*
     Created on : 14-Nov-2014, 08:10:33
     Author     : Richard
 */
