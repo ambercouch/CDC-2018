@@ -6,3 +6,4 @@ dist/
 assets/images/defs.svg
 
 gulpfile.js
+.DS_Store
