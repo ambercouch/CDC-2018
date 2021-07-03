@@ -117,14 +117,18 @@
 .content__widget-area--footer{
   @extend .container;
 
-  @include media-query(palm){
-    max-width: 30em;
-    margin: 0 auto;
-  }
-  @include media-query(lap){
-    max-width: 30em;
-    margin: 0 auto;
-  }
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  // @include media-query(palm){
+  //   padding-left: 1rem;
+  //   padding-right: 1rem;
+  // }
+
+  // @include media-query(lap){
+  //   padding-left: 1rem;
+  //   padding-right: 1rem;
+  // }
 
   .widget-area{
     @extend .grid;
