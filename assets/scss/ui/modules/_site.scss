@@ -19,7 +19,7 @@
 .site__footer-content{
   padding: 2rem 0;
   background: $brand-col-11;
-  border-top: 3px solid #EBC8E9;
+  border-top: 3px solid $border-colour;
 }
 .site__footer{
   padding: 0 0 $base-spacing-unit 0;
@@ -53,4 +53,19 @@
 
   }
 
+}
+
+.site__below-content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  .content__widget-area--below {
+    border-top: none;
+    border-bottom: none;
+  }
+
+  .menu {
+    margin-left: -2.2rem;
+    margin-right: -2.2rem;
+  }
 }

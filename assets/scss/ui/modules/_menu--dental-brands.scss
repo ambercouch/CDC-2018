@@ -1,17 +1,21 @@
 .menu--dental-brands{
   @extend %menu--image-menu;
-  .widget__header{
-    margin-bottom: 0.5em;
 
+  margin-top: 1rem;
+
+  .widget__header {
+    margin-bottom: 2rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid $border-colour;
   }
-  .title--widget{
-    background: $brand-col-4 !important;
-    color: #fff !important;
-    padding-bottom: 0.3em;
-    padding-top: 0.4em;
-    line-height: 1;
-    text-align: center;
+
+  .title--widget {
+    margin: 0;
+    padding: 0 !important;
+    font-size: 1.1rem !important;
+    color: $brand-primary;
   }
+
   .widget{
     border-color: $brand-col-3--tint;
     border-width: 0px;

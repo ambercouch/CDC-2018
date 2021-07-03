@@ -1,18 +1,22 @@
 .menu--payment-plan{
   @extend %menu--image-menu;
-  width: 33.33% !important;
-  .widget__header{
-    margin-bottom: 0.5em;
 
+  width: 33.33% !important;
+  padding-left: 0.5rem;
+
+  .widget__header {
+    margin-bottom: 2rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid $border-colour;
   }
-  .title--widget{
-    background: $brand-col-4 !important;
-    color: #fff !important;
-    padding-bottom: 0.3em;
-    padding-top: 0.4em;
-    line-height: 1;
-    text-align: center;
+
+  .title--widget {
+    margin: 0;
+    padding: 0 !important;
+    font-size: 1.1rem !important;
+    color: $brand-primary;
   }
+
   .widget{
     border-color: $brand-col-3--tint;
     border-width: 0px;
@@ -21,6 +25,7 @@
   }
   .menu-item{
     width: 100%;
+
     @include media-query(desk){
       width: 50%;
     }
@@ -36,22 +41,4 @@
     padding-bottom: .3em;
     padding-top: .4em;
   }
-
-  .widget__header{
-    &:before{
-      content: '';
-      width: 1px;
-      display: block;
-      height: 100%;
-      background: #fff;
-      position: absolute;
-      z-index: 1;
-      border: solid 4px $brand-col-4;
-      border-left: none;
-      border-right: none;
-    }
-  }
-
-
 }
-

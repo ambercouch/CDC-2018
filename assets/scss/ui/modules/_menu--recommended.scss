@@ -1,18 +1,22 @@
 .menu--recommended{
   @extend %menu--image-menu;
-  width: 66.6666% !important;
-  .widget__header{
-    margin-bottom: 0.5em;
 
+  width: 66.6666% !important;
+  padding-right: 0.5rem;
+
+  .widget__header {
+    margin-bottom: 2rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid $border-colour;
   }
-  .title--widget{
-    background: $brand-col-4 !important;
-    color: #fff !important;
-    padding-bottom: 0.3em;
-    padding-top: 0.4em;
-    line-height: 1;
-    text-align: center;
+
+  .title--widget {
+    margin: 0;
+    padding: 0 !important;
+    font-size: 1.1rem !important;
+    color: $brand-primary;
   }
+
   .widget{
     border-color: $brand-col-3--tint;
     border-width: 0px;
@@ -32,7 +36,8 @@
     .menu-item:nth-of-type(8) a{
     //border-bottom: solid 1px rgba($brand-col-1,0.3);
   }
-
-
 }
 
+#menu-recommended {
+  margin-right: 0;
+}
