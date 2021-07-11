@@ -42,3 +42,42 @@ function wpa54064_inspect_scripts() {
 }
 add_action( 'wp_print_scripts', 'wpa54064_inspect_scripts' , 1000);
 
+/**
+ * Enable TinyMCE style (format) select
+ */
+
+add_filter( 'mce_buttons_2', function( $buttons ) {
+	array_unshift( $buttons, 'styleselect' );
+
+	return $buttons;
+} );
+
+/**
+ * Add TinyMCE style options
+ */
+
+add_filter( 'tiny_mce_before_init', function( $init_array ) {
+	// Define the style_formats array
+	$style_formats = [
+		// Each array child is a format with it's own settings
+		[
+			'title'   => '.large-text',
+			'block'  => 'div',
+			'classes' => 'large-text',
+			'wrapper' => true,
+        ],
+    ];
+
+	// Insert the array, JSON ENCODED, into 'style_formats'
+	$init_array['style_formats'] = wp_json_encode( $style_formats );
+
+	return $init_array;
+} );
+
+/**
+ * Add the default editor stylesheet
+ */
+
+add_action( 'after_setup_theme', function() {
+    add_editor_style();
+} );
