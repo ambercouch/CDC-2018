@@ -55,22 +55,37 @@
     &:not(:last-child) {
       border-bottom: 1px solid $border-colour;
     }
-  }
 
-  .current-menu-item a {
-    position: relative;
-    color: white !important;
-    background-color: $brand-primary;
+    a {
+      position: relative;
+      padding-right: 3rem;
 
-    &:after{
-      content: '';
-      height: 100%;
-      width: 1em;
-      background: green;
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0.7rem;
+        height: 0.7rem;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%) rotate(45deg);
+        border-width: 0.25rem 0.25rem 0 0;
+        border-style: solid;
+        border-color: $brand-primary;
+      }
+
+      &:hover::after {
+        border-color: white;
+      }
+    }
+
+    &.current-menu-item a {
+      color: white !important;
+      background-color: $brand-primary;
+
+      &:after {
+        border-color: white;
+      }
     }
   }
 }
