@@ -3,3 +3,8 @@
   font-size: 1.2rem;
   color: #650360;
 }
+
+.tile-list {
+  margin: 1rem 0;
+  border: 2px dashed grey;
+}

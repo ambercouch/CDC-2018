@@ -66,6 +66,14 @@ add_filter( 'tiny_mce_before_init', function( $init_array ) {
 			'classes' => 'large-text',
 			'wrapper' => true,
         ],
+
+        // The tile list won't work to wrap the ul elements, so adding it directly in the WYSIWYG code
+		// [
+		// 	'title'   => '.tile-list',
+		// 	'block'  => 'div',
+		// 	'classes' => 'tile-list',
+		// 	'wrapper' => true,
+        // ],
     ];
 
 	// Insert the array, JSON ENCODED, into 'style_formats'
