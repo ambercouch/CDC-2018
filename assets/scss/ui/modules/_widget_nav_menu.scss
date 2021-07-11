@@ -9,15 +9,17 @@
     @include inuk-font-size($h3-size);
     padding-left: 0;
     padding-right: 0;
-    font-weight: 300;
+    font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0;
+
     .content__widget-area--below & {
       font-size: 0.9em;
     }
   }
   .widget{
-    border-color: $brand-col-2;
+    border-color: transparent;
+
     @include media-query(portable){
       margin-bottom: $base-spacing-unit !important;
     }

@@ -53,6 +53,40 @@
     margin-bottom: 0.2em;
     font-weight: 500;
   }
+
+  // Added to content via the WYSIWYG
+  .introductory-text {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: $brand-primary;
+  }
+
+  table {
+    width: 100%;
+    margin: 3rem 0;
+    border-bottom: 1px solid $border-colour;
+
+    th {
+      font-weight: bold !important;
+      text-align: left !important;
+    }
+
+    td {
+      font-weight: normal !important;
+    }
+
+    th,
+    td {
+      border-left: none !important;
+      border-right: none !important;
+      border-top: 1px solid $border-colour !important;
+      border-bottom: none !important;
+      color: $brand-primary;
+      font-size: 1.1rem;
+      text-align: left;
+    }
+  }
+
   .staff{
     font-size: 0.9em;
     @extend .block-list;
