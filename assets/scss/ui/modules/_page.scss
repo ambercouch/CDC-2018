@@ -228,3 +228,93 @@
   @extend %link-style-1--cfa;
 }
 
+//** Accordion added to the content via the [accordion_content] shortcode **//
+
+.page-accordion-content {
+  margin: 0 0 2rem 0;
+
+  .main-item {
+    > .title {
+      position: relative;
+      padding: 0.4rem 1rem;
+      background-color: rgba($brand-primary, 0.2);
+      color: $brand-primary;
+      font-size: 1.2rem;
+      transition: all 0.2s;
+      cursor: pointer;
+      border-bottom: 1px solid white;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0.7rem;
+        height: 0.7rem;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%) rotate(135deg);
+        border-width: 0.25rem 0.25rem 0 0;
+        border-style: solid;
+        border-color: $brand-primary;
+        transition: all 0.2s;
+      }
+
+      &:hover::after {
+        border-color: white;
+      }
+
+      &.active::after {
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+
+    &.active,
+    &:hover {
+      > .title {
+        background-color: $brand-primary;
+        color: white;
+      }
+    }
+
+    .title:not(.active) ~ .items {
+      display: none;
+    }
+
+    .items {
+      .item {
+        display: flex;
+        padding: 0.8rem 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 2px solid $border-colour;
+        }
+
+        .item-title {
+          padding-right: 2rem;
+        }
+
+        .values {
+          margin-left: auto;
+          flex: 0 0 8rem;
+
+          .value {
+            display: flex;
+
+            .value-text {
+              flex: 0 0 3rem;
+              margin-left: auto;
+              padding-left: 0.4rem;
+              text-align: right;
+              font-weight: bold;
+              color: $brand-primary;
+            }
+
+            &:not(:first-child) {
+              margin-top: 0.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
