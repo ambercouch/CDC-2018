@@ -271,11 +271,13 @@
       }
     }
 
-    &.active,
-    &:hover {
-      > .title {
-        background-color: $brand-primary;
-        color: white;
+    > .title.active,
+    &:hover > .title {
+      background-color: $brand-primary;
+      color: white;
+
+      &::after {
+        border-color: white;
       }
     }
 
