@@ -61,8 +61,9 @@ if (!function_exists('ac_inuk_setup')) :
      * This theme uses wp_nav_menu() in one location.
      */
     register_nav_menus(array(
-        'primary' => __('Primary Menu', 'ac_inuk'),
-        'services' => __('Services Menu', 'ac_inuk')
+        'primary'        => __('Primary Menu', 'ac_inuk'),
+        'services'       => __('Services Menu', 'ac_inuk'),
+        'footer_notices' => __('Footer Notices Menu', 'ac_inuk'),
     ));
 
     /**

@@ -18,11 +18,18 @@
 <footer class="site__footer" id="colophon"  role="contentinfo">
   <div class="footer--master" >
     <div class="grid">
-      <div class="footer--master__site-info" >
-        <div class="site-info">
-          <small><?php _e('© 2012 Cathedral Dental Clinic', 'ac_inuk'); ?></small><br/>
-          <small><?php _e('Website design by <a href="http://ambercouch.co.uk"><strong>Ambercouch', 'ac_inuk'); ?></strong></a></small>
+      <div class="footer--master__site-info">
+        <nav class="nav-footer">
+          <?php
+          if ( has_nav_menu('footer_notices') ) :
+            echo wp_nav_menu( ['theme_location' => 'footer_notices', 'menu_class' => 'nav'] );
+          endif;
+          ?>
+        </nav>
 
+        <div class="site-info">
+          <span class="copyright"><?php _e('© 2012 Cathedral Dental Clinic', 'ac_inuk'); ?></span> |
+          <?php _e('Website design by <a href="http://ambercouch.co.uk">Ambercouch</a>', 'ac_inuk'); ?>
         </div><!-- .site-info -->
       </div>
     </div>
