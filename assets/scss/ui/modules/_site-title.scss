@@ -3,6 +3,9 @@
   line-height: 0;
   margin-left: $base-spacing-unit;
 
+  @include media-query(desk){
+    margin-top: 1.5em;
+  }
 }
 @media (min-width: 1024px) {
   .site-title{
@@ -20,8 +23,8 @@
 }
 
 .site-title__icon--desk{
-  width:265px;
-  height:89px;
+  width: 212px;
+  height: 71px;
   display: none !important;
   @include media-query(desk){
     display:block !important;

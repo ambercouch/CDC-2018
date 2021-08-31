@@ -53,14 +53,6 @@
                 <span class="c-sep"> | </span>
                 <?php echo  langSwitch(); ?>
               </div>
-              <div class="header--master__tel">
-                <a href="tel:02920382671">
-                  <svg preserveAspectRatio="none" class="icon header--master__tel__call ">
-                  <use xlink:href="#icon-call" />
-                  </svg>
-                  029 2038 2671
-                </a>
-              </div>
             </div><!-- /.branding -->
             <a id="site_menu_toggle" class="menu--responsive-toggle__toggle" href="#menu">Menu</a>
             <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => 'nav', 'container_class' => 'menu--site__container', 'menu_class' => 'menu--site__menu-list')); ?>

@@ -9,7 +9,8 @@
 
   .branding__site-title{
     @extend .kilo;
-    margin-top: $act-unit-l;
+
+    margin-top: 0.5em;
     margin-bottom: 0.5em;
     font-weight: bold;
     line-height: 1.333em;

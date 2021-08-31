@@ -214,6 +214,7 @@
 }
 
 .header--master__lang-switch {
+  display: none;
   position: absolute;
   bottom: auto;
   left: auto;
@@ -222,4 +223,8 @@
   padding: .4em .75em;
   color: #fff;
   font-weight: 100;
+
+  @include media-query(desk) {
+    display: block;
+  }
 }

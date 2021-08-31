@@ -23,7 +23,13 @@
 }
 
 .menu--site__container{
-  margin-top:10px
+  margin-top: 0;
+
+  @media only screen and (min-width: 960px) {
+    margin-top: -2.8em;
+    margin-bottom: 1.4em;
+    transition: none !important;
+  }
 }
 
 .site__tel {
