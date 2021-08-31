@@ -24,8 +24,9 @@
   .home &{
     height: 335px;
     display:block;
-    @include media-query(desk){
-      height: 325px;
+
+    @include media-query(desk) {
+      height: 390px;
     }
   }
 }
@@ -135,8 +136,17 @@
       min-width: unset;
     }
 
+    p {
+      margin-bottom: 1em;
+    }
+
     .btn {
       font-weight: normal;
+    }
+
+    & > *:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
     }
   }
 

@@ -45,6 +45,7 @@
   @include x-rem(padding-bottom, 1);
   @extend %post__img;
 }
+
 .menu--services__menu-list{
   display: flex;
   flex-wrap: wrap;
@@ -120,6 +121,96 @@
   }
 
 }
+
+.home {
+  .menu--services{
+    border-top: none;
+    border-bottom: none;
+  }
+
+  .menu--services__menu-list {
+    font-size: 1em;
+
+    .menu-item {
+      padding-left: 0;
+      padding-right: 0;
+
+      @include media-query(palm) {
+        width: 50%;
+      }
+
+      @include media-query(lap) {
+        width: 50%;
+      }
+
+      @include media-query(desk) {
+        width: 33.333%;
+      }
+
+      .image {
+        position: relative;
+        padding-top: 75%;
+        overflow: hidden;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .menu--services__title {
+        padding-left: 1em;
+        padding-right: 1em;
+        background-color: white;
+        color: $brand-primary;
+        transform: all 0.3s !important;
+        text-shadow: none;
+        justify-content: flex-start;
+
+        .menu--services__title-text {
+          position: relative;
+
+          &::after {
+            // TODO: Add the down-primary svg file to the folder and uncomment this line
+            // content: url("assets/images/svg/down-primary.svg");
+            content: url("assets/images/svg/down.svg");
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 10px;
+            height: 10px;
+            margin-left: 0.1em;
+            transform: translateY(-50%) rotate(-90deg);
+          }
+        }
+      }
+
+      &:hover {
+        .image {
+          img {
+            border: none;
+          }
+        }
+
+        .menu--services__title {
+          background-color: $brand-primary;
+          color: white;
+          text-shadow: none;
+
+          .menu--services__title-text::after {
+            content: url("assets/images/svg/down.svg");
+          }
+        }
+      }
+    }
+  }
+}
+
 .menu--services__wrapper{
   //padding: 6px;
   position: relative;

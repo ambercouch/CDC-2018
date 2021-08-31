@@ -281,6 +281,20 @@
     box-shadow: none;
   }
 }
+
+// Hiding the book button from the home page widget as the button is now added in the Hero banner, but the Modal content is added here via the widget
+.home {
+  .textwidget--book-online {
+    .widget {
+      margin-bottom: 0;
+    }
+
+    .btn {
+      display: none;
+    }
+  }
+}
+
 .textwidget--cfa{
   @extend %textwidget--boxy-cfa;
   a.btn{
