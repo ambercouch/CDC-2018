@@ -46,6 +46,14 @@
     vertical-align: middle;
     padding: 0 0.25em;
   }
+  &footer{
+    width: 1.75em;
+    height: 1.75em;
+    vertical-align: middle;
+    padding: 0 0.25em;
+    //display: none !important;
+    fill: $brand-col-2;
+  }
   &contact-box{
     display: block;
     width: $act-unit;

@@ -50,23 +50,25 @@ function cdc_shortcode_video_block($atts) {
           $query->the_post();
           $output .= '<div class="video-preview__video-thumb with atts">';
           $output .= '<div class="video-thumb">';
+
           $output .= '<a class="video-link " href="#modal-'.$vid_id.'">';
           //$output .= '<a class="video-link cdc_ajax" href="#modal">';
-          if (has_post_thumbnail($post->ID)) {
-            $output .= get_the_post_thumbnail($post->ID);
+          if (has_post_thumbnail()) {
+            $output .= get_the_post_thumbnail();
           } else {
 
             $output .= '<svg preserveAspectRatio="none" class="icon video-link__icon--play ">';
             $output .= '<use xlink:href = "#icon-play" />';
             $output .= '</svg>';
             $output .= '<small class="video-link__play-text">Play</small>';
+
           }
             $output .='</a>';
 
 
 
             $output .= '</div>';
-            $output .= '<h6 class="video-preview__video-title">' . get_field('video_title', $post->ID) . '</h6>';
+            $output .= '<h6 class="video-preview__video-title test">' . get_field('video_title') . '</h6>';
             $output .= '</div>';
             $output .= (is_user_logged_in() == false)? '<div class="remodal" data-remodal-id="modal-'.$vid_id.'">' : '<div class="remodal" data-remodal-id="modal-'.$vid_id.'">';
             $output .= '<div id="ajax-box"  class="iframe video ">';
@@ -75,12 +77,12 @@ function cdc_shortcode_video_block($atts) {
             $output .= '<span class="title" >'. get_field('video_title') .'</span>';
             $output .= '</h1>';
 
-            if(get_field('swf_video', $post->ID)){
+            if(get_field('swf_video')){
                 $output .= '';
                 $output .= '<object type="application/x-shockwave-flash"';
-                $output .= 'data="'.get_field('swf_video', $post->ID).'"';
-                $output .= 'width="'.get_field('swf_width', $post->ID).'" height="'.get_field('swf_height', $post->ID).'">';
-                $output .= '<param name="movie" value="'.get_field('swf_video', $post->ID).'" />';
+                $output .= 'data="'.get_field('swf_video').'"';
+                $output .= 'width="'.get_field('swf_width').'" height="'.get_field('swf_height').'">';
+                $output .= '<param name="movie" value="'.get_field('swf_video').'" />';
                 $output .= '<param name="quality" value="high"/>';
                 $output .= '<param name="wmode" value="opaque" />';
 

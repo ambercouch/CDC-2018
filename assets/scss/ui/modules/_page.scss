@@ -53,6 +53,74 @@
     margin-bottom: 0.2em;
     font-weight: 500;
   }
+
+  // Added to content via the WYSIWYG
+  .large-text {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: $brand-primary;
+  }
+
+  // For the tile list to work, it must be added via the WYSIWYG around a standard list element
+  .tile-list {
+    margin: 2rem 0;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      @include media-query(desk){
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4%;
+      }
+
+      li {
+        flex: 0 0 48%;
+        background-color: $brand-col-4;
+        color: white;
+        padding: 1rem;
+
+        .title {
+          font-weight: bold;
+          margin-bottom: 0.6rem;
+          font-size: 1.1rem;
+
+          .value {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+    margin: 3rem 0;
+    border-bottom: 1px solid $border-colour;
+
+    th {
+      font-weight: bold !important;
+      text-align: left !important;
+    }
+
+    td {
+      font-weight: normal !important;
+    }
+
+    th,
+    td {
+      border-left: none !important;
+      border-right: none !important;
+      border-top: 1px solid $border-colour !important;
+      border-bottom: none !important;
+      color: $brand-primary;
+      font-size: 1.1rem;
+      text-align: left;
+    }
+  }
+
   .staff{
     font-size: 0.9em;
     @extend .block-list;
@@ -163,3 +231,95 @@
   @extend %link-style-1--cfa;
 }
 
+//** Accordion added to the content via the [accordion_content] shortcode **//
+
+.page-accordion-content {
+  margin: 0 0 2rem 0;
+
+  .main-item {
+    > .title {
+      position: relative;
+      padding: 0.4rem 1rem;
+      background-color: rgba($brand-primary, 0.2);
+      color: $brand-primary;
+      font-size: 1.2rem;
+      transition: all 0.2s;
+      cursor: pointer;
+      border-bottom: 1px solid white;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0.7rem;
+        height: 0.7rem;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%) rotate(135deg);
+        border-width: 0.25rem 0.25rem 0 0;
+        border-style: solid;
+        border-color: $brand-primary;
+        transition: all 0.2s;
+      }
+
+      &:hover::after {
+        border-color: white;
+      }
+
+      &.active::after {
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+
+    > .title.active,
+    &:hover > .title {
+      background-color: $brand-primary;
+      color: white;
+
+      &::after {
+        border-color: white;
+      }
+    }
+
+    .title:not(.active) ~ .items {
+      display: none;
+    }
+
+    .items {
+      .item {
+        display: flex;
+        padding: 0.8rem 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 2px solid $border-colour;
+        }
+
+        .item-title {
+          padding-right: 2rem;
+        }
+
+        .values {
+          margin-left: auto;
+          flex: 0 0 8rem;
+
+          .value {
+            display: flex;
+
+            .value-text {
+              flex: 0 0 3rem;
+              margin-left: auto;
+              padding-left: 0.4rem;
+              text-align: right;
+              font-weight: bold;
+              color: $brand-primary;
+            }
+
+            &:not(:first-child) {
+              margin-top: 0.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
