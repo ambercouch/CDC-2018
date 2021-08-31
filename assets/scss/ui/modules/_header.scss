@@ -121,24 +121,35 @@
   text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.26);
   top: 70px;
   left: 1em;
+
   .home & {
-    top: 230px;
-    left: 20px;
+    top: 50% !important;
+    left: 0.5em !important;
+    right: unset !important;
+    transform: translateY(-50%);
+    text-shadow: none;
+    font-weight: bold;
+    min-width: 40%;
+
+    @media (min-width: 610px) {
+      min-width: unset;
+    }
+
+    .btn {
+      font-weight: normal;
+    }
   }
+
   @include media-query(lap){
     font-size: 1.5em;
     line-height: 1.2em;
     top: 50px !important;
     right: 65% !important;
     left: auto !important;
-    .home &{
-      font-size: 1.5em;
-      right: 65% !important;
-      top:  auto !important;
-      left: auto;
-      bottom: 2em !important;;
-    }
 
+    .home & {
+      font-size: 1.5em;
+    }
   }
   @include media-query(desk){
     font-size: 2.2em ;
@@ -148,12 +159,7 @@
     bottom: auto;
     right: auto;
     left: 0.5em;
-    .home &{
-      top: 100px;
-      right: 66% ;
-      left: auto;
-      bottom: auto;
-    }
+
     br{
       display: none;
       .home &{
@@ -174,12 +180,10 @@
     bottom: auto;
     right: auto;
     left: 0.5em;
-    .home &{
+
+    .home & {
       font-size: 2em;
-      right: 60% !important;
-      top:  auto;
-      left: auto;
-      bottom: 0.5em;;
+      left: 0.7em;
     }
   }
 
