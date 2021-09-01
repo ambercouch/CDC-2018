@@ -14,6 +14,7 @@ require( get_template_directory() . '/lib/ac-body-data.php' );
 require( get_template_directory() . '/lib/ac-walker.php' );
 require( get_template_directory() . '/lib/ac-custom-post-types.php' );
 require( get_template_directory() . '/lib/ac-shortcode.php' );
+require( get_template_directory() . '/lib/ac-acf.php' );
 
 /**
  * Implement the Custom Header feature
