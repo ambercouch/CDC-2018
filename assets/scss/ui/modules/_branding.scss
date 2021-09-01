@@ -10,11 +10,12 @@
   .branding__site-title{
     @extend .kilo;
 
-    margin-top: 0.5em;
+    margin-top: 48px;
     margin-bottom: 0.5em;
     font-weight: bold;
     line-height: 1.333em;
     color: $brand-col-2;
+
     @include media-query(lap-and-up){
       margin-top: 0.6em;
     }
