@@ -1,7 +1,7 @@
 ACINUK = {
   common: {
     init: function () {
-      //console.log('common test');
+      console.log('common test dist/js folder test dist');
 
         try {
             Typekit.load();
@@ -16,6 +16,17 @@ ACINUK = {
             mq.addListener(WidthChange);
             WidthChange(mq);
         }
+
+        $('[data-control]:not([data-control-radio])').each(function () {
+
+            var controlId = $(this).attr('data-control')
+            if (controlId != ''){
+                var showButton = $('[data-control='+controlId+']');
+                var container = $('[data-container='+controlId+']');
+                var containerParent = container.parent()
+                ACINUK.fn.actStateToggle(container, showButton, containerParent, false);
+            }
+        })
 
 
 // media query change
@@ -74,7 +85,7 @@ ACINUK = {
 
             e.preventDefault();
         });
-        
+
 
       if (jQuery('#nav-main').data('responsive-clone')) {
         $clone_nav = jQuery('#nav-main').clone();
@@ -258,7 +269,7 @@ ACINUK = {
       console.log('all posts');
     }
   },
-    gaq :{
+  gaq :{
         video : function(){
 
             jQuery(document).on('open','.remodal', function(e) {
@@ -305,7 +316,7 @@ ACINUK = {
 
             jQuery(document).on('mailsent.wpcf7',  function(e) {
                 var current_url = e.currentTarget.baseURI;
-               
+
                 if (typeof __gaTracker != "undefined") {
                     console.log('__gaTracker');
                     __gaTracker('send', 'event', 'contact', 'submit' , current_url);
@@ -316,6 +327,42 @@ ACINUK = {
             });
 
         }//gaq.tel
+    },
+    fn:{
+        actStateToggle: function (container, showButton, parent, listParent) {
+            var elState = showButton.attr('data-state');
+            var eventActOpen = new Event('actOpen');
+            var eventActClose = new Event('actClose');
+            showButton.on('click', function(e){
+                e.preventDefault();
+                elState = $(this).attr('data-state');
+                // console.log('elState');
+                // console.log(this);
+                //
+                // console.log(elState);
+
+                if ('off' === elState ) {
+                    console.log('click on');
+                    console.log($(container));
+                    $(this).attr('data-state', 'on');
+                    $(container).attr('data-state', 'on');
+                    $(parent).attr('data-state', 'on');
+                    $(container).addClass('is-on');
+                    document.body.className += ' ' + 'container-'+ $(container).attr('data-container') +'-is-open ';
+                    window.dispatchEvent(eventActOpen);
+
+                } else {
+                    // console.log('click off');
+                    $(this).attr('data-state', 'off');
+                    $(container).attr('data-state', 'off');
+                    $(parent).attr('data-state', 'off');
+                    $(container).removeClass('is-off');
+                    document.querySelector('body').classList.remove('container-'+ $(container).attr('data-container') +'-is-open ');
+
+                    window.dispatchEvent(eventActClose);
+                }
+            });
+        },
     }
 };
 UTIL = {

@@ -1,0 +1,126 @@
+/*
+  BEM BLOCK .c-header
+ */
+
+.c-header {
+  display: block;
+}
+
+/*
+  BEM BLOCK MODIFIER .c-header--
+ */
+
+.c-header-- {
+
+}
+
+//BEM BLOCK MODIFIER FALLBACK .c-header--
+
+[class*=c-header--] {
+  @extend .c-header;
+}
+
+/*
+  BEM ELEMENTS .c-header__
+ */
+
+.c-header__ {
+  &header {
+    display: block
+  }
+
+  &heading {
+    display: block;
+    color: $brand-col-2;
+  }
+
+  &title {
+    display: inline;
+  }
+
+  &link {
+    display: inline
+  }
+
+  &content {
+    display: block
+  }
+
+  &footer {
+    display: block
+  }
+  &pre-heading{
+    display: block;
+  }
+  &post-heading{
+    display: block;
+  }
+  &control{
+    display: block;
+  }
+}
+
+//BEM ELEMENT MODIFIER FALLBACK .c-header--
+
+[class*=c-header__header--] {
+  @extend .c-header__header;
+}
+
+.c-header__header--{
+  &staff{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr $act-unit-l;
+    align-self: self-end;
+
+    &[data-control]{
+      cursor: pointer;
+    }
+  }
+
+}
+
+//BEM ELEMENT MODIFIER FALLBACK .c-header--
+
+[class*=c-header__heading--] {
+  @extend .c-header__heading;
+}
+
+.c-header__heading--{
+  &staff{
+   grid-column-start: 1;
+    font-weight: 500 !important;
+    margin-bottom: 0;
+  }
+}
+
+//BEM ELEMENT MODIFIER FALLBACK .c-header--
+
+[class*=c-header__control--] {
+  @extend .c-header__control
+}
+
+.c-header__control--{
+  &staff{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+
+//BEM ELEMENT MODIFIER FALLBACK .c-header--
+
+[class*=c-header__post-heading--] {
+  @extend .c-header__post-heading;
+  align-self: self-end;
+}
+
+.c-header__post-heading--{
+  &staff{
+    @include act-font-size($inuit-font-size-h5, 1.2);
+    text-align: left;
+
+  }
+}
