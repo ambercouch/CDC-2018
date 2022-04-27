@@ -1,6 +1,17 @@
 .content{
   @extend .container;
-  max-width:924px;
+  max-width: 1024px !important;
+
+
+  @include media-query(lap) {
+    padding: 0 ;
+  }
+  @include media-query(desk) {
+    padding: 0 ;
+  }
+  @media only screen and (max-width:1018px) and (min-width : 798px){
+    padding: 0 6px ;
+  }
 }
 
 .content__post-list,

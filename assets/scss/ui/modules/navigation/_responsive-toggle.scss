@@ -39,16 +39,21 @@
 }
 
 .menu--responsive-toggle__toggle{
+.menu--site__branding &{
   position: absolute;
+  transform: translateY(-50%);
+  right: $act-unit-s !important;
+}
+  position: relative;
   display: block;
   padding: 0.75em 2.75em .75em .5em;
   line-height: 1;
-  right: $act-unit-s !important;
+  right: 0;
   text-decoration: none;
   color:#fff;
   background: transparent;
   top: 3em;
-  transform: translateY(-50%);
+
   right: 0;
   font-size: 1.14em;
   text-transform: none;
@@ -60,6 +65,8 @@
   }
   @include media-query(lap){
     font-size: 1em;
+    position: absolute;
+    transform: translateY(-50%);
   }
   &:after{
     content :'';
