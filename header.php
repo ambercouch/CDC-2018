@@ -51,6 +51,11 @@
       <!-- WP HEAD -->
     <?php wp_head(); ?>
       <!-- END WP HEAD -->
+
+		<!-- TrustBox script -->
+<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+		<!-- End TrustBox script -->
+
   </head>
 
   <body <?php body_class(defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : ''); ?> <?php ac_body_data(); ?>>
