@@ -33,7 +33,7 @@
           max-width: 100%;
         }
 
-        <?php include_once($path); ?>
+        <?php //include_once($path); ?>
       </style>
     <?php else: ?>
     <!-- No Critical CSS <?php echo $path ?> -->
