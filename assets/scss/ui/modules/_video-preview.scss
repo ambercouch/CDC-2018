@@ -8,28 +8,28 @@
   //background: rgba(0, 0, 0, 0.05);
   left: 0px;
   position: relative;
-  padding: 12px 10px;
+  padding: 0;
   font-size: 0;
   text-align: center;
-  margin: 20px 0;
-  border: solid 1px #fff;
+  margin: 0;
+  border: none;
 }
 
 .video-preview__video-thumb{
-  padding: 5px;
+  padding: 0;
   display:block;
   width: 100%;
-  margin: 0 auto $half-spacing-unit;
-  max-width: 200px;
+  margin: 0 auto $act-unit;
+  max-width: 100%;
   background: rgba(255, 255, 255, 1);
   position: relative;
   vertical-align: top;
   line-height: 14px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0;
   @include media-query(lap-and-up){
-    display: inline-block;
-    width: 32.333%;
-    margin: 0 0 0 0.7%
+    display: block;
+    width: 100%;
+    margin: 0 auto $act-unit;
   }
 }
 .video-preview__video-thumb:first-of-type{
@@ -45,14 +45,16 @@
 
 .video-thumb{
   background: $brand-col-2;
-  height: 104px;
   position: relative;
+  width: 100%;
+  aspect-ratio: 5/3;
 }
 .video-link{
   display: block;
   width:100%;
   height: 100%;
   border: none !important;
+
 }
 .video-link__icon--play{
   transition:
@@ -63,15 +65,28 @@
 
   height: 80px;
   width: 80px;
-  margin-top: 12px;
+  //margin-top: 12px;
   opacity: 0.3;
+  //position: absolute;
+  //left: 12%;
+  //top: 50%;
+  display: block;
 
 }
 .video-link:hover .video-link__icon--play{
-  margin-top: 9px;
   opacity: 0.4;
-  height: 86px;
-  width: 86px;
+  height: 80px;
+  width: 80px;
+}
+.video-link__wrapper{
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  top: 50%;
+  position: absolute;
+  padding-left: 12%;
+  padding-top: 12px;
 }
 .video-link__logo{
   color: #3F002E;
@@ -85,20 +100,17 @@
   width: 100%;
 }
 .video-link__play-text {
-
   color: #fff;
   display: block;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 500;
   letter-spacing: 2px;
-  left: 50%;
-  margin-left: -18px;
-  padding: 10px 0;
-  position: absolute;
+  left: 20%;
+  margin-left: $act-unit;
+  padding: 0;
+  position: static;
   text-align: center;
-  text-transform: uppercase;
-  top: 36px;
-  width: 35px;
+  text-transform: none;
 }
 
 .video-thumb img{
@@ -113,10 +125,13 @@
 
 
 .video-preview__video-title{
-  color: #3F002E;
-  font-size: 0.7rem;
+  color: white;
+  font-size: 2rem;
   font-weight: 300;
   margin: 0;
+  position: absolute;
+  left: 12%;
+  top: 33.33%;
 }
 .video-thumb .video-link__icon{
   width:45px;

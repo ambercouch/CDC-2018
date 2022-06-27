@@ -19,8 +19,8 @@ function cdc_shortcode_video_block($atts) {
         } else {
 
 
-          $output .= '<img class="video-link__icon" src="' . get_bloginfo('stylesheet_directory') . '/library/images/play.png" alt="Play Video" />';
-          $output .= '<small class="video-link__play-text">Play</small>';
+          $output .= '<div class="video-link__wrapper" ><img class="video-link__icon" src="' . get_bloginfo('stylesheet_directory') . '/library/images/play.png" alt="Play Video" />';
+          $output .= '<small class="video-link__play-text">Play Video</small></div>';
         }
         $output .='</a>';
 
@@ -51,16 +51,16 @@ function cdc_shortcode_video_block($atts) {
           $output .= '<div class="video-preview__video-thumb with atts">';
           $output .= '<div class="video-thumb">';
 
-          $output .= '<a class="video-link " href="#modal-'.$vid_id.'">';
+          $output .= '><a class="video-link " href="#modal-'.$vid_id.'">';
           //$output .= '<a class="video-link cdc_ajax" href="#modal">';
           if (has_post_thumbnail()) {
             $output .= get_the_post_thumbnail();
           } else {
 
-            $output .= '<svg preserveAspectRatio="none" class="icon video-link__icon--play ">';
+            $output .= '<div class="video-link__wrapper" ><svg preserveAspectRatio="none" class="icon video-link__icon--play ">';
             $output .= '<use xlink:href = "#icon-play" />';
             $output .= '</svg>';
-            $output .= '<small class="video-link__play-text">Play</small>';
+            $output .= '<small class="video-link__play-text">Play Video</small></div>';
 
           }
             $output .='</a>';
