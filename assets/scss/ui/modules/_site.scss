@@ -11,6 +11,7 @@
 .site__navigation--main{
   background: $brand-col-2;
   border-bottom: none;
+  overflow: hidden;
 }
 .site__content{
   padding: $base-spacing-unit 0 0;

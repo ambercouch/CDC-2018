@@ -231,7 +231,7 @@
 .header--master__lang-switch {
   position: absolute !important;
   bottom: auto;
-  left: auto;
+  left: 0;
   right: 0;
   top: 0;
   padding: 0;
@@ -249,10 +249,13 @@
   .header--master__lang{
     display: inline;
   }
-  display: none!important;
+  display: block;
+
   @include breakout-band($bgc :#E0CCDF);
   @include media-query(lap-and-up) {
     display: block !important;
+    left: auto;
+
   }
 
 }
