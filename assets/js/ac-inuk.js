@@ -161,7 +161,7 @@ ACINUK = {
         console.log('element');
         console.log(jQuery(el));
 
-        jQuery('.title--widget', this).after('<a class="menu--responsive-toggle__toggle">MENU</a>');
+        jQuery('.title--widget', this).after('<a class="menu--responsive-toggle__toggle">Page Menu</a>');
         //var toggle = jQuery(this)
         jQuery(this).on('click', '.menu--responsive-toggle__toggle', function () {
           jQuery(this).toggleClass('active');

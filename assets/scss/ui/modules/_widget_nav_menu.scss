@@ -25,7 +25,7 @@
     }
   }
   .menu--responsive-toggle__toggle{
-    background: $brand-col-2 !important;
+    background: $brand-col-1!important;
     //position: absolute;
     top: 0;
     color: #fff !important;
@@ -68,7 +68,7 @@
         transition: margin-bottom 0.3s ease;
         margin-bottom: 0;
         &.active{
-          margin-bottom: 1em;
+          margin-bottom: 0;
         }
       }
       .menu{
