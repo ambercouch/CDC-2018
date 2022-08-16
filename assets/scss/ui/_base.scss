@@ -17,6 +17,7 @@ html{
 }
 body{
   font-size: 90%;
+  overflow: hidden;
   //background: $brand-col-6;
   background: #fff;
   @include media-query(lap-and-up){
