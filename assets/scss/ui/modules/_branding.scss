@@ -16,7 +16,7 @@
     line-height: 1.333em;
     color: $brand-col-2;
 
-    @include media-query(lap-and-up){
+    @include media-query(desktop){
       margin-top: $act-unit-t;
     }
     a{
