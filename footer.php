@@ -37,7 +37,7 @@
 </footer><!-- #colophon -->
 </div><!-- #page -->
 
-<link type="text/css" media="all" href="<?php echo get_stylesheet_uri(); ?>?v=20220627-2" rel="stylesheet" >
+<link type="text/css" media="all" href="<?php echo get_stylesheet_uri(); ?>?v=20220815" rel="stylesheet" >
 <?php wp_footer(); ?>
 
 </body>
