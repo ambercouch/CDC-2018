@@ -109,19 +109,31 @@
   &:active,&:focus,&:hover{
     color: $brand-col-2 !important;
   }
+  &.active{
+    &:after{
+      content: "\2212";
+      font-size: 1.5em;
+      line-height: 1.4em;
+
+    }
+  }
   &:after{
-    content: '-';
+    content: "\002B";
     display: block;
-    width: 0.75em;
-    height: 0.75em;
-    line-height: 0.55em;
+    width: $act-unit * 1.5;
+    height: $act-unit * 1.5;
+    line-height: 1em;
     text-align: center;
-    font-size: 3em;
+    font-size: 2em;
     position: absolute;
-    right: 0.25em;
+    right: $act-unit / 1.5;
     top: 50%;
-    transform: translate(0,-50%);
-    border: solid 1px $brand-col-2;
+    transform: translateY(-50%);
+    border: 2px solid #650360;
     border-radius: 999999px;
+
+  }
+  @include media-query('desk'){
+    display: none;
   }
 }

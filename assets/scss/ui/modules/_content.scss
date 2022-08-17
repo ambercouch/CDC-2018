@@ -78,11 +78,11 @@
         width: 0.7rem;
         height: 0.7rem;
         top: 50%;
-        right: 1rem;
+        right: 1.75rem;
         transform: translateY(-50%) rotate(45deg);
         border-width: 0.25rem 0.25rem 0 0;
         border-style: solid;
-        border-color: $brand-primary;
+        border-color: #e0ccdf;
       }
 
       &:hover::after {
@@ -93,7 +93,6 @@
     &.current-menu-item a {
       color: white !important;
       background-color: $brand-primary;
-
       &:after {
         border-color: white;
       }
