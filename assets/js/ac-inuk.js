@@ -1,7 +1,7 @@
 ACINUK = {
   common: {
     init: function () {
-      console.log('common test dist/js folder test dist');
+      console.log('test');
 
         try {
             Typekit.load();
@@ -161,9 +161,9 @@ ACINUK = {
         console.log('element');
         console.log(jQuery(el));
 
-        jQuery('.title--widget', this).after('<a class="menu--responsive-toggle__toggle">Page Menu</a>');
+        jQuery('.title--widget', this).after('<a class="menu__toggle--page">Page Menu</a>');
         //var toggle = jQuery(this)
-        jQuery(this).on('click', '.menu--responsive-toggle__toggle', function () {
+        jQuery(this).on('click', '.menu__toggle--page', function () {
           jQuery(this).toggleClass('active');
           jQuery('.menu', el).toggleClass('active');
           jQuery('.widget__header', el).toggleClass('active');

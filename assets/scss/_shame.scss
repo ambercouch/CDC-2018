@@ -100,3 +100,28 @@
   //border-bottom-style: solid;
   //border-bottom-color: rgb(255, 255, 255);
 }
+
+.widget_nav_menu .menu__toggle--page{
+  position: relative;
+  background: #E0CCDF !important;
+  color: $brand-col-2 !important;
+  display: block;
+  &:active,&:focus,&:hover{
+    color: $brand-col-2 !important;
+  }
+  &:after{
+    content: '-';
+    display: block;
+    width: 0.75em;
+    height: 0.75em;
+    line-height: 0.55em;
+    text-align: center;
+    font-size: 3em;
+    position: absolute;
+    right: 0.25em;
+    top: 50%;
+    transform: translate(0,-50%);
+    border: solid 1px $brand-col-2;
+    border-radius: 999999px;
+  }
+}

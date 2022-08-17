@@ -25,10 +25,10 @@
     }
   }
   .menu--responsive-toggle__toggle{
-    background: $brand-col-1!important;
+    background: #E0CCDF !important;
     //position: absolute;
     top: 0;
-    color: #fff !important;
+    color: $brand-col-2 !important;
     border: none;
     &:hover{
       box-shadow: none !important;
