@@ -28,7 +28,7 @@
     "pixrem": "^3.0.2",
     "pump": "^1.0.2",
     "readable-stream": "^3.4.0",
-    "remodal": "^1.1.1",
+    "remodal": "0.6.3",
     "webpack": "^2.2.1"
   },
   "dependencies": {
