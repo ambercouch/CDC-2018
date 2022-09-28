@@ -82,6 +82,7 @@ if (!function_exists('ac_inuk_setup')) :
 
       add_theme_support('post-thumbnails');
       add_image_size( 'service-thumb', 400, 400, true );
+      add_image_size( 'service-thumb-2022', 600, 450, true );
   }
 
 endif; // ac_inuk_setup

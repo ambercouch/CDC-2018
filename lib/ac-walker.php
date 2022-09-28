@@ -24,7 +24,7 @@ function ad_filter_menu($sorted_menu_objects, $args) {
       if (in_array($menu_object->object, array(' post', 'page', 'any_post_type'))) {
         // set the title to the post_thumbnail if available
         // thumbnail size is the second parameter of get_the_post_thumbnail()
-        $menu_object->title = has_post_thumbnail($menu_object->object_id) ? '<div class = "menu--services__wrapper" data-posbot="-62" data-posleft="0"><div class="image">' . get_the_post_thumbnail($menu_object->object_id, 'service-thumb') . '</div><div class="menu--services__title"><span class="menu--services__title-text">' . $menu_object->title . '</span></div></div> ' : $menu_object->title;
+        $menu_object->title = has_post_thumbnail($menu_object->object_id) ? '<div class = "menu--services__wrapper" data-posbot="-62" data-posleft="0"><div class="image">' . get_the_post_thumbnail($menu_object->object_id, 'service-thumb-2020') . '</div><div class="menu--services__title"><span class="menu--services__title-text">' . $menu_object->title . '</span></div></div> ' : $menu_object->title;
       }
     }
   }
