@@ -19,6 +19,25 @@
       transform: rotateZ(-180deg);
     }
   }
+  &primary{
+    box-shadow: none;
+    border-radius: 0;
+    line-height: 2.5em!important;
+    height: 45px;
+    padding: 0 !important;
+    background-color: #650360 !important;
+    display: block;
+    width: 100%;
+    border: none;
+    margin: 0 auto;
+    top: 0;
+    font-style: normal;
+    font-family: proxima-nova,sans-serif;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff !important;
+  }
 }
 
 //BEM BLOCK MODIFIER FALLBACK .c-btn--

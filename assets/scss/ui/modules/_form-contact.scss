@@ -69,6 +69,7 @@
 
 
 .form-contact {
+  background: white;
   &__wrapper{
     padding: 0 $act-unit;
     @include media-query(lap-and-up){
@@ -169,6 +170,20 @@
   .textwidget{
     padding-left: 0;
     padding-right: 0;
+  }
+  form{
+    padding: 25px;
+  }
+  .title--form {
+    @extend .title--widget;
+    text-align: left;
+    .remodal &{
+      padding-left: 25px;
+    }
+    .rtl &{
+      text-align: right;
+      direction: rtl;
+    }
   }
 }
 
