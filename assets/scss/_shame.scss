@@ -137,3 +137,25 @@
     display: none;
   }
 }
+
+.modaal-wrapper{
+  transition: opacity 0.3s ease-in-out;
+}
+.modaal-overlay{
+  transition: opacity 0.3s ease-in-out;
+}
+
+.has-lightbox .modaal-wrapper{
+//display: none !important;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0 !important;
+}
+
+.has-lightbox .modaal-overlay{
+  //display: none !important;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0 !important;
+}
+.modaal-wrapper .ngg-galleryoverview{
+  margin: 0;
+}
