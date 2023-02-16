@@ -142,8 +142,7 @@
 
 .form-contact--primary {
   @extend .form-contact;
-
-  display: none;
+  
   @include media-query(desk) {
     display: block;
   }
