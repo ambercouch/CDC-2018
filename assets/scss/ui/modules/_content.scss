@@ -41,7 +41,7 @@
 .content__widget-area--main {
   @extend .content__widget-area;
 
-  padding: 0 $act-unit 0 $act-unit-l !important;
+  padding: 0 $act-unit $act-unit-l $act-unit-l !important;
 
   @include media-query(desk) {
     padding: 0 0 0 $act-unit !important;
