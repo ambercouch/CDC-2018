@@ -1,3 +1,4 @@
+
 /*
   BEM BLOCK .c-post-thumb
  */
@@ -14,7 +15,7 @@
   &staff {
     transition: background 0.3s ease-in-out;
     background: $brand-col-4--light;
-    padding: $act-unit;
+    padding: $act-unit-s;
     border-top: solid 2px;
     border-color: white;
     &[data-state=on]{

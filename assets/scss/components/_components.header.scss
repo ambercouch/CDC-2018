@@ -79,6 +79,20 @@
 
 }
 
+
+//BEM ELEMENT MODIFIER FALLBACK .c-header__pre-heading--
+
+[class*=c-header__heading--] {
+  @extend .c-header__pre-heading;
+}
+
+.c-header__pre-heading--{
+  &staff{
+    color : $brand-col-2;
+    @include act-font-size($inuit-font-size-h4)
+  }
+}
+
 //BEM ELEMENT MODIFIER FALLBACK .c-header--
 
 [class*=c-header__heading--] {
