@@ -14,7 +14,7 @@ If you would like to show the timestamp of the image ,you can use <?php echo $ex
 ?>
 <?php if (!defined ('ABSPATH')) die ('No direct access allowed'); ?><?php if (!empty ($gallery)) : ?>
 
-    <div class="ngg-galleryoverview" id="<?php echo $gallery->anchor ?>">
+    <div class="ngg-galleryoverview c-gallery" id="<?php echo $gallery->anchor ?>">
 
         <?php if ($gallery->show_slideshow) { ?>
             <!-- Slideshow link -->
@@ -29,15 +29,18 @@ If you would like to show the timestamp of the image ,you can use <?php echo $ex
         <?php $i = 0; ?>
         <?php foreach ( $images as $image ) : ?>
 
-            <div id="ngg-image-<?php echo $image->pid ?>" class="ngg-gallery-thumbnail-box" <?php echo $image->style ?> >
-                <div class="ngg-gallery-thumbnail" >
+            <div id="ngg-image-<?php echo $image->pid ?>" class="ngg-gallery-thumbnail-box c-gallery__thumb-wrapper" <?php echo $image->style ?> >
+                <div class="ngg-gallery-thumbnail c-gallery__thumb" >
                     <a href="<?php echo nextgen_esc_url($image->imageURL) ?>"
-                       title="<?php echo esc_attr($image->description) ?>"
+                       title="Click to enlarge"
                         <?php echo $image->thumbcode ?> >
                         <?php if ( !$image->hidden ) { ?>
-                            <img title="<?php echo esc_attr($image->alttext) ?>" alt="<?php echo esc_attr($image->alttext) ?>" src="<?php echo nextgen_esc_url($image->thumbnailURL) ?>" <?php echo $image->size ?> />
+                            <img title="Click to enlarge image" alt="<?php echo esc_attr($image->alttext) ?>" src="<?php echo nextgen_esc_url($image->thumbnailURL) ?>" <?php echo $image->size ?> />
                         <?php } ?>
                     </a>
+                  <div class="c-gallery__description">
+                      <?php echo $image->description ?>
+                  </div>
                 </div>
             </div>
 

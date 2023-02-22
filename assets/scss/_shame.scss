@@ -159,3 +159,56 @@
 .modaal-wrapper .ngg-galleryoverview{
   margin: 0;
 }
+.c-gallery__thumb-wrapper{
+  margin-bottom: $act-unit-s;
+  &:nth-of-type(odd){
+    .c-gallery__thumb{
+      margin-right: $act-unit-t;
+      margin-left: 0;
+    }
+  }
+
+}
+
+.c-gallery .c-gallery__thumb{
+  margin: 0;
+  margin-left: $act-unit-t;
+  border: none 0;
+  display: flex;
+
+
+  a{
+    margin: 0;
+    width: 60%;
+  }
+}
+.c-gallery__description{
+  background: #F7F7F7;
+  //color: #fff;
+  width: 40%;
+  padding: $act-unit-t $act-unit-s;
+  //padding-left: $act-unit-t;
+  ul{
+    margin-left: 1em;
+  }
+}
+
+.sl-caption{
+  padding: $act-unit-t !important;
+  position: static !important;
+  background: $brand-col-2 !important;
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @include act-font-size($inuit-font-size-h5, 1);
+  }
+  li{
+    display: inline-block;
+    @include act-font-size($inuit-font-size-h5, 1);
+    &:after{
+      content : ' /'
+    }
+
+  }
+}

@@ -1,11 +1,11 @@
 .menu--dental-brands{
   @extend %menu--image-menu;
 
-  margin-top: 1rem;
+  margin-top: 0;
 
   .widget__header {
-    margin-bottom: 2rem;
-    padding-top: 1.6rem;
+    margin-bottom: 1.4rem !important;
+    padding-top: 1.6rem !important;
     border-top: 1px solid $border-colour;
   }
 

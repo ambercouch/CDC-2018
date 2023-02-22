@@ -7,6 +7,7 @@
  */
 
 $member_role = get_field('staff_member_role');
+$member_interest = get_field('staff_member_interest');
 $member_qualifications = get_field('staff_member_qualifications');
 $member_name = (get_field('staff_member_name')) ? get_field('staff_member_name') : get_the_title();
 $member_bio = get_field('staff_member_bio');
@@ -22,7 +23,14 @@ $member_bio = get_field('staff_member_bio');
            <h3 class="entry-title c-header__heading--staff" >
               <span class="c-header__title--staff"><?php echo $member_name ?></span>
            </h3>
-           <div class="c-header__post-heading--staff"><span><?php echo $member_qualifications ?></span></div>
+           <?php if( $member_interest ) : ?>
+           <div class="c-header__post-heading--staff-interest">
+           <span class="c-header__label">Special Interest: </span><span><?php echo $member_interest ?></span>
+           </div>
+           <?php endif ?>
+           <div class="c-header__post-heading--staff-qualification">
+             <span><?php echo $member_qualifications ?></span>
+           </div>
            <div class="c-header__control--staff " >
                <?php if ($member_bio) : ?>
              <div class="c-btn--expand" >
