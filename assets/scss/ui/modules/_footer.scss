@@ -73,10 +73,11 @@
         font-size: 0.9rem;
 
         .widget__header {
-          margin: 0;
+          margin: 0 0 1.2rem 0 ;
+          border-bottom: solid 1px;
 
           .title--widget {
-            margin: 0 0 1.2rem 0;
+            margin: 0;
             padding: 0;
             font-weight: bold;
             font-size: 1rem;
