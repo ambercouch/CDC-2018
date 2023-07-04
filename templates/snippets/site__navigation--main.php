@@ -47,10 +47,15 @@
               <?php endif; ?>
 
               <div class="header--master__lang-switch">
+                <div class="social-nav--header">
+
+
                 <a href="https://www.facebook.com/cathedraldentalclinic" target="_blank" class="a--icon"><svg class="icon icon-facebook2 icon--header"><use xlink:href="#icon-facebook2"></use></svg></a>
-                <span class="c-sep"> | </span>
+
                 <a href="https://www.instagram.com/cathedraldentalclinic166/" target="_blank" class="a--icon"><svg class="icon icon-instagram icon--header"><use xlink:href="#icon-instagram"></use></svg></a>
-                <span class="c-sep"> | </span>
+
+<!--                <a href="tel:02920382671" target="_blank" class="a--icon"><svg class="icon icon-phone icon--header"><use xlink:href="#icon-phone"></use></svg></a>-->
+                </div>
                 <?php echo  langSwitch(); ?>
               </div>
             </div><!-- /.branding -->
