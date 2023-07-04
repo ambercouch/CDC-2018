@@ -91,10 +91,27 @@
 .header--master__lang-a{
   //color: white;
 }
-
-.icon--header{ width: 1.75em; height: 1.75em; vertical-align: middle; padding: 0px 0.25em; }
-
-
+.social-nav--header{
+  display: inline;
+  margin-right: 1.5em;
+  display: none;
+  @include mq($from : tablet){
+    display: inline;
+  }
+}
+.icon--header{
+  width:2em;
+  height: 2em; vertical-align: middle; padding: 0px 0.25em;
+}
+.a--icon{
+  margin: 0 0.5em;
+  fill: $brand-col-2;
+  color: $brand-col-2;
+  .icon{
+    fill: $brand-col-2;
+    color: $brand-col-2;
+  }
+}
 .lang-active {
   //border-bottom-width: 1px;
   //border-bottom-style: solid;
