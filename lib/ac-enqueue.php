@@ -15,7 +15,7 @@ function ac_remove_scripts() {
     }
 }
 
-add_action('wp_print_scripts', 'ac_remove_scripts', 100);
+add_action('wp_enqueue_scripts', 'ac_remove_scripts', 100);
 
 /**
  * Enqueue scripts and styles
