@@ -1,7 +1,7 @@
 .menu--payment-plan{
   @extend %menu--image-menu;
 
-  width: 33.33% !important;
+  //width: 33.33% !important;
   padding-left: 0.5rem;
 
   .widget__header {
@@ -24,7 +24,7 @@
     //height:100px;
   }
   .menu-item{
-    width: 100%;
+    //width: 100%;
 
     @include media-query(desk){
       width: 50%;
