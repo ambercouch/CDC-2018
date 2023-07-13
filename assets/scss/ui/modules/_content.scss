@@ -133,6 +133,9 @@
   .menu--dental-brands{
     width: 100%;
   }
+  .menu--recommended{
+    @extend .desk-two-thirds;
+  }
   .menu--finance{
     @extend .desk-one-quarter;
   }
