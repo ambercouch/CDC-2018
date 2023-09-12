@@ -12,7 +12,7 @@
 
 }
 
-img.header--master__banner-image{
+img.header--master__banner-imageco{
   width: 800px
 }
 
@@ -132,28 +132,44 @@ img.header--master__banner-image{
     color: $brand-col-2 !important;
   }
   &.active{
-    &:after{
-      content: "\2212";
-      font-size: 1.5em;
-      line-height: 1.4em;
-
+    //&:after{
+    //  content: "\2212";
+    //  font-size: 1.5em;
+    //  line-height: 1.4em;
+    //}
+    &::after {
+      transform: translateY(-50%) rotate(135deg);
     }
   }
-  &:after{
-    content: "\002B";
+  //&:after{
+  //  content: "\002B";
+  //  display: block;
+  //  width: $act-unit * 1.5;
+  //  height: $act-unit * 1.5;
+  //  line-height: 1em;
+  //  text-align: center;
+  //  font-size: 2em;
+  //  position: absolute;
+  //  right: $act-unit / 1.5;
+  //  top: 50%;
+  //  transform: translateY(-50%);
+  //  border: 2px solid #650360;
+  //  border-radius: 999999px;
+  //
+  //}
+  &::after {
+    transition: transform 0.2s ease-in-out;
+    content: "";
     display: block;
-    width: $act-unit * 1.5;
-    height: $act-unit * 1.5;
-    line-height: 1em;
-    text-align: center;
-    font-size: 2em;
     position: absolute;
-    right: $act-unit / 1.5;
+    width: 0.7rem;
+    height: 0.7rem;
     top: 50%;
-    transform: translateY(-50%);
-    border: 2px solid #650360;
-    border-radius: 999999px;
-
+    right: 1.75rem;
+    transform: translateY(-50%) rotate(45deg);
+    border-width: 0.25rem 0.25rem 0 0;
+    border-style: solid;
+    border-color: $brand-col-2;
   }
   @include media-query('desk'){
     display: none;
