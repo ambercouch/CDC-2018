@@ -21,8 +21,14 @@
     border-width: 0px;
     margin-bottom: 1em
   }
+  .menu {
+    @include media-query(palm) {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
   .menu-item{
-    width: 50%;
+    width: 33%;
     @include media-query(desk){
       width: 16.6666%;
     }

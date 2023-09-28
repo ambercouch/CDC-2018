@@ -256,3 +256,13 @@ img.header--master__banner-image{
     display: none;
   }
 }
+
+.col_wrapper h2{
+  justify-content: left !important;
+}
+
+.menu--payment-plan .menu-item.denplan .icon{
+  @include media-query(palm){
+    height: 40px;
+  }
+}

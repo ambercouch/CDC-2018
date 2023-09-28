@@ -63,6 +63,16 @@
   .content__widget-area--below {
     border-top: none;
     border-bottom: none;
+    .widget-area{
+      display: flex;
+      flex-direction: column;
+      .menu--payment-plan{
+        order: -1;
+      }
+      @include media-query(desk){
+        display: block;
+      }
+    }
   }
 
   .menu {
