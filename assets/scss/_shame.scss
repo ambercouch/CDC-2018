@@ -266,3 +266,9 @@ img.header--master__banner-image{
     height: 40px;
   }
 }
+
+.allianz.menu-item{
+  @include media-query(palm){
+    display: none;
+  }
+}
