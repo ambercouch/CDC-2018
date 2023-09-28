@@ -79,6 +79,9 @@
           max-height: 30em;
         }
       }
+      .title--widget{
+        display: none !important;
+      }
     }
   }
 }
@@ -99,3 +102,6 @@
   }
 }
 
+.title--widget{
+  //display: none !important;
+}

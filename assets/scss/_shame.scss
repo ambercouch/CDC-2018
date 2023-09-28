@@ -12,7 +12,7 @@
 
 }
 
-img.header--master__banner-imageco{
+img.header--master__banner-image{
   width: 800px
 }
 
@@ -132,44 +132,28 @@ img.header--master__banner-imageco{
     color: $brand-col-2 !important;
   }
   &.active{
-    //&:after{
-    //  content: "\2212";
-    //  font-size: 1.5em;
-    //  line-height: 1.4em;
-    //}
-    &::after {
-      transform: translateY(-50%) rotate(135deg);
+    &:after{
+      content: "\2212";
+      font-size: 1.5em;
+      line-height: 1.4em;
+
     }
   }
-  //&:after{
-  //  content: "\002B";
-  //  display: block;
-  //  width: $act-unit * 1.5;
-  //  height: $act-unit * 1.5;
-  //  line-height: 1em;
-  //  text-align: center;
-  //  font-size: 2em;
-  //  position: absolute;
-  //  right: $act-unit / 1.5;
-  //  top: 50%;
-  //  transform: translateY(-50%);
-  //  border: 2px solid #650360;
-  //  border-radius: 999999px;
-  //
-  //}
-  &::after {
-    transition: transform 0.2s ease-in-out;
-    content: "";
+  &:after{
+    content: "\002B";
     display: block;
+    width: $act-unit * 1.5;
+    height: $act-unit * 1.5;
+    line-height: 1em;
+    text-align: center;
+    font-size: 2em;
     position: absolute;
-    width: 0.7rem;
-    height: 0.7rem;
+    right: $act-unit / 1.5;
     top: 50%;
-    right: 1.75rem;
-    transform: translateY(-50%) rotate(45deg);
-    border-width: 0.25rem 0.25rem 0 0;
-    border-style: solid;
-    border-color: $brand-col-2;
+    transform: translateY(-50%);
+    border: 2px solid #650360;
+    border-radius: 999999px;
+
   }
   @include media-query('desk'){
     display: none;
@@ -253,4 +237,22 @@ img.header--master__banner-imageco{
 
 .menu-menu-footer-services-container ul{
   column-count: 2;
+}
+
+#custom_html-2{
+  @include media-query(lap-and-up){
+    display: none;
+  }
+}
+#custom_html-8{
+  display: none;
+  @include media-query(lap-and-up){
+    display: block;
+  }
+}
+
+#custom_html-7{
+  @include media-query(lap-and-up){
+    display: none;
+  }
 }

@@ -38,6 +38,17 @@
     text-decoration: none;
     color: #fff !important;
   }
+  &secondary{
+    @extend .c-btn--primary;
+    background-color: $brand-col-4--light !important;
+    color: $brand-col-2 !important;
+    &:hover{
+      .page & {
+        color: $brand-col-2 !important;
+      }
+
+    }
+  }
 }
 
 //BEM BLOCK MODIFIER FALLBACK .c-btn--
