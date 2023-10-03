@@ -18,10 +18,10 @@
   <div class="page__content">
     <?php the_content(); ?>
     <?php
-    wp_link_pages(array(
-        'before' => '<div class="page__page-links">' . __('Pages:', 'ac_inuk'),
-        'after' => '</div>',
-    ));
+//    wp_link_pages(array(
+//        'before' => '<div class="page__page-links">' . __('Pages:', 'ac_inuk'),
+//        'after' => '</div>',
+//    ));
     ?>
   </div><!-- /.page__content -->
 
