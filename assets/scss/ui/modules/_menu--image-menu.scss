@@ -30,6 +30,7 @@
       }
     }
     a{
+
       margin: 0 1em;
       display: block;
       text-align: center;
@@ -41,6 +42,10 @@
         box-shadow: none;
         color: inherit;
       }
+      &[rel="whatclinic"]{
+        margin: 0 0.5em;
+      }
+
     }
   }
 }
