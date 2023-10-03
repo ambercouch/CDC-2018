@@ -259,6 +259,12 @@ img.header--master__banner-image{
   justify-content: left !important;
 }
 
+.menu--payment-plan .menu-item.finance .icon{
+  @include media-query(palm){
+    height: 36px;
+  }
+}
+
 .menu--payment-plan .menu-item.denplan .icon{
   @include media-query(palm){
     height: 40px;
@@ -287,6 +293,7 @@ img.header--master__banner-image{
   }
   .c-gallery__thumb-wrapper{
     flex-basis: 100%;
+    max-width: none !important;
     @include media-query(lap-and-up){
       width: 50%;
       max-width: 50%;
