@@ -161,3 +161,40 @@ add_action( 'wp_enqueue_scripts', function() {
 
     wp_enqueue_script('temp-rob.js', get_stylesheet_directory_uri() . '/assets/js/temp-rob.js', ['jquery'], $version_timestamp, true);
 } );
+
+
+/*
+ * Widget Names plugin
+ */
+
+// Add a field to all widgets in WordPress
+function add_widget_name_widget_field($instance, $widget_class) {
+    // Check if the "widget_name" index exists and provide a default value
+    $widget_name_value = isset($instance['widget_name']) ? esc_attr($instance['widget_name']) : '';
+
+    // Add your widget name HTML here
+    ?>
+  <p>
+    <label for="<?php echo $widget_class->get_field_id('widget_name'); ?>">Widget Name:</label>
+    <input class="widefat" id="<?php echo $widget_class->get_field_id('widget_name'); ?>" name="<?php echo $widget_class->get_field_name('widget_name'); ?>" type="text" value="<?php echo $widget_name_value; ?>" />
+  </p>
+    <?php
+    return $instance; // This line is needed to update the widget instance
+
+}
+
+function save_widget_name_widget_field($instance, $new_instance) {
+    // Sanitize and save the widget name value
+    $instance['widget_name'] = sanitize_text_field($new_instance['widget_name']);
+    return $instance;
+}
+
+// Hook into the widget form and update processes
+add_action('widget_form_callback', 'add_widget_name_widget_field', 10, 2);
+add_filter('widget_update_callback', 'save_widget_name_widget_field', 10, 2);
+
+function enqueue_admin_script() {
+    wp_enqueue_script('ac-admin', get_template_directory_uri() . '/assets/js/ac-admin.js', array('jquery'), '1.0', true);
+}
+add_action('admin_enqueue_scripts', 'enqueue_admin_script');
+
