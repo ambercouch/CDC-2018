@@ -169,16 +169,20 @@ add_action( 'wp_enqueue_scripts', function() {
 
 // Add a field to all widgets in WordPress
 function add_custom_widget_field($instance, $widget_class) {
+    // Check if the "custom_field" index exists and provide a default value
+    $custom_field_value = isset($instance['custom_field']) ? esc_attr($instance['custom_field']) : '';
+
     // Add your custom field HTML here
     ?>
   <p>
     <label for="<?php echo $widget_class->get_field_id('custom_field'); ?>">Custom Field:</label>
-    <input class="widefat" id="<?php echo $widget_class->get_field_id('custom_field'); ?>" name="<?php echo $widget_class->get_field_name('custom_field'); ?>" type="text" value="<?php echo esc_attr($instance['custom_field']); ?>" />
+    <input class="widefat" id="<?php echo $widget_class->get_field_id('custom_field'); ?>" name="<?php echo $widget_class->get_field_name('custom_field'); ?>" type="text" value="<?php echo $custom_field_value; ?>" />
   </p>
     <?php
 }
 
 function save_custom_widget_field($instance, $new_instance) {
+    // Sanitize and save the custom field value
     $instance['custom_field'] = sanitize_text_field($new_instance['custom_field']);
     return $instance;
 }
