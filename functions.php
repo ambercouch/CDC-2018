@@ -161,3 +161,28 @@ add_action( 'wp_enqueue_scripts', function() {
 
     wp_enqueue_script('temp-rob.js', get_stylesheet_directory_uri() . '/assets/js/temp-rob.js', ['jquery'], $version_timestamp, true);
 } );
+
+
+/*
+ * Widget Names plugin
+ */
+
+// Add a field to all widgets in WordPress
+function add_custom_widget_field($instance, $widget_class) {
+    // Add your custom field HTML here
+    ?>
+  <p>
+    <label for="<?php echo $widget_class->get_field_id('custom_field'); ?>">Custom Field:</label>
+    <input class="widefat" id="<?php echo $widget_class->get_field_id('custom_field'); ?>" name="<?php echo $widget_class->get_field_name('custom_field'); ?>" type="text" value="<?php echo esc_attr($instance['custom_field']); ?>" />
+  </p>
+    <?php
+}
+
+function save_custom_widget_field($instance, $new_instance) {
+    $instance['custom_field'] = sanitize_text_field($new_instance['custom_field']);
+    return $instance;
+}
+
+// Hook into the widget form and update processes
+add_action('widget_form_callback', 'add_custom_widget_field', 10, 2);
+add_filter('widget_update_callback', 'save_custom_widget_field', 10, 2);
