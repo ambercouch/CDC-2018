@@ -179,6 +179,8 @@ function add_custom_widget_field($instance, $widget_class) {
     <input class="widefat" id="<?php echo $widget_class->get_field_id('custom_field'); ?>" name="<?php echo $widget_class->get_field_name('custom_field'); ?>" type="text" value="<?php echo $custom_field_value; ?>" />
   </p>
     <?php
+    return $instance; // This line is needed to update the widget instance
+
 }
 
 function save_custom_widget_field($instance, $new_instance) {
