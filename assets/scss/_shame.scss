@@ -201,8 +201,11 @@ img.header--master__banner-image{
   margin-bottom: $act-unit-s;
   &:nth-of-type(odd){
     .c-gallery__thumb{
-      margin-right: $act-unit-t;
+      margin-right: 0;
       margin-left: 0;
+      @include media-query(lapandup){
+        margin-right: $act-unit-t;
+      }
     }
   }
 
@@ -210,9 +213,12 @@ img.header--master__banner-image{
 
 .c-gallery .c-gallery__thumb{
   margin: 0;
-  margin-left: $act-unit-t;
+  margin-left: 0;
   border: none 0;
   display: flex;
+  @include media-query(lapandup){
+    margin-left: $act-unit-t;
+  }
 
 
   a{

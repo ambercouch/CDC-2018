@@ -32,7 +32,7 @@ If you would like to show the timestamp of the image ,you can use <?php echo $ex
             <div id="ngg-image-<?php echo $image->pid ?>" class="ngg-gallery-thumbnail-box c-gallery__thumb-wrapper" <?php echo $image->style ?> >
                 <div class="ngg-gallery-thumbnail c-gallery__thumb" >
                     <a href="<?php echo nextgen_esc_url($image->imageURL) ?>"
-                       title="Click to enlarge"
+                       title=""
                         <?php echo $image->thumbcode ?> >
                         <?php if ( !$image->hidden ) { ?>
                             <img title="Click to enlarge image" alt="<?php echo esc_attr($image->alttext) ?>" src="<?php echo nextgen_esc_url($image->thumbnailURL) ?>" <?php echo $image->size ?> />
