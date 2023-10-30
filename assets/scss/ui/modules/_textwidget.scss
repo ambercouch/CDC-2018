@@ -346,5 +346,9 @@
 }
 
 .htmlwidget--contact-button{
-  margin-bottom:$base-spacing-unit * 2 !important;
+  margin-bottom:$base-spacing-unit !important;
+  @include media-query(lap-and-up){
+    margin-bottom:$base-spacing-unit * 2 !important;
+  }
+
 }
