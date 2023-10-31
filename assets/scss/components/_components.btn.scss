@@ -40,6 +40,17 @@
   }
   &secondary{
     @extend .c-btn--primary;
+    background-color: $brand-col-9 !important;
+    color: white !important;
+    &:hover{
+      .page & {
+        color: white !important;
+      }
+
+    }
+  }
+  &tertiary{
+    @extend .c-btn--primary;
     background-color: $brand-col-4--light !important;
     color: $brand-col-2 !important;
     &:hover{
