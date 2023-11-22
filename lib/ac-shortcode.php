@@ -122,12 +122,12 @@ function cdc_shortcode_youtube_block($atts) {
     $output .= '<div class="video-thumb">';
     $output .= '<a class="video-link " href="#modal-'.$id.'">';
 
-    $output .= '<svg preserveAspectRatio="none" class="icon video-link__icon--play ">';
+    $output .= '<div class="video-link__wrapper" ><svg preserveAspectRatio="none" class="icon video-link__icon--play ">';
     $output .= '<use xlink:href = "#icon-play" />';
     $output .= '</svg>';
     $output .= '<small class="video-link__play-text">Play</small>';
 
-    $output .='</a>';
+    $output .='</div></a>';
 
     $output .= '</div>';
     $output .= '</div>';
