@@ -60,6 +60,11 @@
 
     }
   }
+  &text-icon{
+    display: flex;
+    align-items: center;
+    margin-bottom: $act-unit-t;
+  }
 }
 
 //BEM BLOCK MODIFIER FALLBACK .c-btn--
@@ -95,6 +100,15 @@
 
   &footer {
     display: block
+  }
+  &icon{
+    display: inline-block;
+    @include size(1.5em);
+    margin-right: 0.5em;
+    fill: currentColor;
+  }
+  &label{
+    display: inline-block;
   }
 }
 

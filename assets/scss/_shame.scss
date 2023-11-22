@@ -196,6 +196,7 @@ img.header--master__banner-image{
 }
 .modaal-wrapper .ngg-galleryoverview{
   margin: 0;
+  display: flex !important;
 }
 .c-gallery__thumb-wrapper{
   margin-bottom: $act-unit-s;
@@ -227,6 +228,8 @@ img.header--master__banner-image{
   }
 }
 .c-gallery__description{
+  text-align: left;
+  color: $brand-col-1;
   background: #F7F7F7;
   //color: #fff;
   width: 40%;
