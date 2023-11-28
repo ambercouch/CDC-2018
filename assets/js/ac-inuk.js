@@ -241,9 +241,8 @@ ACINUK = {
         return false;
       });
 
-    }, emergency_dentist_cardiff: function () {
-
-
+    },
+      emergency_dentist_cardiff: function () {
       var mins = new Date().getMinutes(),
               hrs = new Date().getHours(),
               day = new Date().getDay(),
@@ -263,7 +262,20 @@ ACINUK = {
         jQuery('.open-highlight').attr('title', 'We are currently open.');
       }
       console.log('emergency_dentist_cardiff');
-    }
+    },
+      payment_plan: function () {
+console.log("this is the payment_plan")
+          // Targeting .item-title with <a> tags
+          document.querySelectorAll('.page-accordion-content .item-title a').forEach(el => {
+              el.innerHTML = el.innerHTML.replace(/\(([^)]+)\)/, '<small>($1)</small>');
+          });
+
+          // Targeting .item-title without <a> tags
+          document.querySelectorAll('.page-accordion-content .item-title:not(:has(a))').forEach(el => {
+              el.innerHTML = el.innerHTML.replace(/\(([^)]+)\)/, '<small>($1)</small>');
+          });
+      }
+
 
   },
   post: {
