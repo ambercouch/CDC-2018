@@ -57,6 +57,34 @@ function cdc_cpt() {
         'has_archive' => 'staff-member'
     );
     register_post_type('staff-member', $args);
+
+    //Landing pages
+    $labels = array(
+        'name' => _x('Landing Pages', 'post type general name'),
+        'singular_name' => _x('Landing Page', 'post type singular name'),
+        'add_new' => _x('Add New', 'Landing Page'),
+        'add_new_item' => __('Add New Landing Page'),
+        'edit_item' => __('Edit Landing Page'),
+        'new_item' => __('New Landing Page'),
+        'all_items' => __('All Landing Pages'),
+        'view_item' => __('View Landing Page'),
+        'search_items' => __('Search Landing Pages'),
+        'not_found' => __('No Landing Pages found'),
+        'not_found_in_trash' => __('No Landing Pages found in the trash'),
+        'parent_item_colon' => '',
+        'menu_name' => 'Landing Pages'
+    );
+    $args = array(
+        'labels' => $labels,
+        'menu_icon' => 'dashicons-admin-page',
+        'description' => 'Landing Pages',
+        'public' => true,
+        'hierarchical' => true,
+        'menu_position' => 20,
+        'supports' => array('title', 'editor','custom-fields','revisions'),
+        'has_archive' => 'landing-page'
+    );
+    register_post_type('landing_page', $args);
 }
 
 add_action('init', 'cdc_cpt');

@@ -9,9 +9,11 @@
 ?>
 </div><!-- .content -->
 </div><!-- .site__content-->
+<?php if (get_post_type() !== 'landing_page') : ?>
 <div class="site__below-content">
   <?php get_template_part('templates/sidebar-below-content'); ?>
 </div>
+<?php endif; ?>
 <div class="site__footer-content">
   <?php get_template_part('templates/snippets/sidebar-footer-content'); ?>
 </div>

@@ -461,3 +461,141 @@ if( function_exists('acf_add_local_field_group') ):
     ));
 
 endif;
+
+add_action( 'acf/include_fields', function() {
+    if ( ! function_exists( 'acf_add_local_field_group' ) ) {
+        return;
+    }
+
+    acf_add_local_field_group( array(
+        'key' => 'group_landing_page_settings',
+        'title' => 'Landing Page Settings',
+        'fields' => array(
+            array(
+                'key' => 'field_landing_page_banner_image',
+                'label' => 'Landing page banner image',
+                'name' => 'landing_page_banner_image',
+                'aria-label' => '',
+                'type' => 'image',
+                'instructions' => 'Banner image to be used at the top of the site',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'return_format' => 'array',
+                'library' => 'all',
+                'min_width' => '',
+                'min_height' => '',
+                'min_size' => '',
+                'max_width' => '',
+                'max_height' => '',
+                'max_size' => '',
+                'mime_types' => '',
+                'preview_size' => 'medium',
+            ),
+            array(
+                'key' => 'field_landing_page_video_ID',
+                'label' => 'Landing page video ID',
+                'name' => 'landing_page_video_ID',
+                'aria-label' => '',
+                'type' => 'text',
+                'instructions' => 'Medivision video ID number',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'maxlength' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+            ),
+            array(
+                'key' => 'field_landing_page_video_title',
+                'label' => 'Landing page video title',
+                'name' => 'landing_page_video_title',
+                'aria-label' => '',
+                'type' => 'text',
+                'instructions' => 'The title for the video that appears on the play thumbnail and above the video in the popup.',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'maxlength' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+            ),
+            array(
+                'key' => 'field_landing_page_footer_content',
+                'label' => 'Landing page footer content',
+                'name' => 'landing_page_footer_content',
+                'aria-label' => '',
+                'type' => 'wysiwyg',
+                'instructions' => 'Area at the bottom of the page suitable for a call to action. Defaults to the main contact form short code.',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '<h2>Contact Us </h2>
+[contact-form-7 id="0f194c5" title="Contact form 1"]',
+                'tabs' => 'all',
+                'toolbar' => 'full',
+                'media_upload' => 1,
+                'delay' => 0,
+            ),
+            array(
+                'key' => 'field_landing_page_sidebar',
+                'label' => 'Landing page sidebar',
+                'name' => 'landing_page_sidebar',
+                'aria-label' => '',
+                'type' => 'wysiwyg',
+                'instructions' => 'Additional content that is displayed as a side bar.',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'tabs' => 'all',
+                'toolbar' => 'full',
+                'media_upload' => 1,
+                'delay' => 0,
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'landing_page',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
+        'show_in_rest' => 0,
+    ) );
+} );
+
