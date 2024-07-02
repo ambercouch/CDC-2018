@@ -1,6 +1,15 @@
 <?php
 
 function cdc_shortcode_video_block($atts) {
+    if(isset($atts['title']) ||isset($atts['ids'] )) :
+        extract(shortcode_atts(array(
+            'ids' => '',
+            'title' => ''
+        ), $atts));
+        $ids = explode(',', $ids);
+    else :
+    $ids = $atts;
+    endif;
 
   $output = '<div class="video-preview sc ">';
   if (empty($atts)) {
@@ -31,7 +40,7 @@ function cdc_shortcode_video_block($atts) {
       wp_reset_postdata();
     }
   } else {
-    foreach ($atts as $vid_id) {
+    foreach ($ids as $vid_id) {
       $args = array(
           'post_type' => 'video',
           'showposts' => 1,
@@ -47,7 +56,9 @@ function cdc_shortcode_video_block($atts) {
       $query = new WP_Query($args);
       if ($query->have_posts()) :
         while ($query->have_posts()) :
+
           $query->the_post();
+            $title = ($title != '') ? $title : get_field('video_title');
           $output .= '<div class="video-preview__video-thumb with atts">';
           $output .= '<div class="video-thumb">';
 
@@ -68,13 +79,13 @@ function cdc_shortcode_video_block($atts) {
 
 
             $output .= '</div>';
-            $output .= '<h6 class="video-preview__video-title test">' . get_field('video_title') . '</h6>';
+            $output .= '<h6 class="video-preview__video-title test-video title atts">' . $title . '</h6>';
             $output .= '</div>';
             $output .= (is_user_logged_in() == false)? '<div class="remodal" data-remodal-id="modal-'.$vid_id.'">' : '<div class="remodal" data-remodal-id="modal-'.$vid_id.'">';
             $output .= '<div id="ajax-box"  class="iframe video ">';
             $output .= '<h1 class="video__title">';
 
-            $output .= '<span class="title" >'. get_field('video_title') .'</span>';
+            $output .= '<span class="title" >'.  $title .'</span>';
             $output .= '</h1>';
 
             if(get_field('swf_video')){
