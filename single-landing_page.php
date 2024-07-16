@@ -14,7 +14,7 @@ get_header();
 
         <?php get_template_part('templates/content', 'single-landing-page'); ?>
 
-        <?php ac_inuk_content_nav('nav-below'); ?>
+        <?php //ac_inuk_content_nav('nav-below'); ?>
 
         <?php
         // If comments are open or we have at least one comment, load up the comment template
