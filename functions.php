@@ -198,3 +198,28 @@ function enqueue_admin_script() {
 }
 add_action('admin_enqueue_scripts', 'enqueue_admin_script');
 
+
+add_filter('wpseo_canonical', 'custom_canonical_url');
+
+  function custom_canonical_url($canonical) {
+      if (is_page('dental-implants-cardiff')) {
+          return 'https://dentalimplantscardiff.com/';
+      }
+      return $canonical;
+  }
+
+function modify_canonical_tags() {
+    // Check if it's the custom post type and specific slug
+    if (is_singular('landing_page') && get_queried_object()->post_name == 'dental-implants-cardiff') {
+        // Remove the default canonical tag
+        remove_action('wp_head', 'rel_canonical');
+
+        // Add the custom canonical tag
+        add_action('wp_head', 'custom_canonical_tag');
+    }
+}
+add_action('wp', 'modify_canonical_tags');
+
+function custom_canonical_tag() {
+    echo '<link rel="canonical" href="https://dentalimplantscardiff.com/" />' . "\n";
+}
