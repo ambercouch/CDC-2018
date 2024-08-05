@@ -1,4 +1,5 @@
 <?php
+
 //Nice and simple
 require( get_template_directory() . '/lib/ac-inuk.php' );
 add_filter( 'wpcf7_support_html5_fallback', '__return_true' );
@@ -198,28 +199,61 @@ function enqueue_admin_script() {
 }
 add_action('admin_enqueue_scripts', 'enqueue_admin_script');
 
-
-add_filter('wpseo_canonical', 'custom_canonical_url');
-
-  function custom_canonical_url($canonical) {
-      if (is_page('dental-implants-cardiff')) {
-          return 'https://dentalimplantscardiff.com/';
-      }
-      return $canonical;
-  }
+// Test functions file
+//add_action('wp_head', function() {
+//    echo '<!-- test WP HEAD 123 -->' . "\n";
+//});
 
 function modify_canonical_tags() {
-    // Check if it's the custom post type and specific slug
-    if (is_singular('landing_page') && get_queried_object()->post_name == 'dental-implants-cardiff') {
-        // Remove the default canonical tag
-        remove_action('wp_head', 'rel_canonical');
 
-        // Add the custom canonical tag
-        add_action('wp_head', 'custom_canonical_tag');
+//    add_action('wp_head', function() {
+//        echo '<!-- modify_canonical_tags() 123 -->' . "\n";
+//    });
+
+    // Array of slugs and their canonical URLs
+    $canonical_urls = array(
+        'dental-implants-cardiff' => 'https://dentalimplantscardiff.com/',
+        'orthodontist-cardiff' => 'https://orthodontistcardiff.com/',
+        // Add more slugs and URLs as needed
+    );
+
+
+
+    // Check if it's the custom post type
+    if (is_singular('landing_page')) {
+        $post_name = get_queried_object()->post_name;
+//        add_action('wp_head', function() {
+//            echo '<!-- is_singular(landing_page) -->' . "\n";
+//        });
+        if (array_key_exists($post_name, $canonical_urls)) {
+//            add_action('wp_head', function() {
+//                echo '<!-- array_key_exists -->' . "\n";
+//            });
+            // Remove the default canonical tag
+            remove_action('wp_head', 'rel_canonical');
+
+            // Add the custom canonical tag
+            add_action('wp_head', function() use ($canonical_urls, $post_name) {
+                echo '<link class="ac-canonical" rel="canonical" href="' . esc_url($canonical_urls[$post_name]) . '" />' . "\n";
+            });
+
+            // Add the custom canonical tag for WPSEO YOAST
+            add_filter('wpseo_canonical', function() use ($canonical_urls, $post_name){
+              return $canonical_urls[$post_name];
+            });
+        }else{
+//            add_action('wp_head', function() use ($canonical_urls, $post_name) {
+//                echo '<!-- NOT array_key_exists -->' . "\n";
+//            });
+        }
+    }else{
+//        add_action('wp_head', function() {
+//            echo '<!-- NOT is_singular(landing_page) -->' . "\n";
+//        });
     }
 }
 add_action('wp', 'modify_canonical_tags');
 
-function custom_canonical_tag() {
-    echo '<link rel="canonical" href="https://dentalimplantscardiff.com/" />' . "\n";
-}
+
+
+
