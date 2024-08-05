@@ -319,6 +319,19 @@ img.header--master__banner-image{
   height: 400px;
 
 }
+
+.page-template-page--referral-header-banner .c-background-image{
+  height: 400px;
+  position: relative;
+}
+.page-template-page--referral-header-banner .c-background-image__img{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  height: 400px;
+
+}
 .c-background-image:after{
   content: "";
   display: block;
@@ -331,6 +344,10 @@ img.header--master__banner-image{
 .site__navigation--main.has-background-image{
   position: relative;
   height: 400px;
+}
+.page-template-page--referral-header-banner .site__navigation--main.has-background-image{
+  position: relative;
+  height: auto !important;
 }
 
 .c-header__wrapper--landing-page{

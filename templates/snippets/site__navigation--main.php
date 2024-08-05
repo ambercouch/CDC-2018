@@ -1,4 +1,19 @@
-<div class="site__navigation--main" id="nav-main"   role="navigation" <?php echo(AC_MENU_ABOVE_HEADER === FALSE) ? 'data-responsive-clone="true"' : ''; ?>>
+<?php
+// Check if the custom field has a value
+$image = false;
+$cssClass = 'no-background-image';
+if (get_field('banner_image')) :
+// Get the image array
+    $image = get_field('landing_page_banner_image');
+    $cssClass = 'has-background-image';
+    else :
+        $image = get_field('landing_page_banner_image');
+        $cssClass = 'test-background-image';
+    ?>
+<?php endif; ?>
+
+<div class="site__navigation--main <?php echo $cssClass; ?>" id="nav-main"   role="navigation" <?php echo(AC_MENU_ABOVE_HEADER === FALSE) ? 'data-responsive-clone="true"' : ''; ?>>
+
   <div class="navigation--main" >
     <div class="grid">
       <div class="navigation--main__menu">
@@ -66,4 +81,14 @@
       </div>
     </div><!-- /.container -->
   </div><!-- #site-navigation -->
+    <?php
+    // Check if the custom field has a value
+    if (get_field('banner_image')) :
+        // Get the image array
+        $image = get_field('banner_image');
+        ?>
+      <div  class="c-background-image" >
+          <?php echo '<img class="c-background-image__img" src="' . esc_url($image['url']) . '" alt="' . esc_attr($image['alt']) . '" width="' . esc_attr($image['width']) . '" height="' . esc_attr($image['height']) . '">'; ?>
+      </div>
+    <?php endif; ?>
 </div>
