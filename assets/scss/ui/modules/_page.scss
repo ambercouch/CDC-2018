@@ -21,7 +21,7 @@
 
   ul, ol{
     margin-left: 1.5em;
-    text-align: left;
+    text-align: justify;
     .rtl &{
       text-align: right;
     }
@@ -32,6 +32,7 @@
     }
     max-width: 36em;
     margin: 0 0 0.5em;
+
   }
   dd{
     a{
