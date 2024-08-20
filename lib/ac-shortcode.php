@@ -9,6 +9,7 @@ function cdc_shortcode_video_block($atts) {
         $ids = explode(',', $ids);
     else :
     $ids = $atts;
+    $title = '';
     endif;
 
   $output = '<div class="video-preview sc ">';
