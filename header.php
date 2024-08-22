@@ -77,17 +77,20 @@
       </svg>
       <span>029 2038 2671</span>
     </a>
-  <?php if (get_post_type() !== 'landing_page') : ?>
-    <?php (AC_MENU_ABOVE_HEADER === TRUE) ? get_template_part('templates/snippets/site__navigation--main') : ''; ?>
-  <?php else : ?>
+  <?php if (get_post_type() == 'landing_page') : ?>
       <?php (AC_MENU_ABOVE_HEADER === TRUE) ? get_template_part('templates/snippets/site__navigation--landing-page') : ''; ?>
+  <?php elseif (is_page_template('page--referral-header-banner.php')) : ?>
+      <?php (AC_MENU_ABOVE_HEADER === TRUE) ? get_template_part('templates/snippets/site__navigation--referral') : ''; ?>
+  <?php else : ?>
+      <?php (AC_MENU_ABOVE_HEADER === TRUE) ? get_template_part('templates/snippets/site__navigation--main') : ''; ?>
   <?php endif; ?>
   <div id="page" class="hfeed site remodal-bg">
       <?php do_action('before'); ?>
       <header class="site__header--master" id="masthead"   role="banner">
         <?php get_template_part('templates/snippets/sidebar-banner'); ?>
       </header><!-- /.site__header -->
-        <?php if (get_post_type() !== 'landing_page') : ?>
+        <?php if (get_post_type() == 'landing_page' || is_page_template('page--referral-header-banner.php') ) : ?>
+        <?php else : ?>
       <?php get_template_part('templates/snippets/site__navigation--services'); ?>
         <?php endif; ?>
       <div class="site__content" id="main" >

@@ -27,7 +27,11 @@ and open the template in the editor.
     @include mq($from : tablet){
       width: 46% !important;
       margin: 0 4% 4% 0;
+      .content__widget-area--main &{
+        width: 100% !important;
+      }
     }
+
   }
 
 
@@ -65,6 +69,7 @@ and open the template in the editor.
       background-color:rgba($brand-col-4, 0.5);
 
     }
+    padding:0;
   }
   .contact-boxes__icon{
     border: solid 1px white;

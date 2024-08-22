@@ -5,6 +5,9 @@
   @extend .navigation;
   @extend .container;
   position: relative;
+  .page-template-page--referral-header-banner &{
+    padding-bottom: $act-unit;
+  }
 }
 .navigation--services{
   @extend .navigation;
