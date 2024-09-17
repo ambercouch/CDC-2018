@@ -87,9 +87,12 @@ if (get_field('banner_image')) :
     if (get_field('banner_image')) :
         // Get the image array
         $image = get_field('banner_image');
+        $image_class = (get_field('banner_image_class')  ) ? get_field('banner_image_class') : 'no-banner-image-class';
+        $banner_content = (get_field('banner_content')  ) ? get_field('banner_content') : '<!-- no banner content -->';
         ?>
       <div  class="c-background-image" >
-          <?php echo '<img class="c-background-image__img" src="' . esc_url($image['url']) . '" alt="' . esc_attr($image['alt']) . '" width="' . esc_attr($image['width']) . '" height="' . esc_attr($image['height']) . '">'; ?>
+          <?php echo '<img class="c-background-image__img '. $image_class .' " src="' . esc_url($image['url']) . '" alt="' . esc_attr($image['alt']) . '" width="' . esc_attr($image['width']) . '" height="' . esc_attr($image['height']) . '">'; ?>
+        <?php echo $banner_content ?>
       </div>
     <?php endif; ?>
 </div>

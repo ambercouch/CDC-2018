@@ -1,0 +1,22 @@
+.u-obf-contain{
+   object-fit: contain !important;
+ }
+
+.u-obf-cover {
+   object-fit: cover !important;
+ }
+
+.u-obf-cover--lap {
+  @include media-query(lap) {
+   object-fit: cover !important;
+  }
+}
+.u-obf-cover--palm {
+  @include media-query(palm) {
+    object-fit: cover !important;
+  }
+}
+
+.u-obf-fill {
+  object-fit: fill !important;
+}
