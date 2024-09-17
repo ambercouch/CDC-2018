@@ -73,7 +73,10 @@ if (get_field('banner_image')) :
                 <?php echo  langSwitch(); ?>
               </div>
             </div><!-- /.branding -->
-                     </div>
+            <a id="site_menu_toggle" class="menu--responsive-toggle__toggle" href="#menu">Menu</a>
+              <?php wp_nav_menu(array('theme_location' => 'primary_referrals', 'container' => 'nav', 'container_class' => 'menu--site__container', 'menu_class' => 'menu--site__menu-list')); ?>
+
+          </div>
           <!-- menu -->
         </div>
       </div>
