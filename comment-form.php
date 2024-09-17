@@ -4,10 +4,15 @@ $commenter = wp_get_current_commenter();
 $user = wp_get_current_user();
 $user_identity = $user->exists() ? $user->display_name : '';
 
+
+$post_id = isset($post_id)? $post_id : false;
+$args = isset($args) ? $args : array();
 $args = wp_parse_args($args);
 if (!isset($args['format'])) {
-  $args['format'] = current_theme_supports('html5', 'comment-form') ? 'html5' : 'xhtml';
+    $args['format'] = current_theme_supports('html5', 'comment-form') ? 'html5' : 'xhtml';
 }
+
+
 
 $req = get_option('require_name_email');
 $aria_req = ( $req ? " aria-required='true'" : '' );
