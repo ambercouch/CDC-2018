@@ -37,6 +37,9 @@
     text-align: center;
     text-decoration: none;
     color: #fff !important;
+    a{
+      color: #fff !important;
+    }
   }
   &secondary{
     @extend .c-btn--primary;
@@ -64,6 +67,9 @@
     display: flex;
     align-items: center;
     margin-bottom: $act-unit-t;
+  }
+  &read-more{
+    @extend .c-btn--primary;
   }
 }
 

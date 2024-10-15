@@ -239,6 +239,8 @@
 }
 
 .header--master__lang-switch {
+  display:flex;
+  align-items: center;
   position: absolute !important;
   bottom: auto;
   left: 0;
@@ -263,7 +265,8 @@
 
   @include breakout-band($bgc :#E0CCDF);
   @include media-query(lap-and-up) {
-    display: block !important;
+    display:flex;
+    align-items: center;
     left: auto;
 
   }
@@ -288,3 +291,6 @@
   position: relative;
   height: 100%;
 }
+
+
+

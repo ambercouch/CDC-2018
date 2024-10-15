@@ -7,19 +7,25 @@
 get_header();
 ?>
 <div class="grid" >
-  <section class="content__search-list" id="primary"  >
-    <div class="search-list" id="content"  role="main">
+    <?php get_sidebar(); ?>
+  <div id="primary" class="content__single-page">
+    <div id="content" class="single-page" role="main">
 
       <?php if (have_posts()) : ?>
 
-        <header class="search-list__header">
-          <h1 class="header"><?php printf(__('Search Results for: %s', 'ac_inuk'), '<span class="search-list__term">' . get_search_query() . '</span>'); ?></h1>
-        </header><!-- .page-header -->
+      <header class="page__header">
+        <div class="header--article">
+          <h2 class="header__title">
+            <span class="title--article" ><?php printf(__('Your results for: <strong> %s </strong>', 'ac_inuk'), '<span class="search-list__term">' . get_search_query() . '</span>'); ?></span>
+          </h2>
+        </div>
+      </header>
+
 
         <?php /* Start the Loop */ ?>
         <?php while (have_posts()) : the_post(); ?>
 
-          <?php get_template_part('templates/content', 'search'); ?>
+          <?php get_template_part('templates/content', 'search-result'); ?>
 
         <?php endwhile; ?>
 
@@ -32,7 +38,7 @@ get_header();
       <?php endif; ?>
 
     </div><!-- #content -->
-  </section><!-- #primary -->
+  </div><!-- #primary -->
 
 
   <?php get_sidebar(); ?>

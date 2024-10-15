@@ -254,6 +254,72 @@ function modify_canonical_tags() {
 }
 add_action('wp', 'modify_canonical_tags');
 
+/*
+ * Search function
+ */
+
+function custom_search_filter($query) {
+    if ( !is_admin() && $query->is_search ) {
+        // Limit the search to pages only
+        $query->set('post_type', 'page');
+
+        // Add a meta query to check if ACF field 'make_page_searchable' is true
+        $meta_query = array(
+            array(
+                'key' => 'make_page_searchable',
+                'value' => '1', // ACF stores true as '1'
+                'compare' => '='
+            )
+        );
+        $query->set('meta_query', $meta_query);
+    }
+    return $query;
+}
+add_filter('pre_get_posts', 'custom_search_filter');
+
+function scroll_to_primary() {
+    if ( is_search() ) {
+        ?>
+      <script type="text/javascript">
+          document.addEventListener('DOMContentLoaded', function() {
+              // Check if this is a search results page
+              if (window.location.href.indexOf('?s=') !== -1) {
+                  // Append #primary to the URL
+                  if (!window.location.href.includes('#primary')) {
+                      window.location.href += '#primary';
+                  }
+              }
+          });
+      </script>
+        <?php
+    }
+}
+add_action('wp_footer', 'scroll_to_primary');
+
+
+function set_acf_field_for_pages_and_children() {
+    // List of page IDs for which we want to set the ACF field to true
+    $parent_page_ids = array(1154, 19411, 8, 10, 12, 25, 28, 4603, 5367);
+
+    // Loop through each parent page and set the ACF field
+    foreach ( $parent_page_ids as $parent_page_id ) {
+        // Set ACF field to true for the parent page
+        update_field('make_page_searchable', true, $parent_page_id);
+
+        // Get the children of the parent page
+        $child_pages = get_pages(array(
+            'child_of' => $parent_page_id,
+            'post_type' => 'page',
+            'post_status' => 'publish'
+        ));
+
+        // Set ACF field to true for each child page
+        foreach ( $child_pages as $child_page ) {
+            update_field('make_page_searchable', true, $child_page->ID);
+        }
+    }
+}
+//add_action('init', 'set_acf_field_for_pages_and_children');
 
 
 

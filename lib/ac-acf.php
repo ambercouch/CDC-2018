@@ -333,6 +333,25 @@ if( function_exists('acf_add_local_field_group') ):
                 'ui_on_text' => 'Hide',
                 'ui_off_text' => 'Show',
             ),
+            array(
+                'key' => 'field_make_page_searchable',
+                'label' => 'Make Page Searchable',
+                'name' => 'make_page_searchable',
+                'type' => 'true_false',
+                'instructions' => 'If True then the page will show in search results',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'message' => '',
+                'default_value' => 0,
+                'ui' => 1,
+                'ui_on_text' => 'True',
+                'ui_off_text' => 'False',
+            ),
         ),
         'location' => array(
             array(

@@ -9,11 +9,11 @@
 ?>
 
 <article id="post-0" class="post no-results not-found">
-  <header class="post__header">
-    <h1 class="header"><?php _e('Nothing Found', 'ac_inuk'); ?></h1>
+  <header class="page__header">
+    <h2 class="header__title"><?php _e('Nothing Found', 'ac_inuk'); ?></h2>
   </header><!-- .entry-header -->
 
-  <div class="post__content">
+  <div class="page__content">
     <?php if (is_home() && current_user_can('publish_posts')) : ?>
 
       <p><?php printf(__('Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'ac_inuk'), esc_url(admin_url('post-new.php'))); ?></p>
@@ -21,7 +21,6 @@
     <?php elseif (is_search()) : ?>
 
       <p><?php _e('Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'ac_inuk'); ?></p>
-      <?php get_search_form(); ?>
 
     <?php else : ?>
 

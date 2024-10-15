@@ -350,10 +350,10 @@ console.log("this is the payment_plan")
             showButton.on('click', function(e){
                 e.preventDefault();
                 elState = $(this).attr('data-state');
-                // console.log('elState');
-                // console.log(this);
-                //
-                // console.log(elState);
+                console.log('elState');
+                console.log(this);
+
+                console.log(elState);
 
                 if ('off' === elState ) {
                     console.log('click on');
@@ -362,16 +362,16 @@ console.log("this is the payment_plan")
                     $(container).attr('data-state', 'on');
                     $(parent).attr('data-state', 'on');
                     $(container).addClass('is-on');
-                    document.body.className += ' ' + 'container-'+ $(container).attr('data-container') +'-is-open ';
+                    document.body.className += ' ' + 'container-'+ $(container).attr('data-container') +'-is-open';
                     window.dispatchEvent(eventActOpen);
 
                 } else {
-                    // console.log('click off');
+                    console.log('click off');
                     $(this).attr('data-state', 'off');
                     $(container).attr('data-state', 'off');
                     $(parent).attr('data-state', 'off');
                     $(container).removeClass('is-off');
-                    document.querySelector('body').classList.remove('container-'+ $(container).attr('data-container') +'-is-open ');
+                    document.querySelector('body').classList.remove('container-'+ $(container).attr('data-container') +'-is-open');
 
                     window.dispatchEvent(eventActClose);
                 }

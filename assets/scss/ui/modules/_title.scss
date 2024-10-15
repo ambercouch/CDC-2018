@@ -40,6 +40,18 @@
   background: #fff;
   padding: ($half-spacing-unit) $base-spacing-unit;
   letter-spacing: 0.1em;
-
+#secondary &{
+  background: transparent;
+  color: #650360;
+  font-size: 24px;
+  font-size: 1.41176rem;
+  line-height: 1.04167;
+  padding-left: 0;
+  padding-right: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
 
 }
+

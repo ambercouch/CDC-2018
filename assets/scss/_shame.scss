@@ -101,7 +101,10 @@ img.header--master__banner-image{
   margin-right: 1.5em;
   display: none;
   @include mq($from : tablet){
-    display: inline;
+
+      display: inline-flex;
+      align-items: center;
+
   }
 }
 .icon--header{
@@ -407,3 +410,95 @@ img.header--master__banner-image{
   position: relative;
   top: 2px;
 }
+/*
+ * Search form styles
+ */
+
+
+.c-search-form__control{
+  fill: $brand-col-2 ;
+
+}
+
+.c-search-form{
+  overflow: visible;
+  transition: width 0.5s ease-in-out;
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+  &[data-state=on]{
+    background: #fafafa;
+    width: 100%;
+    .social-nav--header &{
+      background: rgba(#fafafa, 0.4);
+      width: auto;
+    }
+  }
+  padding: $act-unit-t;
+}
+.c-search-form__form{
+  transition: width 0.5s ease-in-out;
+  width: 100%;
+  overflow: hidden;
+  &[data-state=off]{
+    width: 0;
+  }
+}
+
+.c-search-form__input--query{
+  @include size(100%);
+  border: none;
+  background: transparent;
+  &:focus{
+    border: none;
+    outline: none;
+  }
+}
+
+p.is-empty{
+  display: none !important;
+}
+
+.parent-pageid-54652 #custom_html-6,
+.page-id-54652 #custom_html-6,
+.page-template-page--referral-header-banner #custom_html-6{
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.c-search-result{
+  margin-bottom: $act-unit;
+  padding: $act-unit;
+  margin-left: $act-unit;
+  background: rgba($brand-col-4, 0.1);
+  .page__content{
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .title--article{
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+
+.search-results #secondary .widget_nav_menu{
+  display: none;
+}
+
+#secondary .c-search-form__form {
+  transition: width .5s ease-in-out;
+  width: 100% !important;
+  overflow: hidden;
+}
+
+#secondary .widget_search{
+  display : none;
+}
+
+.search-results #secondary .widget_search,
+.search-no-results #secondary .widget_search{
+   display : block;
+ }
+
