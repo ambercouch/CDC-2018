@@ -297,6 +297,9 @@ function scroll_to_primary() {
 add_action('wp_footer', 'scroll_to_primary');
 
 
+/*
+ * update the searchable field for child pages
+ */
 function set_acf_field_for_pages_and_children() {
     // List of page IDs for which we want to set the ACF field to true
     $parent_page_ids = array(1154, 19411, 8, 10, 12, 25, 28, 4603, 5367);
@@ -318,8 +321,10 @@ function set_acf_field_for_pages_and_children() {
             update_field('make_page_searchable', true, $child_page->ID);
         }
     }
-}
+} 
 //add_action('init', 'set_acf_field_for_pages_and_children');
+
+add_filter('wpcf7_autop_or_not', '__return_false');
 
 
 
