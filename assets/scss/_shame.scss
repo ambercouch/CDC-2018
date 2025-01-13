@@ -1,12 +1,13 @@
 .hero-banner--winter-girl{
   .header--master__banner-image{
     width: auto;
-    left: -120px;
-    top: -50px;
+    left: -20px;
+    top: -115px !important;
+    right: auto !important;
     @include media-query(lap-and-up){
       left: auto;
-      top: -25px;
-      right: 0 !important;
+      top: -60px !important;
+      right: -60px !important;
     }
   }
 
@@ -502,3 +503,16 @@ p.is-empty{
    display : block;
  }
 
+.navigation-paging {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 0 24px;
+
+  &:has(> :only-child) {
+    justify-content: flex-end;
+  }
+
+  a {
+    color: $brand-col-2;
+  }
+}
