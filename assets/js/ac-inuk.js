@@ -283,6 +283,47 @@ console.log("this is the payment_plan")
       console.log('all posts');
     }
   },
+    error404: {
+      init: function(){
+          console.log('Error 404');
+          // Ensure the DOM is ready
+
+              // Select the elements
+              const $controlElement = $('.c-search-form__control');
+              const $formElement = $('.c-search-form__form');
+              const $searchElement = $('.c-search-form');
+
+              // Set the data-state attribute to "on"
+              if ($controlElement.length) {
+                  console.log('has controlEle');
+                  $controlElement.attr('data-state', 'on');
+              } else {
+                  console.log("NO ControlEle");
+              }
+          // Set the data-state attribute to "on"
+          if ($searchElement.length) {
+              console.log('has $search');
+              $searchElement.attr('data-state', 'on');
+          } else {
+              console.log("NO $search");
+          }
+
+
+              if ($formElement.length) {
+                  console.log("has form");
+                  $formElement.attr('data-state', 'on');
+                  // Add the class "is-on" to .c-search-form__form
+                  $formElement.addClass('is-on');
+              } else {
+                  console.log("NO form");
+              }
+
+
+          console.log(controlElement.getAttribute('data-state'));
+          console.log(formElement.getAttribute('data-state'));
+          console.log(formElement.classList.contains('is-on'));
+      },
+    },
   gaq :{
         video : function(){
 

@@ -23,6 +23,9 @@
         text-decoration: none;
       }
     }
+    .error404 &{
+      padding-left: 0;
+    }
   }
   .post__content{
     @extend .cf;
@@ -42,7 +45,7 @@
       max-width: 33em;
     }
   }
-  
+
   .post__summary{
     @include media-query(desk){
       padding-left:20%;

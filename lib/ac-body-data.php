@@ -19,7 +19,7 @@ function _act_get_body_data() {
     }
 
     if (is_404()) {
-        $post_type = '404';
+        $post_type = 'error404';
     }
 
     $body_data['post-type'] = $post_type;
