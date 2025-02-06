@@ -127,16 +127,19 @@ ACINUK = {
         return false;
       });
 
-      jQuery('p').each(function (i) {
-        if (jQuery(this).text() == '') {
-          jQuery(this).addClass('is-empty');
-        }
-      });
+        jQuery('p').each(function () {
+            if (jQuery.trim(jQuery(this).html()) === '') {
+                console.log('empty p test');
+                console.log(this);
+                jQuery(this).addClass('is-empty');
+            }
+        });
 
       //jQuery('.widget_nav_menu .widget__header').append('<a class="menu--responsive-toggle__toggle" href="#menu">Menu</a>');
 
       //svg hover effect for menu items;
       jQuery('.menu__icon').each(function (i, e) {
+
         var id = jQuery('.icon__use--hover-on', this).attr('xlink:href');
         if (jQuery(id).length === 1) {
           var currentClass = jQuery(this).attr('class');
