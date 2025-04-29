@@ -25,8 +25,26 @@ function ac_inuk_scripts() {
         wp_register_style('cdc_styles', get_template_directory_uri() . '/style.css', array(), filemtime(get_template_directory() . '/style.css') );
         wp_enqueue_style('cdc_styles');
 
-    wp_enqueue_script('jquery.cookie', ICL_PLUGIN_URL . '/res/js/jquery.cookie.js', array('jquery'), ICL_SITEPRESS_VERSION, true);
-    wp_enqueue_script('wpml-browser-redirect', ICL_PLUGIN_URL . '/res/js/browser-redirect.js', array('jquery', 'jquery.cookie'), ICL_SITEPRESS_VERSION, true);
+    if (defined('ICL_PLUGIN_URL') && defined('ICL_SITEPRESS_VERSION')) {
+        wp_enqueue_script(
+            'jquery.cookie',
+            ICL_PLUGIN_URL . '/res/js/jquery.cookie.js',
+            array('jquery'),
+            ICL_SITEPRESS_VERSION,
+            true
+        );
+
+        wp_enqueue_script(
+            'wpml-browser-redirect',
+            ICL_PLUGIN_URL . '/res/js/browser-redirect.js',
+            array('jquery', 'jquery.cookie'),
+            ICL_SITEPRESS_VERSION,
+            true
+        );
+    } else {
+        error_log('ICL_PLUGIN_URL or ICL_SITEPRESS_VERSION is not defined. WPML scripts may not load correctly.');
+    }
+
 
     //wp_enqueue_script( 'language-selector', ICL_PLUGIN_URL . '/res/js/language-selector.js', ICL_SITEPRESS_VERSION, true );
 
