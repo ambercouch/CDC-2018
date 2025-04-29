@@ -38,8 +38,8 @@ If you would like to show the timestamp of the image ,you can use <?php echo $ex
                             <img title="Click to enlarge image" alt="<?php echo esc_attr($image->alttext) ?>" src="<?php echo nextgen_esc_url($image->thumbnailURL) ?>" <?php echo $image->size ?> />
                         <?php } ?>
                     </a>
-                  <div class="c-gallery__description">
-                      <?php echo $image->description ?>
+                  <div class="c-gallery__description test gallery-description">
+                      <?php echo wp_kses_post(html_entity_decode($image->description, ENT_QUOTES, 'UTF-8')); ?>
                   </div>
                 </div>
             </div>

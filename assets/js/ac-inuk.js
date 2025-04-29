@@ -1,7 +1,7 @@
 ACINUK = {
   common: {
     init: function () {
-      console.log('page menu test');
+      console.log('gallery test');
 
         try {
             Typekit.load();
@@ -27,6 +27,37 @@ ACINUK = {
                 ACINUK.fn.actStateToggle(container, showButton, containerParent, false);
             }
         })
+
+
+            document.querySelectorAll(".c-gallery__description").forEach(description => {
+                // Create a new <ul> element
+                const ul = document.createElement("ul");
+
+                // Process child nodes (text and elements)
+                [...description.childNodes].forEach(node => {
+                    if (node.nodeType === Node.TEXT_NODE) {
+                        // Split text into words and wrap each word in <li>
+                        node.textContent.trim().split(/\s+/).forEach(word => {
+                            if (word) {
+                                const li = document.createElement("li");
+                                li.textContent = word;
+                                ul.appendChild(li);
+                            }
+                        });
+                    } else if (node.nodeType === Node.ELEMENT_NODE) {
+                        // Wrap existing elements in <li>
+                        const li = document.createElement("li");
+                        li.appendChild(node.cloneNode(true));
+                        ul.appendChild(li);
+                    }
+                });
+
+                // Replace the original content with the new <ul>
+                description.innerHTML = ""; // Clear original content
+                description.appendChild(ul);
+            });
+
+
 
 
 // media query change
