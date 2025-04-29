@@ -214,7 +214,7 @@ if( function_exists('acf_add_local_field_group') ):
                 'key' => 'field_63ce9674b6bcc',
                 'label' => 'Staff Member Qualifications',
                 'name' => 'staff_member_qualifications',
-                'type' => 'text',
+                'type' => 'textarea', // ← changed from 'text' to 'textarea'
                 'instructions' => '',
                 'required' => 0,
                 'conditional_logic' => 0,
@@ -225,9 +225,9 @@ if( function_exists('acf_add_local_field_group') ):
                 ),
                 'default_value' => '',
                 'placeholder' => '',
-                'prepend' => '',
-                'append' => '',
                 'maxlength' => '',
+                'rows' => '2', // Optional: define number of rows visible in the textarea
+                'new_lines' => 'br', // Optional: 'wpautop' or 'br' for how new lines are handled when output
             ),
             array(
                 'key' => 'field_63ce968fb6bcd',
