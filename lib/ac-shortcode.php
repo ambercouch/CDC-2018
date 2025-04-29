@@ -59,7 +59,8 @@ function cdc_shortcode_video_block($atts) {
         while ($query->have_posts()) :
 
           $query->the_post();
-            $title = ($title != '') ? $title : get_field('video_title');
+        $title = ($title != '') ? $title : get_field('video_title');
+
           $output .= '<div class="video-preview__video-thumb with atts">';
           $output .= '<div class="video-thumb">';
 
@@ -102,11 +103,11 @@ function cdc_shortcode_video_block($atts) {
             }else{
                 $output .= '<iframe class="medivision post__content--video__iframe" style="margin:0 auto; width: 398px; height:223px; display: block" src="https://www.medivision.co.uk/Dental/webpakonline.php?id='.$vid_id.'" frameborder="0" marginwidth="1" marginheight="1" scrolling="no" ></iframe>';
             }
-
-
+            $title = '';
 
             $output .= '</div>';
-            $output .= (is_user_logged_in() == false)? '</div>' : '</div>';
+            $output .= '</div>';
+            $title == '';
         endwhile;
       endif;
       wp_reset_postdata();
