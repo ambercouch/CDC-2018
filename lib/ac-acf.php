@@ -570,6 +570,7 @@ add_action( 'acf/include_fields', function() {
                     'id' => '',
                 ),
                 'default_value' => '<h2>Contact Us </h2>
+Fill out our contact form today so we can help you get started on your new smile.
 [contact-form-7 id="0f194c5" title="Contact form 1"]',
                 'tabs' => 'all',
                 'toolbar' => 'full',
