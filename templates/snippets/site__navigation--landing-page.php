@@ -62,9 +62,11 @@
     </div><!-- /.container -->
 
   </div><!-- #site-navigation -->
+  <!-- AC : 2025 08 - Commented out title on banner -->
+  <!--
   <div class="c-header__wrapper--landing-page" >
     <div class="c-header__container">
   <h1 class="c-header--landing-page"><?php the_title() ?></h1>
     </div>
-  </div>
+  </div> -->
 </div>
