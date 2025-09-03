@@ -217,8 +217,52 @@ ACINUK = {
         ACINUK.gaq.tel();
         ACINUK.gaq.contact();
     },
-    testimonials: function () {
-      console.log('pages__testimonials');
+      testimonials: function () {
+          var q = jQuery('.comments ol li');
+          if (!q.length) return;
+
+          // Build the new markup
+          var splitList = '<ol class="testimonials__list">';
+          // First/featured testimonial (always visible)
+          splitList += '<li class="testimonials__testimonial">' + jQuery(q[0]).html() + '</li>';
+          splitList += '</ol>';
+
+          // If there are more testimonials, add a single toggle + drawer
+          if (q.length > 1) {
+              var drawerId = 'testimonials-drawer';
+
+              splitList += '' +
+                  '<a class="fadeNext closed testimonials__toggle" href="#" ' +
+                  'aria-expanded="false" aria-controls="' + drawerId + '">' +
+                  '<span class="show">Show </span><span class="hide">Hide </span>more testimonials' +
+                  '</a>' +
+                  '<ol id="' + drawerId + '" class="testimonials__drawer">';
+
+              for (var i = 1; i < q.length; i++) {
+                  splitList += '<li class="testimonials__testimonial">' + jQuery(q[i]).html() + '</li>';
+              }
+              splitList += '</ol>';
+          }
+
+          jQuery('.testimonials').html(splitList);
+
+          // Toggle the single drawer
+          jQuery('.fadeNext').on('click', function (e) {
+              e.preventDefault();
+              var $btn = jQuery(this);
+              var $drawer = $btn.next();
+
+              $drawer.toggleClass('open');
+              var isOpen = $drawer.hasClass('open');
+
+              $btn.toggleClass('open', isOpen).toggleClass('closed', !isOpen);
+              $btn.attr('aria-expanded', isOpen ? 'true' : 'false');
+              return false;
+          });
+      },
+
+      testimonialsAlt: function () {
+
       var q = jQuery('.comments ol li');
       var thisYear;
       var nextYear;
@@ -248,10 +292,8 @@ ACINUK = {
             splitList = splitList + '</ol><a class="fadeNext closed testimonials__year-toggle" href=""><span class="show">Show </span><span class="hide">Hide </span>' + nextYear + ' Testimonials </a><ol class="testimonials__year ' + nextYearClass + ' " >'
           }
         }
-
-
-
-      });
+      }
+      );
 
       splitList = splitList + '</ol>';
 

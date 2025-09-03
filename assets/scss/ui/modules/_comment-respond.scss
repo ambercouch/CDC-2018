@@ -9,6 +9,9 @@ and open the template in the editor.
 */
 
 .comment-respond{
+  .comments  &{
+    display: none !important;
+  }
   margin: 0 0 $base-spacing-unit 1em;
   border: solid 1px $brand-col-3--tint;
   padding: 1em;
