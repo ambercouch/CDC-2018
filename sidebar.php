@@ -9,7 +9,7 @@
   <div class="widget-area" >
     <?php do_action('before_sidebar'); ?>
     <?php if (!dynamic_sidebar('primary-aside')) : ?><?php endif; // end sidebar widget area ?>
-    <?php if (is_single() && comments_open()) {
+    <?php if (comments_open()) {
         require get_template_directory() . '/comment-form.php';
     } ?>
   </div>

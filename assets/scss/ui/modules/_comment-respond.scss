@@ -13,7 +13,9 @@ and open the template in the editor.
   border: solid 1px $brand-col-3--tint;
   padding: 1em;
   background-color:rgba($brand-col-4, 0.25);
-  
+  .content__widget-area--main &{
+    margin-left: 0;
+  }
 }
 .form-submit{
   [id="submit"]{
@@ -41,4 +43,8 @@ and open the template in the editor.
     color: $brand-col-1;
     border: solid 1px $brand-col-3--tint
   }
+}
+
+.logged-in-as a{
+  color: $brand-col-2 !important;
 }
