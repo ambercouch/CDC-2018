@@ -223,12 +223,16 @@ ACINUK = {
 
           // Build the new markup
           var splitList = '<ol class="testimonials__list">';
-          // First/featured testimonial (always visible)
-          splitList += '<li class="testimonials__testimonial">' + jQuery(q[0]).html() + '</li>';
+
+          // Show first 3 testimonials (or fewer if not enough)
+          var visibleCount = Math.min(4, q.length);
+          for (var i = 0; i < visibleCount; i++) {
+              splitList += '<li class="testimonials__testimonial">' + jQuery(q[i]).html() + '</li>';
+          }
           splitList += '</ol>';
 
           // If there are more testimonials, add a single toggle + drawer
-          if (q.length > 1) {
+          if (q.length > visibleCount) {
               var drawerId = 'testimonials-drawer';
 
               splitList += '' +
@@ -238,7 +242,7 @@ ACINUK = {
                   '</a>' +
                   '<ol id="' + drawerId + '" class="testimonials__drawer">';
 
-              for (var i = 1; i < q.length; i++) {
+              for (var i = visibleCount; i < q.length; i++) {
                   splitList += '<li class="testimonials__testimonial">' + jQuery(q[i]).html() + '</li>';
               }
               splitList += '</ol>';
@@ -260,6 +264,7 @@ ACINUK = {
               return false;
           });
       },
+
 
       testimonialsAlt: function () {
 
