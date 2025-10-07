@@ -16,6 +16,7 @@ require( get_template_directory() . '/lib/ac-custom-post-types.php' );
 require( get_template_directory() . '/lib/ac-shortcode.php' );
 require( get_template_directory() . '/lib/ac-acf.php' );
 require( get_template_directory() . '/lib/ac-widget-logic-helpers.php' );
+require( get_template_directory() . '/lib/ac-staff-member-clear-cache.php' );
 
 /**
  * Implement the Custom Header feature
