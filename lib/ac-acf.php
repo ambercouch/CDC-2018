@@ -749,4 +749,23 @@ function cdc_page_common_name_menu_titles( $items, $args ) {
 }
 
 
+add_filter( 'widget_title', 'cdc_wrap_widget_brackets_in_small', 10, 3 );
+
+function cdc_wrap_widget_brackets_in_small( $title, $instance, $id_base ) {
+    // Only act if we have a bracket pair
+    if ( strpos( $title, '(' ) === false || strpos( $title, ')' ) === false ) {
+        return $title;
+    }
+
+    // Replace "Title (Something)" → "Title <small>(Something)</small>"
+    $title = preg_replace(
+        '/\s*\((.+?)\)/',
+        ' <small>($1)</small>',
+        $title,
+        1 // only first pair
+    );
+
+    return $title;
+}
+
 
