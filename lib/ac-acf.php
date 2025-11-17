@@ -183,10 +183,6 @@ if( function_exists('acf_add_local_field_group') ):
         'description' => '',
     ));
 
-endif;
-
-if( function_exists('acf_add_local_field_group') ):
-
     acf_add_local_field_group(array(
         'key' => 'group_63ce964714883',
         'title' => 'Staff Info',
@@ -306,10 +302,6 @@ if( function_exists('acf_add_local_field_group') ):
         'description' => '',
     ));
 
-endif;
-
-if( function_exists('acf_add_local_field_group') ):
-
     acf_add_local_field_group(array(
         'key' => 'group_page_settings)',
         'title' => 'Page Settings',
@@ -371,10 +363,6 @@ if( function_exists('acf_add_local_field_group') ):
         'active' => true,
         'description' => '',
     ));
-
-endif;
-
-if( function_exists('acf_add_local_field_group') ):
 
     acf_add_local_field_group(array(
         'key' => 'group_menu_items',
@@ -478,6 +466,62 @@ if( function_exists('acf_add_local_field_group') ):
         'active' => 1,
         'description' => '',
     ));
+
+    acf_add_local_field_group( array(
+        'key'                   => 'group_page_common_name',
+        'title'                 => 'Page Common Name',
+        'fields'                => array(
+            array(
+                'key'               => 'field_common_name',
+                'label'             => 'Common Name',
+                'name'              => 'common_name',
+                'type'              => 'text',
+                'instructions'      => 'Add a common name for this dental practice page (e.g. "Root Canal").',
+                'required'          => 0,
+                'wrapper'           => array(
+                    'width' => '',
+                    'class' => '',
+                    'id'    => '',
+                ),
+                'default_value'     => '',
+                'placeholder'       => '',
+            ),
+            array(
+                'key'               => 'field_common_name_priority',
+                'label'             => 'Common Name Takes Priority',
+                'name'              => 'common_name_priority',
+                'type'              => 'true_false',
+                'instructions'      => 'When enabled, use the common name instead of the medical name.',
+                'required'          => 0,
+                'wrapper'           => array(
+                    'width' => '',
+                    'class' => '',
+                    'id'    => '',
+                ),
+                'message'           => 'Use Common Name instead of Medical Name',
+                'default_value'     => 1, // ON by default
+                'ui'                => 1,
+                'ui_on_text'        => 'Common name',
+                'ui_off_text'       => 'Medical name',
+            ),
+        ),
+        'location'              => array(
+            array(
+                array(
+                    'param'     => 'post_type',
+                    'operator'  => '==',
+                    'value'     => 'page',
+                ),
+            ),
+        ),
+        'menu_order'            => 0,
+        'position'              => 'acf_after_title', // shows just under the page title
+        'style'                 => 'default',
+        'label_placement'       => 'top',
+        'instruction_placement' => 'label',
+        'active'                => true,
+        'show_in_rest'          => 0,
+    ) );
 
 endif;
 
@@ -618,4 +662,91 @@ Fill out our contact form today so we can help you get started on your new smile
         'show_in_rest' => 0,
     ) );
 } );
+
+
+
+// Helper: build the combined title using ACF fields.
+function cdc_get_common_name_title( $title, $post_id ) {
+
+    // Bail if ACF isn't available.
+    if ( ! function_exists( 'get_field' ) ) {
+        return $title;
+    }
+
+    $common_name = trim( (string) get_field( 'common_name', $post_id ) );
+    if ( $common_name === '' ) {
+        // Nothing set, fall back to normal title.
+        return $title;
+    }
+
+    $common_name_priority = (bool) get_field( 'common_name_priority', $post_id );
+
+    if ( $common_name_priority ) {
+        // Common name first: Dentures (Prosthodontics)
+        return sprintf(
+            '%s <small>(%s)</small>',
+            $common_name,
+            $title
+        );
+    }
+
+    // Medical name first: Prosthodontics (Dentures)
+    return sprintf(
+        '%s <small>(%s)</small>',
+        $title,
+        $common_name
+    );
+}
+
+/**
+ * 1) Filter page title on the front end.
+ */
+add_filter( 'the_title', 'cdc_page_common_name_title_filter', 10, 2 );
+function cdc_page_common_name_title_filter( $title, $post_id ) {
+
+    // Don't affect admin screens.
+    if ( is_admin() ) {
+        return $title;
+    }
+
+    $post = get_post( $post_id );
+    if ( ! $post || $post->post_type !== 'page' ) {
+        return $title;
+    }
+
+    // Only on singular page views in the main loop.
+    if ( ! is_page( $post_id ) || ! in_the_loop() || ! is_main_query() ) {
+        return $title;
+    }
+
+    return cdc_get_common_name_title( $title, $post_id );
+}
+
+/**
+ * 2) Filter menu item titles for page links.
+ *    Only override when the menu label matches the page title
+ *    (so custom labels in menus are left alone).
+ */
+add_filter( 'wp_nav_menu_objects', 'cdc_page_common_name_menu_titles', 10, 2 );
+function cdc_page_common_name_menu_titles( $items, $args ) {
+
+    foreach ( $items as $item ) {
+
+        // Only for menu items that link to pages.
+        if ( $item->type === 'post_type' && $item->object === 'page' ) {
+
+            $page_id    = (int) $item->object_id;
+            $page_title = get_the_title( $page_id );
+
+            // Only override if the menu label is still the default page title.
+            if ( $item->title === $page_title ) {
+                $item->title = cdc_get_common_name_title( $page_title, $page_id );
+            }
+        }
+    }
+
+    return $items;
+}
+
+
 
