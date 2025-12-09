@@ -328,5 +328,30 @@ function set_acf_field_for_pages_and_children() {
 
 add_filter('wpcf7_autop_or_not', '__return_false');
 
+//fix date format in CF7 email notification
+add_filter( 'wpcf7_mail_tag_replaced', function ( $replaced, $submitted, $html, $mail_tag ) {
+
+    // Make sure we have a mail tag object and only target the [dob] field
+    if ( ! $mail_tag instanceof WPCF7_MailTag ) {
+        return $replaced;
+    }
+
+    if ( $mail_tag->field_name() !== 'dob' ) {
+        return $replaced;
+    }
+
+    // $submitted should be the raw value, e.g. 2025-12-01
+    $raw_date = $submitted ?: $replaced;
+
+    $timestamp = strtotime( $raw_date );
+    if ( ! $timestamp ) {
+        return $replaced; // fall back if parsing fails
+    }
+
+    // Return in UK format DD/MM/YYYY
+    return date( 'd/m/Y', $timestamp );
+
+}, 10, 4 );
+
 
 
