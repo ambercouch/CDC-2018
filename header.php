@@ -52,9 +52,9 @@
     <?php wp_head(); ?>
       <!-- END WP HEAD -->
 
-		<!-- TrustBox script -->
-<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
-		<!-- End TrustBox script -->
+    <!-- TrustBox script -->
+    <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+    <!-- End TrustBox script -->
 
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/favicon/favicon-32x32.png">
@@ -89,6 +89,11 @@
       <header class="site__header--master" id="masthead"   role="banner">
         <?php get_template_part('templates/snippets/sidebar-banner'); ?>
       </header><!-- /.site__header -->
+    <!-- TrustBox widget - Micro Review Count -->
+    <div class="trustpilot-widget" data-locale="en-GB" data-template-id="5419b6a8b0d04a076446a9ad" data-businessunit-id="5d95c761d2d30e00011ae879" data-style-height="24px" data-style-width="100%" data-token="a5efc09c-8da4-428b-945f-9baac784bbbf" data-min-review-count="0" data-style-alignment="center">
+      <a href="https://uk.trustpilot.com/review/cathedraldentalclinic.com" target="_blank" rel="noopener">Trustpilot</a>
+    </div>
+    <!-- End TrustBox widget -->
         <?php if (get_post_type() == 'landing_page' || is_page_template('page--referral-header-banner.php') ) : ?>
         <?php else : ?>
       <?php get_template_part('templates/snippets/site__navigation--services'); ?>
