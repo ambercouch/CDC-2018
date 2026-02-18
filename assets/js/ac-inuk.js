@@ -77,14 +77,17 @@ ACINUK = {
         }
 
         $(document).on('change', '.form--referral__select--referral-reason', function () {
-           console.log('changed');
-           console.log($(this).val());
-            if($(this).val() === 'Implantology'){
-                $('[data-control=referral-reason]').show('slow');
-                console.log('boom');
-            }else {
-                console.log('no boom');
-                $('[data-control=referral-reason]').hide('slow');
+            var selected = $(this).val();
+            var $target  = $('[data-select-control="referral-reason"]');
+            var trigger  = $target.data('select-value'); // "Implant Placement & Restoration"
+
+            console.log('changed 12345');
+            console.log(selected, trigger);
+
+            if (selected === trigger) {
+                $target.show('slow');
+            } else {
+                $target.hide('slow');
             }
         });
 
