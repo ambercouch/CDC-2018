@@ -30,8 +30,9 @@
         </nav>
 
         <div class="site-info">
+          <span style="margin-bottom:0.5em; display:block">Cathedral Dental Clinic is a trading name of Odonto Limited, registered in England & Wales with number 08368763</span>
           <span class="copyright"><?php _e('© 2012 Cathedral Dental Clinic', 'ac_inuk'); ?></span> |
-          <?php _e('Website design by <a href="http://ambercouch.co.uk">Ambercouch</a>', 'ac_inuk'); ?>
+            <?php _e('Website design by <a href="http://ambercouch.co.uk">Ambercouch</a>', 'ac_inuk'); ?>
         </div><!-- .site-info -->
       </div>
     </div>
