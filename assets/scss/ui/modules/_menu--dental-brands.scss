@@ -4,7 +4,7 @@
 
 .logo-menu--carousel {
   .menu {
-    display: block;
+    display: block !important;
     margin: 0;
   }
 
@@ -29,7 +29,7 @@
     width: 34px;
     height: 34px;
     background: rgba(#fff, 0.95);
-    border: 1px solid $border-colour;
+    border: 1px none $border-colour;
 
     &:hover {
       background: #fff;

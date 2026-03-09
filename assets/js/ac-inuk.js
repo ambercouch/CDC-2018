@@ -460,23 +460,18 @@ console.log("this is the payment_plan")
     fn:{
 
         initLogoMenuCarousel: function () {
-            if (typeof jQuery.fn.flickity !== 'function') {
-                return;
-            }
+            if (typeof jQuery.fn.flickity !== 'function') return;
 
             jQuery('.logo-menu--carousel').each(function () {
                 var $widget = jQuery(this);
-                var $menu = $widget.children('.widget').find('> .menu');
 
-                if (!$menu.length) {
-                    $menu = $widget.find('> .widget > .menu, > .menu').first();
-                }
+                // This matches your actual markup
+                var $menu = $widget.find('ul.menu').first();
 
-                if (!$menu.length || $menu.data('flickity')) {
-                    return;
-                }
+                if (!$menu.length || $menu.data('flickity')) return;
 
                 $menu.flickity({
+                    cellSelector: 'li',     // be explicit
                     cellAlign: 'center',
                     contain: true,
                     wrapAround: true,
