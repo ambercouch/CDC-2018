@@ -129,15 +129,10 @@
 
   .widget-area__widget{
     @extend .content__widget-area;
-  }
-  .menu--dental-brands{
-    width: 100%;
-  }
-  .menu--recommended{
-    @extend .desk-two-thirds;
-  }
-  .menu--finance{
-    @extend .desk-one-quarter;
+
+    @include media-query(desk){
+      width: 100%;
+    }
   }
 }
 .content__widget-area--footer{

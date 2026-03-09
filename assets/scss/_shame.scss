@@ -528,3 +528,14 @@ p.is-empty{
 .landing_page-template-default #secondary{
   display: none;
 }
+
+ul.menu.flickity-enabled{
+  overflow: visible !important;
+}
+.flickity-prev-next-button.previous {
+left: -70px;
+}
+
+.flickity-prev-next-button.next {
+  right: -70px;
+}

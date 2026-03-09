@@ -171,17 +171,7 @@ ACINUK = {
 
       //jQuery('.widget_nav_menu .widget__header').append('<a class="menu--responsive-toggle__toggle" href="#menu">Menu</a>');
 
-      //svg hover effect for menu items;
-      jQuery('.menu__icon').each(function (i, e) {
-
-        var id = jQuery('.icon__use--hover-on', this).attr('xlink:href');
-        if (jQuery(id).length === 1) {
-          var currentClass = jQuery(this).attr('class');
-          var newClass = ' icon--hover';
-
-          jQuery(this).attr('class', currentClass + newClass);
-        }
-      });
+      ACINUK.fn.initLogoMenuCarousel();
 
     }
   },
@@ -468,6 +458,30 @@ console.log("this is the payment_plan")
         }//gaq.tel
     },
     fn:{
+
+        initLogoMenuCarousel: function () {
+            if (typeof jQuery.fn.flickity !== 'function') return;
+
+            jQuery('.logo-menu--carousel').each(function () {
+                var $widget = jQuery(this);
+
+                // This matches your actual markup
+                var $menu = $widget.find('ul.menu').first();
+
+                if (!$menu.length || $menu.data('flickity')) return;
+
+                $menu.flickity({
+                    cellSelector: 'li',     // be explicit
+                    cellAlign: 'center',
+                    contain: true,
+                    wrapAround: true,
+                    prevNextButtons: true,
+                    pageDots: true,
+                    imagesLoaded: true,
+                    groupCells: '25%'
+                });
+            });
+        },
         actStateToggle: function (container, showButton, parent, listParent) {
             var elState = showButton.attr('data-state');
             var eventActOpen = new Event('actOpen');

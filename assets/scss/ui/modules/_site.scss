@@ -66,9 +66,7 @@
     .widget-area{
       display: flex;
       flex-direction: column;
-      .menu--payment-plan{
-        order: -1;
-      }
+
       @include media-query(desk){
         display: block;
       }
