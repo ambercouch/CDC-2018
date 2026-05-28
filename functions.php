@@ -110,7 +110,6 @@ add_shortcode( 'accordion_content', function( $atts ) {
                 <?php foreach ( $accordion_content as $content ) : ?>
                     <div class="main-item">
                         <div class="title"><?php echo $content['title']; ?></div>
-
                         <?php if ( false === empty( $content['items'] ) ) : ?>
                             <div class="items">
                                 <?php foreach ( $content['items'] as $item ) : ?>
@@ -142,8 +141,12 @@ add_shortcode( 'accordion_content', function( $atts ) {
                                         </div>
                                     </div>
                                 <?php endforeach; ?>
+                                <?php if ( false === empty( $content['price_guide_notes'] ) ) : ?>
+                                  <div class="price-notes"><?php echo $content['price_guide_notes']; ?></div>
+                                <?php endif; ?>
                             </div>
                         <?php endif; ?>
+
                     </div>
                 <?php endforeach; ?>
             </div>
