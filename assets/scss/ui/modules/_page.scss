@@ -304,6 +304,12 @@
 
         .item-title a{
           color: #4d4b4a !important;
+          small{
+            display: block;
+            @include media-query(lap-and-up){
+              display: inline;
+            }
+          }
         }
 
         .prefix-text{
