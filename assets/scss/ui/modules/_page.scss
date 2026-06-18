@@ -298,8 +298,12 @@
         }
 
         .item-title {
-          padding-right: 2rem;
+          padding-right: 0.5rem;
           text-align: left;
+          margin-bottom: 6px;
+          @include media-query(lap-and-up){
+            margin-bottom: 0;
+          }
         }
 
         .item-title a{
@@ -312,14 +316,14 @@
           }
         }
 
-        .prefix-text{
+        .prefix-text {
           font-size: 0.8em;
+          line-height: 2em;
         }
-
         .values {
           margin-left: auto;
           flex: 0 0 auto;
-          margin-top: 6px;
+          margin-top: 0px;
           @include media-query(lap-and-up){
             margin-top: 0;
           }
@@ -337,7 +341,7 @@
             }
 
             &:not(:first-child) {
-              margin-top: 0.6rem;
+              margin-top: 3px;
             }
           }
         }

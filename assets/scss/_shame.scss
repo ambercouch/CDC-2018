@@ -540,3 +540,19 @@ left: -70px;
 .flickity-prev-next-button.next {
   right: -70px;
 }
+
+/* corporate example employee welcome page fixes */
+
+.page-template-page--header-banner-php.parent-pageid-4004 .header--master img {
+  width: 100%;
+  right: auto;
+  left: auto;
+}
+
+.page-template-page--header-banner-php.parent-pageid-4004 .site__header--master {
+  background: #fff;
+}
+
+.page-id-68680 .trustpilot-widget{
+  display: none;
+}
