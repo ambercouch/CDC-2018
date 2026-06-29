@@ -1,4 +1,12 @@
 .rule{
   color: $brand-col-2;
+  & .widget_text{
+    margin-bottom: 0;
+  }
 }
 
+.widget_text .rule{
+
+    margin-bottom: 0 !important;
+
+}

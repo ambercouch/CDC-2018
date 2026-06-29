@@ -216,7 +216,7 @@
   }
 }
 %textwidget--boxy{
-  background-color: $brand-col-4;
+  background-color: transparent;
   color: #fff;
   margin-bottom: $base-spacing-unit;
   @include media-query(desk){
@@ -267,14 +267,12 @@
     background-color: $brand-col-2;
     border: none !important;
     line-height: 2.3em;
+    border-radius: 999px;
   }
   a.btn:hover {
     text-shadow: 0 1px 0 rgba(0,0,0,0.2) !important;
     background-color: $brand-col-2--tint;
-
-
   }
-
   a.btn:active {
     position: relative;
     top: 0px;

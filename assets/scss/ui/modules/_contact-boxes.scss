@@ -20,11 +20,14 @@ and open the template in the editor.
   [class*=contact-boxes__box]{
     @extend .islet;
 
-    height: 220px;
+    height: auto;
+    aspect-ratio: 6/2;
+    border-radius:12px;
     background: $brand-col-4;
     margin: 0 0 4% 0;
     width: 100%;
     @include mq($from : tablet){
+      aspect-ratio: 3/2;
       width: 46% !important;
       margin: 0 4% 4% 0;
       .content__widget-area--main &{
@@ -43,7 +46,7 @@ and open the template in the editor.
     color: #fff;
     margin-bottom: $act-unit-t;
     display: block;
-    @include act-font-size($h3-size);
+    @include act-font-size($h4-size);
     font-weight: 100;
   }
   .contact-boxes__deets{
