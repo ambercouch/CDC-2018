@@ -21,13 +21,13 @@ and open the template in the editor.
     @extend .islet;
 
     height: auto;
-    aspect-ratio: 6/2;
+    aspect-ratio: 10/2;
     border-radius:12px;
     background: $brand-col-4;
     margin: 0 0 4% 0;
     width: 100%;
     @include mq($from : tablet){
-      aspect-ratio: 3/2;
+      aspect-ratio: 5/2;
       width: 46% !important;
       margin: 0 4% 4% 0;
       .content__widget-area--main &{

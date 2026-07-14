@@ -29,14 +29,14 @@ function ad_filter_menu($sorted_menu_objects, $args) {
     }
   }
 
-  if (in_array($args->menu->term_id, array(10,25,47,55,75,76,77,79))) {
+  //if (in_array($args->menu->term_id, array(10,25,47,55,75,76,77,79))) {
 //  if ($args->menu->term_id == 10 || $args->menu->term_id == 25) {
 
     foreach ($sorted_menu_objects as $menu_object) {
 
       $menu_object->title = $menu_object->xfn == '' ? $menu_object->title : '<svg preserveAspectRatio="none" class="icon menu__icon--old "> <use   class="icon__use--hover-off"  xlink:href="#icon-' . $menu_object->xfn . '--rgb" /> <use class="icon__use--hover-on--old"  xlink:href="#icon-' . $menu_object->xfn . '--rgb" /></svg>';
     }
-  }
+  //}
 
   return $sorted_menu_objects;
 }
