@@ -6,6 +6,23 @@
   width: 100% !important;
 }
 
+.u-w-75{
+  width: 75% !important;
+}
+
+.u-w-50{
+  width: 50% !important;
+}
+
+.u-w-33{
+  width: calc(100% / 3) !important;
+}
+
+.u-w-25{
+  width: 25% !important;
+}
+
+
 /*
 UTILITIES width in px from 500 to 1500
   u-w-[xxx]px
@@ -71,8 +88,12 @@ UTILITIES width in %
   max-width: 50% !important;
 }
 
+.u-max-33{
+  max-width: calc(100% / 3) !important;
+}
+
 .u-max-25{
-  max-width: 50% !important;
+  max-width: 25% !important;
 }
 
 /*

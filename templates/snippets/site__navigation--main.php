@@ -76,8 +76,9 @@ if (get_field('banner_image')) :
                 <a href="https://www.instagram.com/cathedraldentalclinic166/" target="_blank" class="a--icon"><svg class="icon icon-instagram icon--header"><use xlink:href="#icon-instagram"></use></svg></a>
 
                 </div>
-                <?php echo  langSwitch(); ?>
+                <?php // echo  langSwitch(); ?>
               </div>
+
             </div><!-- /.branding -->
             <a id="site_menu_toggle" class="menu--responsive-toggle__toggle" href="#menu">Menu</a>
             <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => 'nav', 'container_class' => 'menu--site__container', 'menu_class' => 'menu--site__menu-list')); ?>

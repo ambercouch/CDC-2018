@@ -84,6 +84,7 @@ function cdc_shortcode_video_block($atts) {
             $output .= '<h6 class="video-preview__video-title test-video title atts">' . $title . '</h6>';
             $output .= '</div>';
             $output .= (is_user_logged_in() == false)? '<div class="remodal" data-remodal-id="modal-'.$vid_id.'">' : '<div class="remodal" data-remodal-id="modal-'.$vid_id.'">';
+            $output .= '<button data-remodal-action="close" class="remodal-close"></button>';
             $output .= '<div id="ajax-box"  class="iframe video ">';
             $output .= '<h1 class="video__title">';
 
