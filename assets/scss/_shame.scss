@@ -547,6 +547,15 @@ left: -70px;
   width: 100%;
   right: auto;
   left: auto;
+  position: static;
+  height: 175px;
+  object-fit: cover;
+
+  // Strictly greater than 440px, including fractional widths (legacy Sass syntax).
+  @media not all and (max-width: 440px) {
+    height: 325px;
+    object-fit: cover;
+  }
 }
 
 .page-template-page--header-banner-php.parent-pageid-4004 .site__header--master {
