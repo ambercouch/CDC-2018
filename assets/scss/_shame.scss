@@ -593,3 +593,64 @@ left: -70px;
     filter: blur(6px);
   }
 }
+
+
+// Keep the homepage hero independent of the corporate header banners.
+.home {
+  .header--master {
+    height: auto;
+  }
+
+  .header--master__widget-area--banner .widget {
+    margin-bottom: 0;
+  }
+
+  .header--master__widget-area--banner .widget-area__widget {
+    height: 175px;
+
+    @include media-query(lap-and-up) {
+      height: 390px;
+    }
+  }
+
+  .hero-banner--2026-mouth .header--master__banner-image {
+    top: 0;
+    right: auto !important;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1780px;
+    max-width: none;
+    height: 100%;
+    aspect-ratio: 1024 / 391;
+    object-fit: cover;
+
+    @include media-query(lap-and-up) {
+      width: 1400px;
+      max-width: none !important;
+    }
+  }
+
+  .header--master__strap {
+    top: 60% !important;
+    text-align: center;
+    line-height: 1.2em;
+
+    @include media-query(palm) {
+      font-size: inherit;
+    }
+
+    .btn {
+      font-size: 14px;
+      width: auto;
+      display: inline-block;
+      padding: 0 12px !important;
+      height: 35px;
+
+      @include media-query(lap-and-up) {
+        font-size: 18px;
+        width: 100%;
+        height: 45px;
+      }
+    }
+  }
+}
